@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import Sample from "./images/sample-image.png";
+import Sample from "./images/sample-image.jpg";
 import ImageModal from "../../components/modal";
 
 import { modalState } from "./explore.state";

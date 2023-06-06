@@ -38,7 +38,7 @@ export default function Explore() {
               <hr />
               <Row>
                 <Col md={4}>
-                  <Card className="shadow" onClick={showModal}>
+                  <Card className="shadow" onClick={showModal} style={{ cursor: "pointer"}}>
                     <Card.Img height="368px" variant="top" src={Sample} />
                     <Card.Body>
                       <Card.Text className="d-flex justify-content-center">

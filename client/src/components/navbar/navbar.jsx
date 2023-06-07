@@ -16,8 +16,6 @@ function pathsMatch(path1, path2) {
 
 export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
-  console.log(pathName);
-
   return (
     <Navbar bg="dark" variant="dark" className="text-uppercase font-title" expand="md">
       <Container>

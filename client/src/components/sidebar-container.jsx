@@ -14,26 +14,12 @@ export function SidebarContainer({
   className = "",
 }) {
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < mobileSize ? true : false);
-
-  const handleResize = () => {
-    if (window.innerWidth < mobileSize) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
-  
   const CollapseButton = ({ collapsed, toggleCollapse }) => (
     <i
       onClick={toggleCollapse}
       className={classNames("bi set-absolute", collapsed ? " bi-caret-right-fill" : " bi-caret-left-fill")}
       style={{
-        position: !isMobile ? "absolute" : "relative",
+        position: "absolute",
         left: "-10px",
         background: "transparent",
         border: "none",

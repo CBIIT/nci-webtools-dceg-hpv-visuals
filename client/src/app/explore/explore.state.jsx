@@ -5,6 +5,7 @@ export const exploreState = atom({
     default: {
         body: {
             _id: 0,
+            _image: "/images/sample-image.jpg",
             ageEnroll: "18",
             cervResult: "0.8",
             colImpression: "12",

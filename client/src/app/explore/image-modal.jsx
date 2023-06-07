@@ -1,6 +1,7 @@
+"use client";
 import { Modal } from "react-bootstrap";
-import { modalState } from "../modules/explore/explore.state";
 import { useRecoilState  } from "recoil";
+import { modalState } from "./explore.state";
 
 export default function ImageModal() {
     const [modal, setModal] = useRecoilState(modalState)

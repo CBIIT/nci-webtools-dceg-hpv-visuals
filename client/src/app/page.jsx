@@ -1,8 +1,12 @@
+"use client";
+import Link from 'next/link';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+
+export const metadata = {
+  title: 'HPV Visuals',
+};
 
 export default function Home() {
   return (
@@ -14,11 +18,11 @@ export default function Home() {
               <Col md={6}>
                 <div className="d-flex h-100 align-items-center py-5">
                   <div>
-                    <h1 className="font-title text-light mb-3">HPVAVE</h1>
+                    <h1 className="font-title text-light mb-3">HPV Visuals</h1>
                     <hr className="border-white" />
                     <p className="lead text-light">Explore clinical examples of HPV-associated cancers and precancers.</p>
-                    <Link to="/explore" className="btn btn-lg btn-outline-light text-decoration-none">
-                      Explore Cases
+                    <Link href="/explore" className="btn btn-lg btn-outline-light text-decoration-none">
+                      Explore
                     </Link>
                   </div>
                 </div>
@@ -33,7 +37,7 @@ export default function Home() {
           <Row>
             <Col>
               <p>
-                The Human Papillomavirus Automated Visual Evaluation (HPVAVE) website provides visual examples of the natural history/carcinogenic process of
+                The Human Papillomavirus Visuals (HPV Visuals) website provides visual examples of the natural history/carcinogenic process of
                 HPV infection and progression to precancer, accompanied by relevant clinical data. This platform addresses a significant gap in clinical
                 comprehension of the carcinogenic process and provides exposure to images that are true representations of meaningful changes in the appearance
                 of the cervix that require clinical action.

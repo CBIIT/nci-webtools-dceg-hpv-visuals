@@ -1,14 +1,27 @@
+"use client";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 import NavbarSearch from "./navbar-search";
 
+function pathsMatch(path1, path2) {
+  // remove trailing slash
+  path1 = path1.replace(/\/$/, "");
+  path2 = path2.replace(/\/$/, "");
+  return path1 === path2;
+}
+
 export default function AppNavbar({ routes = [] }) {
+  const pathName = usePathname();
+  console.log(pathName);
+
   return (
     <Navbar bg="dark" variant="dark" className="text-uppercase font-title" expand="md">
       <Container>
-        <Navbar.Brand as={NavLink} to="/" className="d-flex d-md-none text-light">
+        <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
           GWAS Target{" "}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase">
@@ -18,9 +31,9 @@ export default function AppNavbar({ routes = [] }) {
         <Navbar.Collapse id="navbar-nav" className="align-items-stretch">
           <Nav className="me-auto">
             {routes.map((route) => (
-              <NavLink className="nav-link" key={route.path} to={route.path} end={route.end}>
+              <Link className={clsx("nav-link", pathsMatch(pathName, route.path) && "active")} key={route.path} href={route.path}>
                 {route.title}
-              </NavLink>
+              </Link>
             ))}
           </Nav>
           <NavbarSearch />

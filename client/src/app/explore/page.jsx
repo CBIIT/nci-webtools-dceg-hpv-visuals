@@ -1,10 +1,8 @@
+"use client";
 import { useRecoilState } from "recoil";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import Sample from "./images/sample-image.jpg";
-import ImageModal from "../../components/modal";
-
-import { modalState } from "./explore.state";
-
+import ImageModal from "./image-modal";
+import { modalState } from "./explore.state.js";
 
 export default function Explore() {
 
@@ -39,7 +37,7 @@ export default function Explore() {
               <Row>
                 <Col md={4}>
                   <Card className="shadow" onClick={showModal} style={{ cursor: "pointer"}}>
-                    <Card.Img height="368px" variant="top" src={Sample} />
+                    <Card.Img height="368px" variant="top" src="/images/sample-image.jpg" />
                     <Card.Body>
                       <Card.Text className="d-flex justify-content-center">
                         Sample Card

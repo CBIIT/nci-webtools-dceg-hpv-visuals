@@ -8,11 +8,6 @@ import "./styles/main.scss";
 
 const inter = Inter({ subsets: ["latin"], variable: "--bs-font-sans-serif", display: "block" });
 
-export const metadata = {
-  title: "HPV Visuals",
-  description: "HPV Visuals",
-};
-
 export default function RootLayout({ children }) {
   const routes = [
     { title: "Home", path: "/"},

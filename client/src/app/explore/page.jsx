@@ -11,7 +11,7 @@ import ExploreForm from "./explore.form";
 
 export default function Explore() {
 
-  const [_openSidebar, _setOpenSidebar] = useState(false);
+  const [_openSidebar, _setOpenSidebar] = useState(true);
   const [explore, setExplore] = useRecoilState(exploreState);
 
   console.log(explore)

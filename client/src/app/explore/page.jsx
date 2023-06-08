@@ -31,6 +31,7 @@ export default function Explore() {
     },
     {
       _id: 1,
+      _image: "/images/sample-hpv-2.jpg",
       ageEnroll: "21",
       cervResult: "Average",
       colImpression: "10",

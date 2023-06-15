@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { Table, Pagination, Form } from "react-bootstrap";
-import { exploreState } from "./explore.state";
+import { exploreState } from "./view.state";
 
 import {
     flexRender,

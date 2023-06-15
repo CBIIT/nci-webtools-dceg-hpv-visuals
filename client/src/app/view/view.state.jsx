@@ -16,3 +16,12 @@ export const exploreState = atom({
     },
 
 });
+
+export const modalState = atom({
+    key: "search.modalState",
+    default: {
+      open: false,
+      title: "",
+      body: {},
+    },
+  });

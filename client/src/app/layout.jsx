@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--bs-font-sans-serif", disp
 export default function RootLayout({ children }) {
   const routes = [
     { title: "Home", path: "/"},
-    { title: "Explore", path: "/explore" },
+    { title: "View Images", path: "/view" },
     { title: "About", path: "/about" },
   ]
 

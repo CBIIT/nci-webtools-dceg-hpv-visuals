@@ -3,7 +3,7 @@ import { atom } from "recoil";
 export const exploreState = atom({
     key: "explore.exploreState",
     default: {
-        _id: 0,
+        id: 0,
         _image: "/images/sample-image.jpg",
         ageEnroll: "18",
         cervResult: "0.8",

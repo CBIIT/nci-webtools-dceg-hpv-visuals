@@ -82,11 +82,11 @@ export default function ExploreTable({ results = [] }) {
                     {table.getRowModel().rows.map((row) => (
                         <tr
                             onClick={() => {
-                                setActive(row.original._id);
-                                setExplore(results.find((e) => e._id === row.original._id))
+                                setActive(row.original.id);
+                                setExplore(results.find((e) => e.id === row.original.id))
                             }}
-                            className={active === row.original._id ? "active-row" : ""}
-                            key={row.original._id}
+                            className={active === row.original.id ? "active-row" : ""}
+                            key={row.original.id}
                         >
                             {row.getVisibleCells().map((cell) => (
                                 <td key={cell.id} className={cell.column.columnDef.className}>

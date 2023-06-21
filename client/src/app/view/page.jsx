@@ -1,14 +1,13 @@
 "use client";
 import { useRecoilState } from "recoil";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import { useState } from "react";
-import { SidebarContainer, SidebarPanel, MainPanel } from "../../components/sidebar-container";
-import { exploreState, modalState } from "./view.state";
+import { Container, Row, Col, Card, Form } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { Document } from "flexsearch";
 
-import ExploreTable from "./page.table";
-import ExploreForm from "./view.form";
+import { exploreState, modalState } from "./view.state";
 import ImageModal from "../../components/modal";
 
+import data from "./sample-data.json"
 
 
 export default function Explore() {
@@ -16,6 +15,29 @@ export default function Explore() {
   const [_openSidebar, _setOpenSidebar] = useState(true);
   const [explore, setExplore] = useRecoilState(exploreState);
   const [modal, setModal] = useRecoilState(modalState)
+  const document = new Document({
+    document: {
+      index: ["ageEnroll", "eTreatEval"],
+      store: true
+    }
+  })
+
+  console.log(data)
+
+  useEffect(() => {
+    data.forEach((item) => {
+      document.add({
+        id: item.id,
+        ageEnroll: item.ageEnroll,
+        eTreatEval: item.eTreatEval
+
+      })
+    })
+
+    console.log(document)
+  }, [])
+
+
 
   function showModal() {
     //Sample body, TBD get metadata of specific image
@@ -35,32 +57,11 @@ export default function Explore() {
 
   console.log(explore)
 
-  const data = [
-    {
-      _id: 0,
-      _image: "/images/sample-image.jpg",
-      ageEnroll: "18",
-      cervResult: "0.8",
-      colImpression: "12",
-      dob: "1/1/2005",
-      eTreatEval: "Good",
-      hpvResult: "0.7",
-      qcColpoBiopsy: "0.1",
-      qcCyto: "0.23"
-    },
-    {
-      _id: 1,
-      _image: "/images/sample-hpv-2.jpg",
-      ageEnroll: "21",
-      cervResult: "Average",
-      colImpression: "10",
-      dob: "2/1/2002",
-      eTreatEval: "Bad",
-      hpvResult: "1.2",
-      qcColpoBiopsy: "1",
-      qcCyto: "2"
-    }
-  ]
+  function handleSearch(e) {
+    e.preventDefault();
+    console.log(e.target.value)
+    console.log(document.search(e.target.value, { enrich: true }))
+  }
 
 
   return (
@@ -71,29 +72,34 @@ export default function Explore() {
           <Col>
             <article className="shadow p-4 rounded">
               <h1 className="text-primary h3 mb-4">View Images</h1>
+              <Form.Group className="mb-3" controlId="ageEnroll">
+                <Form.Label >Search</Form.Label>
+                <Form.Control
+                  name="ageEnroll"
+                  onChange={handleSearch}
+                />
+              </Form.Group>
               <hr />
               <Row>
-                <Col md={4}>
-                  <Card className="shadow" onClick={showModal}>
-                    <Card.Img height="368px" variant="top" src={"/images/sample-image.jpg"} />
-                    <Card.Body>
-                      <Card.Text className="d-flex justify-content-center">
-                        Sample Card 1
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={4}>
-                  <Card className="shadow" onClick={showModal}>
-                    <Card.Img height="368px" variant="top" src={"/images/sample-hpv-2.jpg"} />
-                    <Card.Body>
-                      <Card.Text className="d-flex justify-content-center">
-                        Sample Card 2
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
+                {data.map((e) => {
+
+                  return (
+                    <Col sm={6} md={4}>
+                      <Card className="shadow" onClick={showModal}>
+                        <Card.Img height="368px" variant="top" src={e._image} />
+                        <Card.Body>
+                          <Card.Text className="d-flex justify-content-center">
+                            Sample Card 1
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  )
+                })
+                }
               </Row>
+
+
             </article>
           </Col>
 

@@ -78,12 +78,12 @@ export default function Explore() {
                   name="ageEnroll"
                   onChange={handleSearch}
                 />
-  </Form.Group>*/}
+              </Form.Group>*/}
               <hr />
               <Row>
                 {data.map((e) => {
                   return (
-                    <Col sm={6} md={4}>
+                    <Col className="mb-3" sm={6} md={4}>
                       <Card className="shadow" onClick={showModal}>
                         <Card.Img height="368px" variant="top" src={e._image} />
                         <Card.Body>
@@ -94,8 +94,7 @@ export default function Explore() {
                       </Card>
                     </Col>
                   )
-                })
-                }
+                })}
               </Row>
             </article>
           </Col>

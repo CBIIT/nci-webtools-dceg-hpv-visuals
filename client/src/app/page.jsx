@@ -17,8 +17,8 @@ export default function Home() {
                     <h1 className="font-title text-light mb-3">HPV Visuals</h1>
                     <hr className="border-white" />
                     <p className="lead text-light">Explore clinical examples of HPV-associated cancers and precancers.</p>
-                    <Link href="/explore" className="btn btn-lg btn-outline-light text-decoration-none">
-                      Explore
+                    <Link href="/view" className="btn btn-lg btn-outline-light text-decoration-none">
+                      View Images
                     </Link>
                   </div>
                 </div>

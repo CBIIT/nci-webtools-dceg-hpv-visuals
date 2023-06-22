@@ -58,11 +58,13 @@ legend {
 
     &:hover,
     &.active {
-      background-color: $navbar-dark-nav-link-active-background-color;
+      color: white;
+      border-bottom: $navbar-dark-nav-link-border-bottom-active;
     }
 
-    &.active {
-      border-bottom: $navbar-dark-nav-link-border-bottom-active;
+    &:hover
+    {
+      border-bottom: 3px rgba(255,255,255,0.3) solid;
     }
   }
 

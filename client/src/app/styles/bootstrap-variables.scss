@@ -34,15 +34,15 @@ $navbar-dark-active-color: black;
 $navbar-dark-toggler-border-color: transparent;
 
 // nav links
-$nav-link-padding-y: 0.5rem;
-$nav-link-padding-x: 1.5rem;
+$nav-link-padding-y: 0.3rem;
+$nav-link-padding-x: 1rem;
 $nav-link-font-weight: 500;
 $nav-link-transition: all 0.1s linear;
-$navbar-nav-link-padding-x: 1.5rem;
-$navbar-nav-link-border-width-y: 7px;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-nav-link-border-width-y: 3px;
 $navbar-dark-nav-link-border-top: $navbar-nav-link-border-width-y solid transparent;
 $navbar-dark-nav-link-border-bottom: $navbar-nav-link-border-width-y solid transparent;
-$navbar-dark-nav-link-border-bottom-active: $navbar-nav-link-border-width-y solid $primary;
+$navbar-dark-nav-link-border-bottom-active: $navbar-nav-link-border-width-y solid $white;
 $navbar-dark-nav-link-active-background-color: white;
 
 // list groups

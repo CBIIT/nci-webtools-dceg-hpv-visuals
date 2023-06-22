@@ -25,10 +25,10 @@ export default function NavbarSearch() {
       role="search"
       action="https://www.google.com/search"
       onSubmit={handleSubmit}>
-      <InputGroup className="border-white">
-        <Form.Control className="search-control" type="search" placeholder="search" aria-label="search" name="q" />
-        <Button variant="outline-secondary" className="search-control-button" type="submit">
-          <i className="bi bi-search"></i>
+      <InputGroup style={{ borderBottom: "3px white solid"}}>
+        <Form.Control className="search-control" type="search" placeholder="Search" aria-label="search" name="q" style={{ backgroundColor: "transparent"}}/>
+        <Button variant="outline-secondary" className="search-control-button" type="submit" style={{ backgroundColor: "transparent"}}>
+          <i className="bi bi-search" ></i>
           <span className="visually-hidden">submit</span>
         </Button>
       </InputGroup>

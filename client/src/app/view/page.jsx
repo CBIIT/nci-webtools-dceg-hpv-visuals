@@ -72,17 +72,16 @@ export default function Explore() {
           <Col>
             <article className="shadow p-4 rounded">
               <h1 className="text-primary h3 mb-4">View Images</h1>
-              <Form.Group className="mb-3" controlId="ageEnroll">
+              {/*<Form.Group className="mb-3" controlId="ageEnroll">
                 <Form.Label >Search</Form.Label>
                 <Form.Control
                   name="ageEnroll"
                   onChange={handleSearch}
                 />
-              </Form.Group>
+  </Form.Group>*/}
               <hr />
               <Row>
                 {data.map((e) => {
-
                   return (
                     <Col sm={6} md={4}>
                       <Card className="shadow" onClick={showModal}>
@@ -98,8 +97,6 @@ export default function Explore() {
                 })
                 }
               </Row>
-
-
             </article>
           </Col>
 

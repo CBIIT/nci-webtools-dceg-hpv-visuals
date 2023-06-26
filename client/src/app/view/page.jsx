@@ -16,7 +16,7 @@ export default function Explore() {
   const [page, setPage] = useState(1)
   const [explore, setExplore] = useRecoilState(exploreState);
   const [modal, setModal] = useRecoilState(modalState)
-  const [numCards, setNumCards] = useState(6); //Number of cards per page
+  const [numCards, setNumCards] = useState(12); //Number of cards per page
 
   const document = new Document({
     document: {
@@ -30,9 +30,15 @@ export default function Explore() {
     data.forEach((item) => {
       document.add({
         id: item.id,
+        _image: item._image,
         ageEnroll: item.ageEnroll,
-        eTreatEval: item.eTreatEval
-
+        cervResult: item.cervResult,
+        colImpression: item.colImpression,
+        dob: item.dob,
+        eTreatEval: item.eTreatEval,
+        hpvResult: item.hpvResult,
+        qcColpoBiopsy: item.qcColpoBiopsy,
+        qcCyto: item.qcCyto
       })
     })
 
@@ -49,17 +55,21 @@ export default function Explore() {
   }
 
 
-  function showModal() {
-    //Sample body, TBD get metadata of specific image
+  function showModal(e) {
+    const item = e
+    console.log(e)
+
     const body = {
-      ageEnroll: "[ageEnroll]",
-      cervResult: "[cervResult]",
-      colImpression: "[colImpression]",
-      dob: "[dob]",
-      eTreatEval: "[eTreatEval]",
-      hpvResult: "[hpvResult]",
-      qcColpoBiopsy: "[qcColpoBiopsy]",
-      qcCyto: "[qcCyto]"
+      id: item.id,
+      _image: item._image,
+      ageEnroll: item.ageEnroll,
+      cervResult: item.cervResult,
+      colImpression: item.colImpression,
+      dob: item.dob,
+      eTreatEval: item.eTreatEval,
+      hpvResult: item.hpvResult,
+      qcColpoBiopsy: item.qcColpoBiopsy,
+      qcCyto: item.qcCyto
     }
 
     setModal((state) => ({ ...state, body: body, open: true }))
@@ -93,8 +103,8 @@ export default function Explore() {
               <Row>
                 {data.map((e) => {
                   return (
-                    (e.id < numCards * page) && (e.id >= numCards * (page-1)) && <Col className="mb-3" lg={6} xl={4}>
-                      <Card className="shadow" onClick={showModal} style={{ cursor: "pointer" }}>
+                    (e.id < numCards * page) && (e.id >= numCards * (page - 1)) && <Col className="mb-3" lg={6} xl={4}>
+                      <Card className="shadow" onClick={() => showModal(e)} style={{ cursor: "pointer" }}>
                         <Card.Img height="368px" variant="top" src={e._image} />
                         <Card.Body>
                           <Card.Text className="d-flex justify-content-center">

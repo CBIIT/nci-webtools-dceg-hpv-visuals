@@ -1,6 +1,6 @@
 "use client";
 import { useRecoilState } from "recoil";
-import { Container, Row, Col, Card, Form } from "react-bootstrap";
+import { Container, Row, Col, Card, Pagination, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { Document } from "flexsearch";
 
@@ -13,8 +13,11 @@ import data from "./sample-data.json"
 export default function Explore() {
 
   const [_openSidebar, _setOpenSidebar] = useState(true);
+  const [page, setPage] = useState(1)
   const [explore, setExplore] = useRecoilState(exploreState);
   const [modal, setModal] = useRecoilState(modalState)
+  const [numCards, setNumCards] = useState(6); //Number of cards per page
+
   const document = new Document({
     document: {
       index: ["ageEnroll", "eTreatEval"],
@@ -22,9 +25,8 @@ export default function Explore() {
     }
   })
 
-  console.log(data)
-
   useEffect(() => {
+
     data.forEach((item) => {
       document.add({
         id: item.id,
@@ -37,6 +39,14 @@ export default function Explore() {
     console.log(document)
   }, [])
 
+  function getPages() {
+    const paginationItems = []
+
+    for (var i = 1; i <= Math.ceil(data.length / numCards); i++) {
+      paginationItems.push(i)
+    }
+    return paginationItems;
+  }
 
 
   function showModal() {
@@ -70,7 +80,7 @@ export default function Explore() {
       <Container className="py-5">
         <Row>
           <Col>
-            <article className="shadow p-4 rounded">
+            <article className="shadow px-3 py-2 rounded">
               <h1 className="text-primary h3 mb-4">View Images</h1>
               {/*<Form.Group className="mb-3" controlId="ageEnroll">
                 <Form.Label >Search</Form.Label>
@@ -83,8 +93,8 @@ export default function Explore() {
               <Row>
                 {data.map((e) => {
                   return (
-                    <Col className="mb-3" sm={6} md={4}>
-                      <Card className="shadow" onClick={showModal}>
+                    (e.id < numCards * page) && (e.id >= numCards * (page-1)) && <Col className="mb-3" lg={6} xl={4}>
+                      <Card className="shadow" onClick={showModal} style={{ cursor: "pointer" }}>
                         <Card.Img height="368px" variant="top" src={e._image} />
                         <Card.Body>
                           <Card.Text className="d-flex justify-content-center">
@@ -96,6 +106,19 @@ export default function Explore() {
                   )
                 })}
               </Row>
+
+              <Pagination className="d=flex justify-content-end">
+                <Pagination.Prev onClick={() => page > 1 ? setPage(page - 1) : ""} />
+                {getPages().map((e) => {
+                  return (
+                    <Pagination.Item key={e} active={e === page} onClick={() => setPage(e)}>
+                      {e}
+                    </Pagination.Item>
+                  )
+                })}
+                <Pagination.Next onClick={() => page < getPages().length ? setPage(page + 1) : ""} />
+              </Pagination>
+
             </article>
           </Col>
 

@@ -107,7 +107,7 @@ export default function Explore() {
                         <Card.Img height="368px" variant="top" src={e._image} />
                         <Card.Body>
                           <Card.Text className="d-flex justify-content-center">
-                            {"Image " + e.id}
+                            {"Image " + (e.id + 1)}
                           </Card.Text>
                         </Card.Body>
                       </Card>

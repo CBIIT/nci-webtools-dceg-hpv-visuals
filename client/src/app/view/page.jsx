@@ -57,7 +57,6 @@ export default function Explore() {
 
   function showModal(e) {
     const item = e
-    console.log(e)
 
     const body = {
       id: item.id,
@@ -79,7 +78,7 @@ export default function Explore() {
 
   function handleSearch(e) {
     e.preventDefault();
-    console.log(e.target.value)
+
     console.log(document.search(e.target.value, { enrich: true }))
   }
 
@@ -108,7 +107,7 @@ export default function Explore() {
                         <Card.Img height="368px" variant="top" src={e._image} />
                         <Card.Body>
                           <Card.Text className="d-flex justify-content-center">
-                            Sample Card 1
+                            {"Image " + e.id}
                           </Card.Text>
                         </Card.Body>
                       </Card>

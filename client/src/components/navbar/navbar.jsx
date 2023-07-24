@@ -20,7 +20,7 @@ export default function AppNavbar({ routes = [] }) {
     <Navbar variant="dark" className="text-uppercase font-title" expand="md" style={{background: "linear-gradient(270deg, #20094b 0%, #bf00a4 50%) !important"}}>
       <Container className="py-2">
         <Navbar.Brand as={Link} href="/" className="d-flex d-md-none text-light">
-          GWAS Target{" "}
+          HPV Visuals{" "}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" className="px-0 py-3 text-uppercase">
           <i className="bi bi-list me-1"></i>

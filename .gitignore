@@ -1,0 +1,5 @@
+**/Ground_Truth
+/data/node_modules
+
+package-lock.json
+hpv-data.json

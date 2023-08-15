@@ -13,7 +13,7 @@ export default function ImageModal() {
     return (
         <Modal show={modal.open} size="xl" onHide={hideModal}>
             <Modal.Header closeButton>
-                <Modal.Title>Image {modal.body.id + 1}</Modal.Title>
+                <Modal.Title>Image {modal.body._id + 1}</Modal.Title>
             </Modal.Header>
             <Modal.Body className="px-0 pb-0">
                 <ul>

@@ -7,7 +7,6 @@ import { Document } from "flexsearch";
 import { exploreState, modalState } from "./view.state";
 import ImageModal from "../../components/modal";
 
-import data from "./sample-data.json"
 
 
 export default function Explore() {
@@ -17,32 +16,38 @@ export default function Explore() {
   const [explore, setExplore] = useRecoilState(exploreState);
   const [modal, setModal] = useRecoilState(modalState)
   const [numCards, setNumCards] = useState(12); //Number of cards per page
+  const [data, setData] = useState([]);
 
   const document = new Document({
     document: {
-      index: ["ageEnroll", "eTreatEval"],
+      index: ["imageId", "detailedGroundTruth", "ageEnroll", "cervResult", "colImpression", "hpvResult", "qcColpoBiopsy", "qcCyto"],
       store: true
     }
   })
 
   useEffect(() => {
 
-    data.forEach((item) => {
-      document.add({
-        id: item.id,
-        _image: item._image,
-        ageEnroll: item.ageEnroll,
-        cervResult: item.cervResult,
-        colImpression: item.colImpression,
-        dob: item.dob,
-        eTreatEval: item.eTreatEval,
-        hpvResult: item.hpvResult,
-        qcColpoBiopsy: item.qcColpoBiopsy,
-        qcCyto: item.qcCyto
-      })
-    })
+    fetch("/images/hpv-data.json")
+      .then((res) => res.json())
+      .then((r) => {
 
-    console.log(document)
+        setData(r)
+        r.forEach((item) => {
+          document.add({
+            _id: item._id,
+            _image: item._image,
+            ageEnroll: item.ageEnroll,
+            cervResult: item.cervResult,
+            colImpression: item.colImpression,
+            dob: item.dob,
+            eTreatEval: item.eTreatEval,
+            hpvResult: item.hpvResult,
+            qcColpoBiopsy: item.qcColpoBiopsy,
+            qcCyto: item.qcCyto
+          })
+        })
+      })
+
   }, [])
 
   function getPages() {
@@ -59,7 +64,7 @@ export default function Explore() {
     const item = e
 
     const body = {
-      id: item.id,
+      _id: item._id,
       _image: item._image,
       ageEnroll: item.ageEnroll,
       cervResult: item.cervResult,
@@ -73,8 +78,6 @@ export default function Explore() {
 
     setModal((state) => ({ ...state, body: body, open: true }))
   }
-
-  console.log(explore)
 
   function handleSearch(e) {
     e.preventDefault();
@@ -102,12 +105,12 @@ export default function Explore() {
               <Row>
                 {data.map((e) => {
                   return (
-                    (e.id < numCards * page) && (e.id >= numCards * (page - 1)) && <Col className="mb-3" lg={6} xl={4}>
+                    (e._id < numCards * page) && (e._id >= numCards * (page - 1)) && <Col className="mb-3" lg={6} xl={4}>
                       <Card className="shadow" onClick={() => showModal(e)} style={{ cursor: "pointer" }}>
                         <Card.Img height="368px" variant="top" src={e._image} />
                         <Card.Body>
                           <Card.Text className="d-flex justify-content-center">
-                            {"Image " + (e.id + 1)}
+                            {"Image " + (e._id + 1)}
                           </Card.Text>
                         </Card.Body>
                       </Card>

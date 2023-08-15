@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     { title: "Home", path: "/"},
     { title: "View Images", path: "/view" },
     { title: "About", path: "/about" },
+    { title: "Publications", path: "/publications" },
   ]
 
   return (

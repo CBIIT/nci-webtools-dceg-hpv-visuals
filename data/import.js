@@ -25,7 +25,7 @@ const path = require("path");
                 groundTruth = "Pre-Cancer"
         }
 
-        const imagePath = "/images/Ground_Truth/" + groundTruth + "/" + e[0]
+        const imagePath = "/images/" + groundTruth + "/" + e[0]
 
         return({
             _id: index,

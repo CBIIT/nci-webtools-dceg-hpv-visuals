@@ -16,7 +16,7 @@ const path = require("path");
                 groundTruth = "Cancer"
                 break;
             case "GRAY/HPV+":
-                groundTruth = "HPV+"
+                groundTruth = "HPV"
                 break;
             case "NORMAL":
                 groundTruth = "Normal"

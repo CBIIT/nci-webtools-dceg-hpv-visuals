@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import clsx from "clsx";
-import NavbarSearch from "./navbar-search";
 
 function pathsMatch(path1, path2) {
   // remove trailing slash
@@ -34,7 +33,7 @@ export default function AppNavbar({ routes = [] }) {
               </Link>
             ))}
           </Nav>
-          <NavbarSearch />
+
         </Navbar.Collapse>
       </Container>
     </Navbar>

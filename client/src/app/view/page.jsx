@@ -40,7 +40,7 @@ export default function Explore() {
             cervResult: item.cervResult,
             colImpression: item.colImpression,
             dob: item.dob,
-            eTreatEval: item.eTreatEval,
+            detailedGroundTruth: item.detailedGroundTruth,
             hpvResult: item.hpvResult,
             qcColpoBiopsy: item.qcColpoBiopsy,
             qcCyto: item.qcCyto
@@ -70,7 +70,7 @@ export default function Explore() {
       cervResult: item.cervResult,
       colImpression: item.colImpression,
       dob: item.dob,
-      eTreatEval: item.eTreatEval,
+      detailedGroundTruth: item.detailedGroundTruth,
       hpvResult: item.hpvResult,
       qcColpoBiopsy: item.qcColpoBiopsy,
       qcCyto: item.qcCyto

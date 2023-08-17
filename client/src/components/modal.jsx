@@ -1,5 +1,5 @@
 "use client";
-import { Modal, Row, Col, Button } from "react-bootstrap";
+import { Modal, Row, Col, Button, Image } from "react-bootstrap";
 import { useRecoilState } from "recoil";
 import { modalState } from "../app/view/view.state";
 
@@ -33,7 +33,7 @@ export default function ImageModal() {
                 
                 <Row className="mx-0" style={{ backgroundColor: "#20094b" }}>
                     <Col md={12} className="px-0">
-                        <img className="w-100 h-100" src={modal.body?._image} alt={"Image " + modal.body?.id} />
+                        <Image className="w-100 h-100" src={modal.body?._image} alt={"Image " + modal.body?.id} />
                     </Col>
                 </Row>
             </Modal.Body>

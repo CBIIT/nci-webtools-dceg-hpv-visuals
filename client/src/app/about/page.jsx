@@ -9,11 +9,36 @@ export default function About() {
       <Row>
         <Col>
           <article className="shadow p-4 rounded">
-            <h1 className="text-primary h3 mb-4">About HPVAVE</h1>
-            <hr/>
-            <p>
-              Placeholder
-            </p>
+            <h1 className="text-primary h2 mb-4">About HPVAVE</h1>
+            <hr />
+            <h4>Who we are?</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla posuere sollicitudin. Fermentum posuere urna nec tincidunt praesent. Nibh sed pulvinar proin gravida hendrerit lectus. Scelerisque felis imperdiet proin fermentum leo vel. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Ut diam quam nulla porttitor massa id neque aliquam. Ornare lectus sit amet est placerat in egestas.</p>
+          
+            <h4>What are the goals?</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla posuere sollicitudin. Fermentum posuere urna nec tincidunt praesent. Nibh sed pulvinar proin gravida hendrerit lectus. Scelerisque felis imperdiet proin fermentum leo vel. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Ut diam quam nulla porttitor massa id neque aliquam. Ornare lectus sit amet est placerat in egestas.</p>
+          
+            <h4 className="mb-3">Medical Organizations:</h4>
+            <ul>
+              <li><h5>Brazil, Fundação Pswaldo Cruz</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Cambodia, Mercy Medical Center Cambodia</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Dominican Republic, Fred Hutch Cancer Center</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>El Salvador, Basic Health International</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Eswatini, University of KwaZulu-Natal-Oslo University Hospital - Norway BRIGHT Academy, CBTHR, Ugu District, South Africa</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Honduras</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Malawi, Médecins Sans Frontières (Epicentre)</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Nigeria: Obafemi Awolowo University</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+              <li><h5>Tanzania: Queen's University</h5></li>
+              <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
+            </ul>
+            
           </article>
         </Col>
       </Row>

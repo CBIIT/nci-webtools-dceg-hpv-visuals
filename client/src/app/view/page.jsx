@@ -7,8 +7,6 @@ import { Document } from "flexsearch";
 import { exploreState, modalState } from "./view.state";
 import ImageModal from "../../components/modal";
 
-
-
 export default function Explore() {
 
   const [_openSidebar, _setOpenSidebar] = useState(true);
@@ -69,7 +67,6 @@ export default function Explore() {
       ageEnroll: item.ageEnroll,
       cervResult: item.cervResult,
       colImpression: item.colImpression,
-      dob: item.dob,
       detailedGroundTruth: item.detailedGroundTruth,
       hpvResult: item.hpvResult,
       qcColpoBiopsy: item.qcColpoBiopsy,

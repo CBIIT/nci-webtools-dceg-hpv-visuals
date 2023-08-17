@@ -9,7 +9,7 @@ export default function ImageModal() {
     function hideModal() {
         setModal((state) => ({ ...state, open: false }));
     }
-    console.log(modal.body._image.split("/").pop().split(".")[0])
+
     return (
         <Modal show={modal.open} size="xl" onHide={hideModal}>
             <Modal.Header closeButton>
@@ -17,7 +17,7 @@ export default function ImageModal() {
                     <Modal.Title className="mr-auto">
                         <div>Image {modal.body._id + 1}</div>
                     </Modal.Title>
-                    <a className="btn btn-primary mx-3" href={modal.body._image} download={modal.body._image.split("/").pop()}>Download</a>
+                    <a className="btn btn-primary mx-3" href={modal.body._image ? modal.body._image : ""} download={modal.body._image ? modal.body._image.split("/").pop() : ""}>Download</a>
                     </div>
             </Modal.Header>
             <Modal.Body className="px-0 pb-0">
@@ -33,7 +33,7 @@ export default function ImageModal() {
                 
                 <Row className="mx-0" style={{ backgroundColor: "#20094b" }}>
                     <Col md={12} className="px-0">
-                        <img className="w-100 h-100" src={modal.body._image} alt={"Image " + modal.body.id} />
+                        <img className="w-100 h-100" src={modal.body?._image} alt={"Image " + modal.body?.id} />
                     </Col>
                 </Row>
             </Modal.Body>

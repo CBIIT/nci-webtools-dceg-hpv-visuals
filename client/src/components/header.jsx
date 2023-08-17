@@ -21,7 +21,7 @@ export default function Header({ routes = [] }) {
         <a className="d-inline-block col-md-9" rel="noopener noreferrer" href="https://www.cancer.gov/">
           <img src="/assets/nci-dceg-logo.svg" height="60" alt="National Cancer Institute Logo" className="mw-100" />
         </a>
-        <div class="d-flex col-lg-3 mb-2 pr-2" style={{ width: "auto !important" }}>
+        <div className="d-flex col-lg-3 mb-2 pr-2" style={{ width: "auto !important" }}>
           <input
             id="doc_search"
             onKeyDown={(e) => handleKey(e)}

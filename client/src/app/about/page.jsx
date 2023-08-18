@@ -35,7 +35,7 @@ export default function About() {
               <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
               <li><h5>Nigeria: Obafemi Awolowo University</h5></li>
               <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
-              <li><h5>Tanzania: Queen's University</h5></li>
+              <li><h5>Tanzania: Queen&apos;s University</h5></li>
               <div className="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique magna sit amet purus gravida.</div>
             </ul>
             

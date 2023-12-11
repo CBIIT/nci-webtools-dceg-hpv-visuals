@@ -14,17 +14,15 @@ export default function Home() {
       <div className="bg-primary-dark">
         <div className="cover-image">
           <Container>
-            <Row>
-              <Col md={6}>
-                <div className="d-flex h-100 align-items-center py-5">
-                  <div>
-                    <h1 className="font-title text-light mb-3">HPV Visuals</h1>
-                    <hr className="border-white" />
-                    <p className="lead text-light">
-                      (H2) HPV-Automated Visual Evaluation (PAVE)
-                      Protocol:Validating a Novel Cervical Screening Strategy
-                    </p>
-                  </div>
+            <Row className="py-5">
+              <Col className="d-flex align-items-center justify-content-center">
+                <div className="text-center">
+                  <h1 className="font-title text-light mb-3">HPV Visuals</h1>
+                  <hr className="border-white" />
+                  <p className="lead text-light">
+                    (H2) HPV-Automated Visual Evaluation (PAVE) Protocol:
+                    Validating a Novel Cervical Screening Strategy
+                  </p>
                 </div>
               </Col>
             </Row>
@@ -98,12 +96,19 @@ export default function Home() {
           <Row className="mt-3">
             <Col>
               <div>
-                This website describes PAVE, Human Papillomavirus Automated
-                Visual Evaluation, (PAVE) a protocol to evaluate a novel
-                cervical screening and triage protocol for resource-limited
-                settings, including areas with high HIV prevalence. PAVE is part
-                of a global strategy to reduce cervical cancer burden and part
-                of the NCI Cancer Moonshot.
+                This website describes PAVE,
+                <a
+                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491363/"
+                  target="_blank"
+                >
+                  {" "}
+                  Human Papillomavirus Automated Visual Evaluation, (PAVE) a
+                  protocol to evaluate a novel cervical screening and triage
+                  protocol
+                </a>{" "}
+                for resource-limited settings, including areas with high HIV
+                prevalence. PAVE is part of a global strategy to reduce cervical
+                cancer burden and part of the NCI Cancer Moonshot.
               </div>
               <div>
                 This website was developed for researchers, public health

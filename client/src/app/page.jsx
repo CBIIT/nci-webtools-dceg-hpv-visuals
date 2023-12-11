@@ -34,13 +34,13 @@ export default function Home() {
 
       <div className="bg-light my-5">
         <Container>
-          <Row>
-            <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <Card className="d-flex flex-column h-100">
+          <Row className="justify-content-center">
+            <Col xs={12} md={4} className="mb-5 mb-md-0 d-flex">
+              <Card className="w-100 d-flex flex-column h-100">
                 <div className="card-middle-top-circle">
                   <BsFillQuestionCircleFill size={30} color="#fff" />
                 </div>
-                <Card.Body className="text-center flex-grow-1">
+                <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                   <div className="mb-2">
                     <h2 className="h4">
                       Browse cervical Images and Quiz Yourself
@@ -49,45 +49,45 @@ export default function Home() {
                   <Button
                     href="#"
                     variant="primary"
-                    className="w-75 mx-auto mt-2 mt-md-auto"
+                    className="w-75 mx-auto mt-2"
                   >
                     Explore
                   </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <Card className="d-flex flex-column h-100">
+            <Col xs={12} md={4} className="mb-5 mb-md-0 d-flex">
+              <Card className="w-100 d-flex flex-column h-100">
                 <div className="card-middle-top-circle">
                   <BsBook size={30} color="#fff" />
                 </div>
-                <Card.Body className="text-center flex-grow-1">
+                <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                   <div className="mb-2">
                     <h2 className="h4">Learn about the PAVE Protocol</h2>
                   </div>
                   <Button
                     href="#"
                     variant="primary"
-                    className="w-75 mx-auto mt-2 mt-md-auto"
+                    className="w-75 mx-auto mt-2"
                   >
                     Explore
                   </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <Card className="d-flex flex-column h-100">
+            <Col xs={12} md={4} className="mb-5 mb-md-0 d-flex">
+              <Card className="w-100 d-flex flex-column h-100">
                 <div className="card-middle-top-circle">
                   <BsLightningFill size={30} color="#fff" />
                 </div>
-                <Card.Body className="text-center flex-grow-1">
+                <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                   <div className="mb-2">
                     <h2 className="h4">Lessons Learned</h2>
                   </div>
                   <Button
                     href="#"
                     variant="primary"
-                    className="w-75 mx-auto mt-2 mt-md-auto"
+                    className="w-75 mx-auto mt-2"
                   >
                     Explore
                   </Button>

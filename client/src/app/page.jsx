@@ -19,10 +19,12 @@ export default function Home() {
                 <div className="text-center">
                   <h1 className="font-title text-light mb-3">HPV Visuals</h1>
                   <hr className="border-white" />
-                  <p className="lead text-light">
-                    (H2) HPV-Automated Visual Evaluation (PAVE) Protocol:
-                    Validating a Novel Cervical Screening Strategy
-                  </p>
+                  <h2>
+                    <p className="lead text-light">
+                      HPV-Automated Visual Evaluation (PAVE) Protocol:
+                      Validating a Novel Cervical Screening Strategy
+                    </p>
+                  </h2>
                 </div>
               </Col>
             </Row>

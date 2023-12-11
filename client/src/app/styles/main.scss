@@ -2,3 +2,23 @@
 @import "bootstrap/scss/bootstrap";
 @import "./bootstrap-theme.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+.card-middle-top-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  background-color: black;
+  border-radius: 50%;
+  margin-top: -40px; /* Half of the circle height to make it half inside the card */
+  margin-left: 50%; /* Center the circle horizontally */
+  transform: translateX(-50%); /* Adjust to center the circle properly */
+}
+
+/* Optional: Center the circle horizontally within the card header */
+.card-header.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

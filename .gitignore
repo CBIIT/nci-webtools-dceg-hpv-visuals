@@ -1,7 +1,9 @@
 **/Cancer
 **/HPV
 **/Normal
+**/HPV+
 **/Pre-Cancer
+**/Ground_Truth
 ALTS_image_list_ground_truth.csv
 ALTS_images_covariate_data_formatted_20230726.xlsx
 /data/node_modules

@@ -47,7 +47,7 @@ export default function Home() {
                     </h2>
                   </div>
                   <Button
-                    href="#"
+                    href="/view"
                     variant="primary"
                     className="w-75 mx-auto mt-2"
                   >
@@ -66,7 +66,7 @@ export default function Home() {
                     <h2 className="h4">Learn about the PAVE Protocol</h2>
                   </div>
                   <Button
-                    href="#"
+                    href="/learn-about-pave"
                     variant="primary"
                     className="w-75 mx-auto mt-2"
                   >
@@ -85,7 +85,7 @@ export default function Home() {
                     <h2 className="h4">Lessons Learned</h2>
                   </div>
                   <Button
-                    href="#"
+                    href="/publications"
                     variant="primary"
                     className="w-75 mx-auto mt-2"
                   >

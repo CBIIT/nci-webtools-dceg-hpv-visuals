@@ -8,28 +8,34 @@ import { exploreState, modalState } from "./view.state";
 import ImageModal from "../../components/modal";
 
 export default function Explore() {
-
   const [_openSidebar, _setOpenSidebar] = useState(true);
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1);
   const [explore, setExplore] = useRecoilState(exploreState);
-  const [modal, setModal] = useRecoilState(modalState)
+  const [modal, setModal] = useRecoilState(modalState);
   const [numCards, setNumCards] = useState(12); //Number of cards per page
   const [data, setData] = useState([]);
 
   const document = new Document({
     document: {
-      index: ["imageId", "detailedGroundTruth", "ageEnroll", "cervResult", "colImpression", "hpvResult", "qcColpoBiopsy", "qcCyto"],
-      store: true
-    }
-  })
+      index: [
+        "imageId",
+        "detailedGroundTruth",
+        "ageEnroll",
+        "cervResult",
+        "colImpression",
+        "hpvResult",
+        "qcColpoBiopsy",
+        "qcCyto",
+      ],
+      store: true,
+    },
+  });
 
   useEffect(() => {
-
     fetch("/images/hpv-data.json")
       .then((res) => res.json())
       .then((r) => {
-
-        setData(r)
+        setData(r);
         r.forEach((item) => {
           document.add({
             _id: item._id,
@@ -41,25 +47,23 @@ export default function Explore() {
             detailedGroundTruth: item.detailedGroundTruth,
             hpvResult: item.hpvResult,
             qcColpoBiopsy: item.qcColpoBiopsy,
-            qcCyto: item.qcCyto
-          })
-        })
-      })
-
-  }, [])
+            qcCyto: item.qcCyto,
+          });
+        });
+      });
+  }, []);
 
   function getPages() {
-    const paginationItems = []
+    const paginationItems = [];
 
     for (var i = 1; i <= Math.ceil(data.length / numCards); i++) {
-      paginationItems.push(i)
+      paginationItems.push(i);
     }
     return paginationItems;
   }
 
-
   function showModal(e) {
-    const item = e
+    const item = e;
 
     const body = {
       _id: item._id,
@@ -70,18 +74,17 @@ export default function Explore() {
       detailedGroundTruth: item.detailedGroundTruth,
       hpvResult: item.hpvResult,
       qcColpoBiopsy: item.qcColpoBiopsy,
-      qcCyto: item.qcCyto
-    }
+      qcCyto: item.qcCyto,
+    };
 
-    setModal((state) => ({ ...state, body: body, open: true }))
+    setModal((state) => ({ ...state, body: body, open: true }));
   }
 
   function handleSearch(e) {
     e.preventDefault();
 
-    console.log(document.search(e.target.value, { enrich: true }))
+    console.log(document.search(e.target.value, { enrich: true }));
   }
-
 
   return (
     <>
@@ -100,39 +103,67 @@ export default function Explore() {
               </Form.Group>*/}
               <hr />
               <Row>
+                <Col>
+                  <div className="pb-3">
+                    The images below include information on HPV, cytology, and
+                    histology diagnoses. They allow you to test the accuracy of
+                    your visual diagnosis. Try to determine the diagnosis before
+                    clicking on the image to see the results.{" "}
+                  </div>
+                </Col>
+              </Row>
+              <Row>
                 {data.map((e) => {
                   return (
-                    (e._id < numCards * page) && (e._id >= numCards * (page - 1)) && <Col className="mb-3" lg={6} xl={4}>
-                      <Card className="shadow" onClick={() => showModal(e)} style={{ cursor: "pointer" }}>
-                        <Card.Img height="368px" variant="top" src={e._image} />
-                        <Card.Body>
-                          <Card.Text className="d-flex justify-content-center">
-                            {"Image " + (e._id + 1)}
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  )
+                    e._id < numCards * page &&
+                    e._id >= numCards * (page - 1) && (
+                      <Col className="mb-3" lg={6} xl={4}>
+                        <Card
+                          className="shadow"
+                          onClick={() => showModal(e)}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <Card.Img
+                            height="368px"
+                            variant="top"
+                            src={e._image}
+                          />
+                          <Card.Body>
+                            <Card.Text className="d-flex justify-content-center">
+                              {"Image " + (e._id + 1)}
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    )
+                  );
                 })}
               </Row>
 
               <Pagination className="d=flex justify-content-end">
-                <Pagination.Prev onClick={() => page > 1 ? setPage(page - 1) : ""} />
+                <Pagination.Prev
+                  onClick={() => (page > 1 ? setPage(page - 1) : "")}
+                />
                 {getPages().map((e) => {
                   return (
-                    <Pagination.Item key={e} active={e === page} onClick={() => setPage(e)}>
+                    <Pagination.Item
+                      key={e}
+                      active={e === page}
+                      onClick={() => setPage(e)}
+                    >
                       {e}
                     </Pagination.Item>
-                  )
+                  );
                 })}
-                <Pagination.Next onClick={() => page < getPages().length ? setPage(page + 1) : ""} />
+                <Pagination.Next
+                  onClick={() =>
+                    page < getPages().length ? setPage(page + 1) : ""
+                  }
+                />
               </Pagination>
-
             </article>
           </Col>
-
         </Row>
-
       </Container>
     </>
   );

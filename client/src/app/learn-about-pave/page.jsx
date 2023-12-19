@@ -49,12 +49,7 @@ export default function About() {
                   className="img-fluid mx-auto"
                 />
                 <figcaption className="mt-2">
-                  This figure depicts the steps that a patient would experience.
-                  First, HPV testing. Patients testing negative are reassured.
-                  Patients testing HPV positive undergo Automated Visual
-                  Evaluation (AVE) and AVE information is combined with HPV
-                  genotyping information to determine the risk of precancer.
-                  Patients are then directed to treatment or surveillance]
+                  Participant experience map.
                 </figcaption>
               </figure>
             </div>

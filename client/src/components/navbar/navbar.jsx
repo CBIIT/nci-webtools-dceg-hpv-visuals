@@ -15,7 +15,6 @@ function pathsMatch(path1, path2) {
 }
 
 function renderRoutes(routes) {
-  console.log("routes ", routes);
   const pathName = usePathname();
 
   const renderSubMenu = (subRoutes) => (

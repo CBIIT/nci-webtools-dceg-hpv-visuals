@@ -16,8 +16,11 @@ export default function RootLayout({ children }) {
   const routes = [
     { title: "Home", path: "/" },
     { title: "View Images", path: "/view" },
-    { title: "Learn about PAVE", path: "/learn-about-pave" },
-    { title: "Testing", path: "/learn-about-pave/testing" },
+    {
+      title: "Learn about PAVE",
+      path: "/learn-about-pave",
+      subRoutes: [{ title: "Testing", path: "/learn-about-pave/testing" }],
+    },
     { title: "Lessons Learned /Publications", path: "/publications" },
   ];
 

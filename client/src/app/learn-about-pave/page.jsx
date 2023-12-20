@@ -45,7 +45,7 @@ export default function About() {
             <div className="d-flex justify-content-center mt-3 mb-3">
               <figure className="text-center">
                 <Image
-                  src="/images/learn-about-map.png"
+                  src="/images/learn-about-map.jpg"
                   alt="This figure depicts the steps that a patient would experience. First, HPV testing. Patients testing negative are reassured. Patients testing HPV positive undergo Automated Visual Evaluation (AVE) and AVE information is combined with HPV genotyping information to determine the risk of precancer. Patients are then directed to treatment or surveillance]"
                   width={500}
                   height={300}
@@ -204,7 +204,7 @@ export default function About() {
             <div className="d-flex justify-content-center mt-3 mb-3">
               <figure className="text-center">
                 <Image
-                  src="/images/learn-about-worldmap.png"
+                  src="/images/learn-about-worldmap.jpg"
                   alt="Map of the world showing the geographical locations of PAVE member sites."
                   width={500}
                   height={300}

@@ -119,7 +119,8 @@ export default function Home() {
                 with limited resources. This site describes the science
                 underlying the PAVE strategy, descriptions of participating
                 partners, and an annotated bibliography. For clinicians, there
-                is also an image library to test your visual diagnostic skills.
+                is also an <a href="/view"> image library</a> to test your
+                visual diagnostic skills.
               </div>
             </Col>
           </Row>

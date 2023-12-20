@@ -3,10 +3,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Table } from "react-bootstrap";
+import Image from "next/image"; // Import the Image component from next/image
 
 export default function About() {
   return (
-    <Container className="py-5">
+    <Container className="py-3">
       <article className="shadow p-4 rounded">
         <h1 className="text-primary mb-3">Learn about the PAVE Protocol </h1>
         <hr />
@@ -43,9 +44,12 @@ export default function About() {
           <Col xs={12}>
             <div className="d-flex justify-content-center mt-3 mb-3">
               <figure className="text-center">
-                <img
+                <Image
                   src="/images/learn-about-map.png"
                   alt="This figure depicts the steps that a patient would experience. First, HPV testing. Patients testing negative are reassured. Patients testing HPV positive undergo Automated Visual Evaluation (AVE) and AVE information is combined with HPV genotyping information to determine the risk of precancer. Patients are then directed to treatment or surveillance]"
+                  width={500}
+                  height={300}
+                  layout="responsive"
                   className="img-fluid mx-auto"
                 />
                 <figcaption className="mt-2">
@@ -199,9 +203,12 @@ export default function About() {
           <Col xs={12}>
             <div className="d-flex justify-content-center mt-3 mb-3">
               <figure className="text-center">
-                <img
+                <Image
                   src="/images/learn-about-worldmap.png"
                   alt="Map of the world showing the geographical locations of PAVE member sites."
+                  width={500}
+                  height={300}
+                  layout="responsive"
                   className="img-fluid"
                 />
                 <figcaption className="mt-2">

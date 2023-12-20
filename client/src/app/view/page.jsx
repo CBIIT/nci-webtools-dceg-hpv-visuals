@@ -89,11 +89,11 @@ export default function Explore() {
   return (
     <>
       <ImageModal />
-      <Container className="py-5">
+      <Container className="py-3">
         <Row>
           <Col>
             <article className="shadow px-3 py-2 rounded">
-              <h1 className="text-primary h3 mb-4">View Images</h1>
+              <h1 className="text-primary mb-4 mt-2">View Images</h1>
               {/*<Form.Group className="mb-3" controlId="ageEnroll">
                 <Form.Label >Search</Form.Label>
                 <Form.Control

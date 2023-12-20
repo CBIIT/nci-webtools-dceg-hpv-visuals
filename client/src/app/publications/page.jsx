@@ -29,15 +29,15 @@ export default function About() {
                 >
                   Use of risk-based cervical screening programs in
                   resource-limited settings.
-                </a>{" "}
+                </a>
                 Perkins RB, Smith DL, Jeronimo J, Campos NG, Gage JC, Hansen N,
                 Rodriguez AC, Cheung LC, Egemen D, Befano B, Novetsky AP,
                 Martins S, Kalpathy-Cramer J, Inturrisi F, Ahmed SR, Marcus J,
-                Wentzensen N, de Sanjose S, Schiffman M.{" "}
-                <span className="green">
+                Wentzensen N, de Sanjose S, Schiffman M.
+                <p className="green">
                   Cancer Epidemiol. 2023 Jun;84:102369. doi:
                   10.1016/j.canep.2023.102369. Epub 2023 Apr 25.PMID: 37105017
-                </span>
+                </p>
               </div>
             </Col>
 
@@ -64,11 +64,11 @@ export default function About() {
                 >
                   Design of the HPV-Automated Visual Evaluation (PAVE) Study:
                   Validating a Novel Cervical Screening Strategy.
-                </a>{" "}
+                </a>
                 de Sanjosé S, Perkins RB, Campos NG, Inturrisi F, Egemen D,
                 Befano B, Rodriguez AC, Jerónimo J, Cheung LC, Desai K, Han P,
                 Novetsky AP, Ukwuani A, Marcus J, Ahmed SR, Wentzensen N,
-                Kalpathy-Cramer J, Schiffman M; PAVE Study Group.{" "}
+                Kalpathy-Cramer J, Schiffman M; PAVE Study Group.
                 <span className="green">
                   medRxiv. 2023 Oct 23:2023.08.30.23294826. doi:
                   10.1101/2023.08.30.23294826. Preprint.PMID: 37693492
@@ -93,7 +93,7 @@ export default function About() {
                   information at the time of cervical examination. The PAVE
                   strategy allows risk-based management using country-specific
                   protocols and focuses treatment resources on those most likely
-                  to develop cancer.{" "}
+                  to develop cancer.
                 </b>
               </div>
             </Col>
@@ -113,7 +113,7 @@ export default function About() {
                 C, Einstein MH, Oyinloye T, Litwin TR, Horning M, Olanrewaju FO,
                 Oripelaye MM, Afolabi E, Odujoko OO, Castle PE, Antani S, Wilson
                 B, Hu L, Mehanian C, Demarco M, Gage JC, Xue Z, Long LR, Cheung
-                L, Egemen D, Wentzensen N, Schiffman M.{" "}
+                L, Egemen D, Wentzensen N, Schiffman M.
                 <span className="green">
                   Infect Agent Cancer. 2020 Oct 14;15:60. doi:
                   10.1186/s13027-020-00324-5. eCollection 2020.PMID: 33072178
@@ -240,9 +240,9 @@ export default function About() {
                   href="https://pubmed.ncbi.nlm.nih.gov/34800038/"
                   target="_blank"
                 >
-                  The development of "automated visual evaluation" for cervical
-                  cancer screening: The promise and challenges in adapting
-                  deep-learning for clinical testing: Interdisciplinary
+                  The development of &quot; automated visual evaluation&quot;
+                  for cervical cancer screening: The promise and challenges in
+                  adapting deep-learning for clinical testing: Interdisciplinary
                   principles of automated visual evaluation in cervical
                   screening.
                 </a>{" "}
@@ -439,7 +439,7 @@ export default function About() {
                   and ordinal models leading to an average reduction of the 95%
                   limits of agreement by 16% points and of the class
                   disagreement rate by 7% points. Both classification accuracy
-                  and repeatability are improved in most settings.{" "}
+                  and repeatability are improved in most settings.
                 </b>
               </div>
             </Col>
@@ -475,9 +475,10 @@ export default function About() {
                 <b>
                   If images are not of adequate quality, an AI algorithm may not
                   function or may provide inaccurate outputs. This study
-                  classified images into four quality categories ("unusable",
-                  "unsatisfactory", "limited", and "evaluable") and improved the
-                  quality classification performance by automatically
+                  classified images into four quality categories
+                  (&quot;unusable&quot;, &quot;unsatisfactory&quot;,
+                  &quot;limited&quot;, and &quot;evaluable&quot;) and improved
+                  the quality classification performance by automatically
                   identifying mislabeled and overly ambiguous images. Testing on
                   a dataset of 87,420 images obtained from 14,183 patients from
                   diverse studies and geographic regions worldwide.

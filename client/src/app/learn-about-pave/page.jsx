@@ -89,7 +89,7 @@ export default function About() {
         <Row>
           <Col xs={12}>
             <div className="">
-              <Table className="table table-bordered">
+              <Table bordered hover>
                 <thead className="thead-dark">
                   <tr>
                     <th scope="col">Country</th>

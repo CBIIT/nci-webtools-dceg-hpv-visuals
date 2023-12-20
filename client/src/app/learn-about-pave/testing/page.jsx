@@ -3,6 +3,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Table } from "react-bootstrap";
+import Image from "next/image"; // Import the Image component from next/image
+import genderImg from "../../../../public/images/gender.png";
+import AveAlgorithm from "../../../../public/images/AVE-algorithm.png";
 
 export default function About() {
   return (
@@ -43,8 +46,8 @@ export default function About() {
             <Col xs={12}>
               <div className="d-flex justify-content-center mt-3 mb-3">
                 <figure className="text-center">
-                  <img
-                    src="/images/gender.png"
+                  <Image
+                    src={genderImg}
                     alt="In a hypothetical population of 100 individuals, with clinician-collected sampling, 100 women require pelvic exams to detect 15 women testing HPV+ and 3 with precancer. Using self-sampling, only the 15 HPV+ women require pelvic exams."
                     className="img-fluid mx-auto"
                   />
@@ -119,8 +122,8 @@ export default function About() {
             <Col xs={12}>
               <div className="d-flex justify-content-center mt-3 mb-3">
                 <figure className="text-center">
-                  <img
-                    src="/images/AVE-algorithm.png"
+                  <Image
+                    src={AveAlgorithm}
                     alt="The top of this figure depicts photographs of the cervix ranging from normal to precancer. The bottom depicts the results of the AVE algorithms, classified as normal, indeterminate, and precancer+. "
                     className="img-fluid mx-auto"
                   />

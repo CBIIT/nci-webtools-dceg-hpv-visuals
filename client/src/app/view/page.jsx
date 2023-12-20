@@ -93,7 +93,7 @@ export default function Explore() {
         <Row>
           <Col>
             <article className="shadow px-3 py-2 rounded">
-              <h1 className="text-primary mb-4 mt-2">View Images</h1>
+              <h1 className="text-primary mb-3">View Images</h1>
               {/*<Form.Group className="mb-3" controlId="ageEnroll">
                 <Form.Label >Search</Form.Label>
                 <Form.Control
@@ -101,17 +101,16 @@ export default function Explore() {
                   onChange={handleSearch}
                 />
               </Form.Group>*/}
+
+              <div className="pb-0">
+                The images below include information on HPV, cytology, and
+                histology diagnoses. They allow you to test the accuracy of your
+                visual diagnosis. Try to determine the diagnosis before clicking
+                on the image to see the results.{" "}
+              </div>
+
               <hr />
-              <Row>
-                <Col>
-                  <div className="pb-3">
-                    The images below include information on HPV, cytology, and
-                    histology diagnoses. They allow you to test the accuracy of
-                    your visual diagnosis. Try to determine the diagnosis before
-                    clicking on the image to see the results.{" "}
-                  </div>
-                </Col>
-              </Row>
+
               <Row>
                 {data.map((e) => {
                   return (

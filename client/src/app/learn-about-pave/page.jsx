@@ -4,8 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Table } from "react-bootstrap";
 import Image from "next/image"; // Import the Image component from next/image
-import learnAboutMapImg from "../../../public/images/learn-about-map.jpg";
-import learnAboutWorldMapImg from "../../../public/images/learn-about-worldmap.jpg";
+import learnAboutMapImg from "../../../public/images/learn-about-map.png";
+import learnAboutWorldMapImg from "../../../public/images/learn-about-worldmap.png";
 
 export default function About() {
   return (

@@ -38,10 +38,10 @@ export default function About() {
                 Rodriguez AC, Cheung LC, Egemen D, Befano B, Novetsky AP,
                 Martins S, Kalpathy-Cramer J, Inturrisi F, Ahmed SR, Marcus J,
                 Wentzensen N, de Sanjose S, Schiffman M.
-                <p className="green">
+                <span className="green">
                   Cancer Epidemiol. 2023 Jun;84:102369. doi:
                   10.1016/j.canep.2023.102369. Epub 2023 Apr 25.PMID: 37105017
-                </p>
+                </span>
               </div>
             </Col>
             <Col xs={12}>
@@ -68,7 +68,9 @@ export default function About() {
                   Design of the HPV-Automated Visual Evaluation (PAVE) Study:
                   Validating a Novel Cervical Screening Strategy.
                 </a>
-                de Sanjosé S, Perkins RB, Campos NG, Inturrisi F, Egemen D,
+              </div>
+              <div>
+                De Sanjosé S, Perkins RB, Campos NG, Inturrisi F, Egemen D,
                 Befano B, Rodriguez AC, Jerónimo J, Cheung LC, Desai K, Han P,
                 Novetsky AP, Ukwuani A, Marcus J, Ahmed SR, Wentzensen N,
                 Kalpathy-Cramer J, Schiffman M; PAVE Study Group.
@@ -112,6 +114,8 @@ export default function About() {
                   screening in Nigeria: self-sampled HPV testing paired with
                   visual triage.
                 </a>
+              </div>
+              <div>
                 Desai KT, Ajenifuja KO, Banjo A, Adepiti CA, Novetsky A, Sebag
                 C, Einstein MH, Oyinloye T, Litwin TR, Horning M, Olanrewaju FO,
                 Oripelaye MM, Afolabi E, Odujoko OO, Castle PE, Antani S, Wilson
@@ -154,6 +158,9 @@ export default function About() {
                   Redesign of a rapid, low-cost HPV typing assay to support
                   risk-based cervical screening and management.
                 </a>{" "}
+              </div>
+              <div>
+                {" "}
                 Desai KT, Adepiti CA, Schiffman M, Egemen D, Gage JC, Wentzensen
                 N, de Sanjose S, Burk RD, Ajenifuja KO.{" "}
                 <span className="green">
@@ -188,6 +195,8 @@ export default function About() {
                   A rapid HPV typing assay to support global cervical cancer
                   screening and risk-based management: A cross-sectional study.
                 </a>
+              </div>
+              <div>
                 Inturrisi F, de Sanjosé S, Desai KT, Dagnall C, Egemen D, Befano
                 B, Rodriguez AC, Jeronimo JA, Zuna RE, Hoffman A, Farhat Nozzari
                 S, Walker JL, Perkins RB, Wentzensen N, Palefsky JM, Schiffman
@@ -248,7 +257,9 @@ export default function About() {
                   adapting deep-learning for clinical testing: Interdisciplinary
                   principles of automated visual evaluation in cervical
                   screening.
-                </a>{" "}
+                </a>
+              </div>
+              <div>
                 Desai KT, Befano B, Xue Z, Kelly H, Campos NG, Egemen D, Gage
                 JC, Rodriguez AC, Sahasrabuddhe V, Levitz D, Pearlman P,
                 Jeronimo J, Antani S, Schiffman M, de Sanjosé S.{" "}
@@ -288,7 +299,9 @@ export default function About() {
                 >
                   AI-based image analysis in clinical testing: lessons from
                   cervical cancer screening.
-                </a>{" "}
+                </a>
+              </div>
+              <div>
                 Egemen D, Perkins RB, Cheung LC, Befano B, Rodriguez AC, Desai
                 K, Lemay A, Ahmed SR, Antani S, Jeronimo J, Wentzensen N,
                 Kalpathy-Cramer J, De Sanjose S, Schiffman M.J.{" "}
@@ -326,6 +339,9 @@ export default function About() {
                   including HPV genotyping and artificial intelligence
                   (AI)-based automated visual evaluation.
                 </a>{" "}
+              </div>
+              <div>
+                {" "}
                 Parham GP, Egemen D, Befano B, Mwanahamuntu MH, Rodriguez AC,
                 Antani S, Chisele S, Munalula MK, Kaunga F, Musonda F, Malyangu
                 E, Shibemba AL, de Sanjose S, Schiffman M, Sahasrabuddhe VV.{" "}

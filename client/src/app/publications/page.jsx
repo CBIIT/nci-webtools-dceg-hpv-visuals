@@ -30,6 +30,10 @@ export default function About() {
                   Use of risk-based cervical screening programs in
                   resource-limited settings.
                 </a>
+              </div>
+            </Col>
+            <Col xs={12}>
+              <div>
                 Perkins RB, Smith DL, Jeronimo J, Campos NG, Gage JC, Hansen N,
                 Rodriguez AC, Cheung LC, Egemen D, Befano B, Novetsky AP,
                 Martins S, Kalpathy-Cramer J, Inturrisi F, Ahmed SR, Marcus J,
@@ -40,7 +44,6 @@ export default function About() {
                 </p>
               </div>
             </Col>
-
             <Col xs={12}>
               <div>
                 <b>

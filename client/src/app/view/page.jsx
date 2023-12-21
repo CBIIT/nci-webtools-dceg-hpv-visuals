@@ -126,6 +126,7 @@ export default function Explore() {
                             height="368px"
                             variant="top"
                             src={e._image}
+                            alt={`Image ${e._id + 1}`}
                           />
                           <Card.Body>
                             <Card.Text className="d-flex justify-content-center">

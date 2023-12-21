@@ -164,7 +164,7 @@ export default function About() {
             <Table bordered hover>
               <thead>
                 <tr>
-                  <th></th>
+                  <th className="visually-hidden no-top-border">placeholder</th>
                   <th colSpan="3" className="text-center">
                     AVE Classification
                   </th>

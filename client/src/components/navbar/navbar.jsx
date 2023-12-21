@@ -14,10 +14,8 @@ function pathsMatch(path1, path2) {
   return path1 === path2;
 }
 
-function renderRoutes(routes) {
-  const pathName = usePathname();
-
-  const renderSubMenu = (subRoutes) => (
+function renderSubMenu(subRoutes, pathName) {
+  return (
     <NavDropdown.Menu>
       {subRoutes.map((subRoute) => (
         <NavDropdown.Item
@@ -31,6 +29,9 @@ function renderRoutes(routes) {
       ))}
     </NavDropdown.Menu>
   );
+}
+
+function renderRoutes({ routes, pathName }) {
   return routes.map((route) => {
     if (route.subRoutes) {
       return (
@@ -62,7 +63,7 @@ function renderRoutes(routes) {
           </div>
 
           {route.subRoutes.some((subRoute) => subRoute.subRoutes) &&
-            renderSubMenu(route.subRoutes)}
+            renderSubMenu(route.subRoutes, pathName)}
         </NavDropdown>
       );
     } else {
@@ -123,7 +124,7 @@ export default function AppNavbar({ routes = [] }) {
                 {route.title}
               </Link>
             ))} */}
-            {renderRoutes(routes)}
+            {renderRoutes({ routes, pathName })}
           </Nav>
         </Navbar.Collapse>
       </Container>

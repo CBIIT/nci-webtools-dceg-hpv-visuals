@@ -31,14 +31,32 @@ function renderSubMenu(subRoutes, pathName) {
   );
 }
 
+function renderMenuRoutes(menuRoutes, pathName) {
+  return (
+    <NavDropdown.Menu>
+      {menuRoutes.map((subRoute) => (
+        <NavDropdown.Item
+          key={subRoute.path}
+          className={clsx(pathName === subRoute.path && "active", "nav-link")}
+        >
+          <Link href={subRoute.path} passHref>
+            {subRoute.title}
+          </Link>
+        </NavDropdown.Item>
+      ))}
+    </NavDropdown.Menu>
+  );
+}
+
 function renderRoutes({ routes, pathName }) {
   return routes.map((route) => {
     if (route.subRoutes) {
       return (
         <NavDropdown
           title={route.title}
-          id={`nav-dropdown-${route.title.toLowerCase()}`}
+          id={`nav-dropdown-${route.path}`}
           key={route.path}
+          aria-labelledby={`nav-dropdown-label-${route.path}`} // Add a label ID
         >
           <NavDropdown.Item className="nav-link">
             <Link href={route.path} passHref>
@@ -63,6 +81,34 @@ function renderRoutes({ routes, pathName }) {
           </div>
 
           {route.subRoutes.some((subRoute) => subRoute.subRoutes) &&
+            renderSubMenu(route.subRoutes, pathName)}
+        </NavDropdown>
+      );
+    } else if (route.menuRoutes) {
+      return (
+        <NavDropdown
+          title={route.title}
+          id={`nav-dropdown-${route.path}`}
+          key={route.path}
+          aria-labelledby={`nav-dropdown-label-${route.path}`} // Add a label ID
+        >
+          <div>
+            {route.menuRoutes.map((subRoute) => (
+              <NavDropdown.Item
+                key={subRoute.path}
+                className={clsx(
+                  pathName === subRoute.path && "active",
+                  "nav-link"
+                )}
+              >
+                <Link href={subRoute.path} passHref>
+                  {subRoute.title}
+                </Link>
+              </NavDropdown.Item>
+            ))}
+          </div>
+
+          {route.menuRoutes.some((subRoute) => subRoute.subRoutes) &&
             renderSubMenu(route.subRoutes, pathName)}
         </NavDropdown>
       );

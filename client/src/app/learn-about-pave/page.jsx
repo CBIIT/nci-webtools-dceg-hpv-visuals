@@ -55,7 +55,7 @@ export default function About() {
                   className="img-fluid mx-auto"
                 />
                 <figcaption className="mt-2">
-                  Participant experience map.
+                  <b>Participant experience map.</b>
                 </figcaption>
               </figure>
             </div>
@@ -214,7 +214,7 @@ export default function About() {
                   className="img-fluid"
                 />
                 <figcaption className="mt-2">
-                  Map of the world showing PAVE sites
+                  <b>Map of the world showing PAVE sites</b>
                 </figcaption>
               </figure>
             </div>

@@ -52,9 +52,11 @@ export default function About() {
                     className="img-fluid mx-auto"
                   />
                   <figcaption className="mt-2">
-                    Number of women undergoing pelvic exams to detect precancer
-                    in a clinician-collected sampling compared to self-sampling
-                    scenario
+                    <b>
+                      Number of women undergoing pelvic exams to detect
+                      precancer in a clinician-collected sampling compared to
+                      self-sampling scenario
+                    </b>
                   </figcaption>
                 </figure>
               </div>
@@ -128,8 +130,10 @@ export default function About() {
                     className="img-fluid mx-auto"
                   />
                   <figcaption className="mt-2">
-                    Illustration of AVE algorithm distinguishing normal from
-                    precancer.
+                    <b>
+                      Illustration of AVE algorithm distinguishing normal from
+                      precancer.
+                    </b>
                   </figcaption>
                 </figure>
               </div>

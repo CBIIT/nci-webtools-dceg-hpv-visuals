@@ -21,7 +21,16 @@ export default function RootLayout({ children }) {
       path: "/learn-about-pave",
       subRoutes: [{ title: "Testing", path: "/learn-about-pave/testing" }],
     },
-    { title: "Lessons Learned /Publications", path: "/publications" },
+
+    {
+      title: "Lessons Learned /Publications",
+      path: "/lessons-learn",
+
+      menuRoutes: [
+        { title: "Lessions Learned", path: "/lessons-learned" },
+        { title: "Publications", path: "/publications" },
+      ],
+    },
   ];
 
   return (

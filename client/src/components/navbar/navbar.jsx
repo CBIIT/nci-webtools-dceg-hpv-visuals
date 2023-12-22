@@ -73,7 +73,7 @@ function renderRoutes({ routes, pathName }) {
                 )}
               >
                 <Link href={subRoute.path} passHref>
-                  <span className="bi bi-arrow-return-right me-1"></span>
+                  <span className="me-1"></span>
                   {subRoute.title}
                 </Link>
               </NavDropdown.Item>
@@ -92,6 +92,12 @@ function renderRoutes({ routes, pathName }) {
           key={route.path}
           aria-labelledby={`nav-dropdown-label-${route.path}`} // Add a label ID
         >
+          <span
+            id={`nav-dropdown-label-${route.path}`}
+            className="visually-hidden"
+          >
+            {route.title} Dropdown
+          </span>
           <div>
             {route.menuRoutes.map((subRoute) => (
               <NavDropdown.Item

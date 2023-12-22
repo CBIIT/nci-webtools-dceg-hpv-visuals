@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     },
 
     {
-      title: "Lessons Learned /Publications",
+      title: "Lessons Learned / Publications",
       path: "/lessons-learn",
 
       menuRoutes: [

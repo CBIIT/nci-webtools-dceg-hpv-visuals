@@ -57,7 +57,7 @@ export default function Header({ routes = [] }) {
             name="search"
             type="text"
             className="form-control"
-            placeholder="Google Site Search"
+            placeholder="Document Site Search"
             style={{
               borderTopLeftRadius: "20px",
               borderBottomLeftRadius: "20px",

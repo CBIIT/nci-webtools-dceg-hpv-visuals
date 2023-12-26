@@ -66,7 +66,7 @@ function renderRoutes({
             href={route.path}
             className={clsx(
               "nav-link",
-              pathsMatch(pathName, route.path) && "active",
+              pathsMatch(pathName, route.path) && "nav-menu-active",
               "pointer-cursor" // Add the pointer-cursor class here
             )}
             onClick={() => {
@@ -132,7 +132,7 @@ export default function AppNavbar({ routes = [] }) {
             "linear-gradient(270deg, #20094b 0%, #bf00a4 50%) !important",
         }}
       >
-        <Container className="py-2">
+        <Container className="">
           {/* Navbar Brand and Toggle */}
           <Navbar.Brand href="/" className="d-flex d-md-none text-light">
             HPV Visuals

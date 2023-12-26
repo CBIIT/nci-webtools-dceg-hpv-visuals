@@ -25,13 +25,20 @@ function pathsMatch(path1, path2) {
 
 function SubMenu({ subRoutes, pathName, isOpen }) {
   return (
-    <div className={clsx("d-flex flex-row", !isOpen && "d-none")}>
+    <div
+      className={clsx(
+        "d-flex flex-row",
+        !isOpen && "d-none",
+        isOpen && "active-submenu"
+      )}
+    >
       {subRoutes.map((subRoute) => (
         <Nav.Item key={subRoute.path}>
           <Link
             href={subRoute.path || "#"}
             className={clsx(
               "nav-link",
+              "submenu",
               pathsMatch(pathName, subRoute.path) && "active"
             )}
           >
@@ -59,22 +66,34 @@ function renderRoutes({
             href={route.path}
             className={clsx(
               "nav-link",
-              pathsMatch(pathName, route.path) && "active"
+              pathsMatch(pathName, route.path) && "active",
+              "pointer-cursor" // Add the pointer-cursor class here
             )}
             onClick={() => {
               handleCloseSubmenu();
-              //setOpenSubmenu(false);
+              // setOpenSubmenu(false);
             }}
           >
             {route.title}
           </Link>
         </Nav.Item>
       ) : (
-        <div
-          className="nav-link"
-          onClick={(e) => handleOpenSubmenu(e, route.title, route.subRoutes)}
-        >
-          {route.title}
+        <div className={clsx("nav-link", "pointer-cursor")}>
+          <div
+            onClick={(e) => handleOpenSubmenu(e, route.title, route.subRoutes)}
+          >
+            {route.title}
+          </div>
+          {route.subRoutes && (
+            <div className="submenu">
+              <SubMenu
+                subRoutes={route.subRoutes}
+                pathName={pathName}
+                activeSubmenu={openSubmenu === route.title}
+                onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -143,11 +162,14 @@ export default function AppNavbar({ routes = [] }) {
 
       {/* Subnavbar */}
       <div
-        className="text-uppercase font-title"
-        style={{
-          background: "#333", // Customize the background color for the subnavbar
-          paddingLeft: "16px", // Adjust padding as needed
-        }}
+        className="text-uppercase font-title submenu-border"
+        style={
+          {
+            //background: "#333", // Customize the background color for the subnavbar
+            //paddingLeft: "16px", // Adjust padding as needed
+            // borderBottom: "1px solid #333",
+          }
+        }
       >
         <Container className="">
           <Nav className="me-auto">

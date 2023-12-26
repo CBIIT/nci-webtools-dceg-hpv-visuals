@@ -67,5 +67,35 @@ th {
 }
 
 .submenu {
-  background-color: #93d050;
+  background-color: white;
+  color: black;
+}
+
+.submenu-border {
+  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.25);
+}
+
+.submenu:hover {
+  text-decoration: none;
+}
+
+.nav {
+  background-color: white;
+  color: black;
+}
+
+.submenu .active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* Set the desired thickness */
+  text-decoration-color: #bf00a4; /* Set the desired underline color */
+  text-underline-offset: 10px; /* Set the desired space between the line and the text */
+  text-decoration-skip-ink: none; /* Ensure the underline is not skipped over descenders */
+  color: black;
+}
+
+.active-submenu {
+  text-decoration: none;
+}
+.pointer-cursor {
+  cursor: pointer;
 }

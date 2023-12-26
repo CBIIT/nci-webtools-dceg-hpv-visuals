@@ -6,180 +6,168 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import clsx from "clsx";
+import React, { useState } from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function pathsMatch(path1, path2) {
+  // Check if path1 or path2 is undefined
+  if (!path1 || !path2) {
+    return false;
+  }
+
   // remove trailing slash
   path1 = path1.replace(/\/$/, "");
   path2 = path2.replace(/\/$/, "");
+
   return path1 === path2;
 }
 
-function renderSubMenu(subRoutes, pathName) {
+function SubMenu({ subRoutes, pathName, isOpen }) {
   return (
-    <NavDropdown.Menu>
+    <div className={clsx("d-flex flex-row", !isOpen && "d-none")}>
       {subRoutes.map((subRoute) => (
-        <NavDropdown.Item
-          key={subRoute.path}
-          className={clsx(pathName === subRoute.path && "active", "nav-link")}
-        >
-          <Link href={subRoute.path} passHref>
-            {subRoute.title}
-          </Link>
-        </NavDropdown.Item>
-      ))}
-    </NavDropdown.Menu>
-  );
-}
-
-function renderMenuRoutes(menuRoutes, pathName) {
-  return (
-    <NavDropdown.Menu>
-      {menuRoutes.map((subRoute) => (
-        <NavDropdown.Item
-          key={subRoute.path}
-          className={clsx(pathName === subRoute.path && "active", "nav-link")}
-        >
-          <Link href={subRoute.path} passHref>
-            {subRoute.title}
-          </Link>
-        </NavDropdown.Item>
-      ))}
-    </NavDropdown.Menu>
-  );
-}
-
-function renderRoutes({ routes, pathName }) {
-  return routes.map((route) => {
-    if (route.subRoutes) {
-      return (
-        <NavDropdown
-          title={route.title}
-          id={`nav-dropdown-${route.path}`}
-          key={route.path}
-          aria-labelledby={`nav-dropdown-label-${route.path}`} // Add a label ID
-        >
-          <NavDropdown.Item className="nav-link">
-            <Link href={route.path} passHref>
-              {route.title}{" "}
-            </Link>
-          </NavDropdown.Item>
-          <div>
-            {route.subRoutes.map((subRoute) => (
-              <NavDropdown.Item
-                key={subRoute.path}
-                className={clsx(
-                  pathName === subRoute.path && "active",
-                  "nav-link"
-                )}
-              >
-                <Link href={subRoute.path} passHref>
-                  <span className="me-1"></span>
-                  {subRoute.title}
-                </Link>
-              </NavDropdown.Item>
-            ))}
-          </div>
-
-          {route.subRoutes.some((subRoute) => subRoute.subRoutes) &&
-            renderSubMenu(route.subRoutes, pathName)}
-        </NavDropdown>
-      );
-    } else if (route.menuRoutes) {
-      return (
-        <NavDropdown
-          title={route.title}
-          id={`nav-dropdown-${route.path}`}
-          key={route.path}
-          aria-labelledby={`nav-dropdown-label-${route.path}`} // Add a label ID
-        >
-          <span
-            id={`nav-dropdown-label-${route.path}`}
-            className="visually-hidden"
+        <Nav.Item key={subRoute.path}>
+          <Link
+            href={subRoute.path || "#"}
+            className={clsx(
+              "nav-link",
+              pathsMatch(pathName, subRoute.path) && "active"
+            )}
           >
-            {route.title} Dropdown
-          </span>
-          <div>
-            {route.menuRoutes.map((subRoute) => (
-              <NavDropdown.Item
-                key={subRoute.path}
-                className={clsx(
-                  pathName === subRoute.path && "active",
-                  "nav-link"
-                )}
-              >
-                <Link href={subRoute.path} passHref>
-                  {subRoute.title}
-                </Link>
-              </NavDropdown.Item>
-            ))}
-          </div>
+            {subRoute.title}
+          </Link>
+        </Nav.Item>
+      ))}
+    </div>
+  );
+}
 
-          {route.menuRoutes.some((subRoute) => subRoute.subRoutes) &&
-            renderSubMenu(route.subRoutes, pathName)}
-        </NavDropdown>
-      );
-    } else {
-      return (
-        <Link
-          className={clsx(
-            "nav-link",
-            pathsMatch(pathName, route.path) && "active"
-          )}
-          key={route.path}
-          href={route.path}
+// Function to render routes
+function renderRoutes({
+  routes,
+  pathName,
+  openSubmenu,
+  handleOpenSubmenu,
+  handleCloseSubmenu,
+}) {
+  return routes.map((route) => (
+    <div key={route.path || "no-path"}>
+      {route.path ? (
+        <Nav.Item className="nav-item">
+          <Link
+            href={route.path}
+            className={clsx(
+              "nav-link",
+              pathsMatch(pathName, route.path) && "active"
+            )}
+            onClick={() => {
+              handleCloseSubmenu();
+              //setOpenSubmenu(false);
+            }}
+          >
+            {route.title}
+          </Link>
+        </Nav.Item>
+      ) : (
+        <div
+          className="nav-link"
+          onClick={(e) => handleOpenSubmenu(e, route.title, route.subRoutes)}
         >
           {route.title}
-        </Link>
-      );
-    }
-  });
+        </div>
+      )}
+    </div>
+  ));
 }
 
+// Main AppNavbar component
 export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
+  const [openSubmenu, setOpenSubmenu] = useState(null);
+
+  const handleOpenSubmenu = (event, title, subRoutes) => {
+    event.preventDefault();
+    setOpenSubmenu((prevOpenSubmenu) => {
+      if (prevOpenSubmenu === title || !subRoutes) {
+        return null;
+      } else {
+        return title;
+      }
+    });
+  };
+
+  const handleCloseSubmenu = () => {
+    setOpenSubmenu(null);
+  };
+
   return (
-    <Navbar
-      variant="dark"
-      className="text-uppercase font-title"
-      expand="md"
-      style={{
-        background:
-          "linear-gradient(270deg, #20094b 0%, #bf00a4 50%) !important",
-      }}
-    >
-      <Container className="py-2">
-        <Navbar.Brand
-          as={Link}
-          href="/"
-          className="d-flex d-md-none text-light"
-        >
-          HPV Visuals{" "}
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="navbar-nav"
-          className="px-0 py-3 text-uppercase"
-        >
-          <i className="bi bi-list me-1"></i>
-          Menu
-        </Navbar.Toggle>
-        <Navbar.Collapse id="navbar-nav" className="align-items-stretch">
+    <div>
+      {/* Main Navbar */}
+      <Navbar
+        variant="dark"
+        className="text-uppercase font-title"
+        expand="md"
+        style={{
+          background:
+            "linear-gradient(270deg, #20094b 0%, #bf00a4 50%) !important",
+        }}
+      >
+        <Container className="py-2">
+          {/* Navbar Brand and Toggle */}
+          <Navbar.Brand href="/" className="d-flex d-md-none text-light">
+            HPV Visuals
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="navbar-nav"
+            className="px-0 py-3 text-uppercase"
+          >
+            <i className="bi bi-list me-1"></i>
+            Menu
+          </Navbar.Toggle>
+          {/* Navbar Content */}
+          <Navbar.Collapse id="navbar-nav" className="align-items-stretch">
+            <Nav className="me-auto">
+              {/* Render routes */}
+              {renderRoutes({
+                routes,
+                pathName,
+                openSubmenu,
+                handleOpenSubmenu,
+                handleCloseSubmenu,
+              })}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      {/* Subnavbar */}
+      <div
+        className="text-uppercase font-title"
+        style={{
+          background: "#333", // Customize the background color for the subnavbar
+          paddingLeft: "16px", // Adjust padding as needed
+        }}
+      >
+        <Container className="">
           <Nav className="me-auto">
-            {/* {routes.map((route) => (
-              <Link
-                className={clsx(
-                  "nav-link",
-                  pathsMatch(pathName, route.path) && "active"
+            {/* Render submenus */}
+            {routes.map((route) => (
+              <div key={route.title}>
+                {route.subRoutes && (
+                  <div className="submenu">
+                    <SubMenu
+                      subRoutes={route.subRoutes}
+                      pathName={pathName}
+                      isOpen={openSubmenu === route.title}
+                    />
+                  </div>
                 )}
-                key={route.path}
-                href={route.path}
-              >
-                {route.title}
-              </Link>
-            ))} */}
-            {renderRoutes({ routes, pathName })}
+              </div>
+            ))}
           </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </Container>
+      </div>
+    </div>
   );
 }

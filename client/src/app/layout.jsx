@@ -13,20 +13,44 @@ const inter = Inter({
 });
 
 export default function RootLayout({ children }) {
+  // const routes = [
+  //   { title: "Home", path: "/" },
+  //   { title: "View Images", path: "/view" },
+  //   {
+  //     title: "Learn about PAVE",
+
+  //     subRoutes: [{ title: "Learn about PAVE", path: "/learn-about-pave" }],
+  //     subRoutes: [{ title: "Testing", path: "/learn-about-pave/testing" }],
+  //   },
+  //   {
+  //     title: "Lessons Learned / Publications",
+
+  //     subRoutes: [{ title: "Lessions Learned", path: "/lessons-learned" }],
+  //     subRoutes: [{ title: "Publications", path: "/publications" }],
+  //   },
+  //   // {
+  //   //   title: "Lessons Learned / Publications",
+  //   //   path: "/lessons-learn",
+
+  //   //   menuRoutes: [
+  //   //     { title: "Lessions Learned", path: "/lessons-learned" },
+  //   //     { title: "Publications", path: "/publications" },
+  //   //   ],
+  //   // },
+  // ];
   const routes = [
     { title: "Home", path: "/" },
     { title: "View Images", path: "/view" },
     {
       title: "Learn about PAVE",
-      path: "/learn-about-pave",
-      subRoutes: [{ title: "Testing", path: "/learn-about-pave/testing" }],
+      subRoutes: [
+        { title: "Learn about PAVE", path: "/learn-about-pave" },
+        { title: "Testing", path: "/learn-about-pave/testing" },
+      ],
     },
-
     {
       title: "Lessons Learned / Publications",
-      path: "/lessons-learn",
-
-      menuRoutes: [
+      subRoutes: [
         { title: "Lessions Learned", path: "/lessons-learned" },
         { title: "Publications", path: "/publications" },
       ],

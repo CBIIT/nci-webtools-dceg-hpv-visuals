@@ -76,6 +76,7 @@ function renderRoutes({
   openSubmenu,
   handleOpenSubmenu,
   handleCloseSubmenu,
+  isMobileView, // New prop for checking mobile view
 }) {
   return routes.map((route) => (
     <div key={route.path || `{routes}`}>
@@ -109,16 +110,17 @@ function renderRoutes({
           >
             {route.title}
           </div>
-          {route.subRoutes && (
-            <div className="submenu">
-              <SubMenu
-                subRoutes={route.subRoutes}
-                pathName={pathName}
-                activeSubmenu={openSubmenu === route.title}
-                onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
-              />
-            </div>
-          )}
+          {route.subRoutes &&
+            isMobileView && ( // Only show submenu for mobile
+              <div className="submenu">
+                <SubMenu
+                  subRoutes={route.subRoutes}
+                  pathName={pathName}
+                  activeSubmenu={openSubmenu === route.title}
+                  onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
+                />
+              </div>
+            )}
         </div>
       )}
     </div>
@@ -129,6 +131,7 @@ function renderRoutes({
 export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
   const [openSubmenu, setOpenSubmenu] = useState(null);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   const handleOpenSubmenu = (event, title, subRoutes) => {
     event.preventDefault();
@@ -145,8 +148,22 @@ export default function AppNavbar({ routes = [] }) {
     setOpenSubmenu(null);
   };
 
+  // Check for mobile view
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Set initial view
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div>
+    <div className="submenu-border">
       {/* Main Navbar */}
       <Navbar
         variant="dark"
@@ -179,6 +196,7 @@ export default function AppNavbar({ routes = [] }) {
                 openSubmenu,
                 handleOpenSubmenu,
                 handleCloseSubmenu,
+                isMobileView, // Pass isMobileView prop
               })}
             </Nav>
           </Navbar.Collapse>
@@ -186,16 +204,7 @@ export default function AppNavbar({ routes = [] }) {
       </Navbar>
 
       {/* Subnavbar */}
-      <div
-        className="text-uppercase font-title submenu-border"
-        style={
-          {
-            //background: "#333", // Customize the background color for the subnavbar
-            //paddingLeft: "16px", // Adjust padding as needed
-            // borderBottom: "1px solid #333",
-          }
-        }
-      >
+      <div className="text-uppercase font-title submenu-border">
         <Container className="">
           <Nav className="me-auto">
             {/* Render submenus */}

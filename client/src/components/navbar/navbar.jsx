@@ -50,6 +50,25 @@ function SubMenu({ subRoutes, pathName, isOpen }) {
   );
 }
 
+function isRouteActive(route, pathName) {
+  if (route.path && pathsMatch(pathName, route.path)) {
+    return true;
+  }
+
+  if (route.subRoutes) {
+    const isSubRouteActive = route.subRoutes.some((subRoute) => {
+      const isActive = pathsMatch(pathName, subRoute.path);
+      return isActive;
+    });
+
+    if (isSubRouteActive) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 // Function to render routes
 function renderRoutes({
   routes,
@@ -59,14 +78,14 @@ function renderRoutes({
   handleCloseSubmenu,
 }) {
   return routes.map((route) => (
-    <div key={route.path || "no-path"}>
+    <div key={route.path || `{routes}`}>
       {route.path ? (
         <Nav.Item className="nav-item">
           <Link
             href={route.path}
             className={clsx(
               "nav-link",
-              pathsMatch(pathName, route.path) && "nav-menu-active",
+              isRouteActive(route, pathName) && "nav-menu-active",
               "pointer-cursor" // Add the pointer-cursor class here
             )}
             onClick={() => {
@@ -78,7 +97,13 @@ function renderRoutes({
           </Link>
         </Nav.Item>
       ) : (
-        <div className={clsx("nav-link", "pointer-cursor")}>
+        <div
+          className={clsx(
+            "nav-link",
+            isRouteActive(route, pathName) && "nav-menu-active",
+            "pointer-cursor"
+          )}
+        >
           <div
             onClick={(e) => handleOpenSubmenu(e, route.title, route.subRoutes)}
           >

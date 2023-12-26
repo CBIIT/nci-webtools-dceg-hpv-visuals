@@ -66,11 +66,17 @@ th {
   border-top: none;
 }
 
-.nav-menu-active {
-  background-color: #03b050;
+.nav-menu-active,
+.nav-menu-active:hover {
+  background-color: #6e3acf;
+  color: white;
 }
 
 .submenu {
+  background-color: white;
+  color: black;
+}
+.submenu:hover {
   background-color: white;
   color: black;
 }
@@ -86,7 +92,6 @@ th {
 
 .nav {
   background-color: white;
-  color: black;
 }
 
 .submenu .active {

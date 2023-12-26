@@ -165,54 +165,58 @@ export default function About() {
             </Col>
           </Row>
           <Row className="py-2">
-            <Table bordered hover>
-              <thead>
-                <tr>
-                  <th className="visually-hidden no-top-border">placeholder</th>
-                  <th colSpan="3" className="text-center">
-                    AVE Classification
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>HPV risk group</th>
-                  <th className="text-center">Precancer+</th>
-                  <th className="text-center">Indeterminate</th>
-                  <th className="text-center">Normal</th>
-                </tr>
-                <tr>
-                  <td>HPV16</td>
-                  <td className="highest-bg text-center">Highest</td>
-                  <td className="high-bg text-center">High</td>
-                  <td className="high-bg text-center">High</td>
-                </tr>
-                <tr>
-                  <td>HPV18/45</td>
-                  <td className="high-bg text-center">High</td>
-                  <td className="high-bg text-center">High</td>
-                  <td className="high-bg text-center">High</td>
-                </tr>
-                <tr>
-                  <td>HPV31/33/35/52/58</td>
-                  <td className="high-bg text-center">High</td>
-                  <td className="medium-bg text-center">Medium</td>
-                  <td className="medium-bg text-center">Medium</td>
-                </tr>
-                <tr>
-                  <td>HPV39/51/56/59/68</td>
-                  <td className="high-bg text-center">High</td>
-                  <td className="medium-bg text-center">Medium</td>
-                  <td className="low-bg text-center">Low</td>
-                </tr>
-                <tr>
-                  <td>Negative</td>
-                  <td colSpan="3" className="lowest-bg text-center">
-                    Lowest
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
+            <div className="table-responsive">
+              <Table bordered hover>
+                <thead>
+                  <tr>
+                    <th className="visually-hidden no-top-border">
+                      placeholder
+                    </th>
+                    <th colSpan="3" className="text-center">
+                      AVE Classification
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>HPV risk group</th>
+                    <th className="text-center">Precancer+</th>
+                    <th className="text-center">Indeterminate</th>
+                    <th className="text-center">Normal</th>
+                  </tr>
+                  <tr>
+                    <td>HPV16</td>
+                    <td className="highest-bg text-center">Highest</td>
+                    <td className="high-bg text-center">High</td>
+                    <td className="high-bg text-center">High</td>
+                  </tr>
+                  <tr>
+                    <td>HPV18/45</td>
+                    <td className="high-bg text-center">High</td>
+                    <td className="high-bg text-center">High</td>
+                    <td className="high-bg text-center">High</td>
+                  </tr>
+                  <tr>
+                    <td>HPV31/33/35/52/58</td>
+                    <td className="high-bg text-center">High</td>
+                    <td className="medium-bg text-center">Medium</td>
+                    <td className="medium-bg text-center">Medium</td>
+                  </tr>
+                  <tr>
+                    <td>HPV39/51/56/59/68</td>
+                    <td className="high-bg text-center">High</td>
+                    <td className="medium-bg text-center">Medium</td>
+                    <td className="low-bg text-center">Low</td>
+                  </tr>
+                  <tr>
+                    <td>Negative</td>
+                    <td colSpan="3" className="lowest-bg text-center">
+                      Lowest
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
           </Row>
         </div>
       </article>

@@ -90,7 +90,7 @@ export default function About() {
         </Row>
         <Row>
           <Col xs={12}>
-            <div className="">
+            <div className="table-responsive">
               <Table bordered hover>
                 <thead className="thead-dark">
                   <tr>

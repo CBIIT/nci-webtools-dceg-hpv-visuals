@@ -163,7 +163,7 @@ export default function AppNavbar({ routes = [] }) {
   }, []);
 
   return (
-    <div className="submenu-border">
+    <div className="">
       {/* Main Navbar */}
       <Navbar
         variant="dark"
@@ -204,25 +204,27 @@ export default function AppNavbar({ routes = [] }) {
       </Navbar>
 
       {/* Subnavbar */}
-      <div className="text-uppercase font-title submenu-border">
-        <Container className="">
-          <Nav className="me-auto">
-            {/* Render submenus */}
-            {routes.map((route) => (
-              <div key={route.title}>
-                {route.subRoutes && (
-                  <div className="submenu">
-                    <SubMenu
-                      subRoutes={route.subRoutes}
-                      pathName={pathName}
-                      isOpen={openSubmenu === route.title}
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
-          </Nav>
-        </Container>
+      <div className="submenu-border">
+        <div className="text-uppercase font-title">
+          <Container className="">
+            <Nav className="me-auto">
+              {/* Render submenus */}
+              {routes.map((route) => (
+                <div key={route.title}>
+                  {route.subRoutes && (
+                    <div className="submenu">
+                      <SubMenu
+                        subRoutes={route.subRoutes}
+                        pathName={pathName}
+                        isOpen={openSubmenu === route.title}
+                      />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </Nav>
+          </Container>
+        </div>
       </div>
     </div>
   );

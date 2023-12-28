@@ -76,7 +76,7 @@ function renderRoutes({
   openSubmenu,
   handleOpenSubmenu,
   handleCloseSubmenu,
-  isMobileView, // New prop for checking mobile view
+  isMobileView,
 }) {
   return routes.map((route) => (
     <div key={route.path || `{routes}`}>
@@ -87,11 +87,10 @@ function renderRoutes({
             className={clsx(
               "nav-link",
               isRouteActive(route, pathName) && "nav-menu-active",
-              "pointer-cursor" // Add the pointer-cursor class here
+              "pointer-cursor"
             )}
             onClick={() => {
               handleCloseSubmenu();
-              // setOpenSubmenu(false);
             }}
           >
             {route.title}
@@ -101,26 +100,35 @@ function renderRoutes({
         <div
           className={clsx(
             "nav-link",
-            isRouteActive(route, pathName) && "nav-menu-active",
+            openSubmenu === route.title && "nav-menu-active",
             "pointer-cursor"
           )}
         >
           <div
-            onClick={(e) => handleOpenSubmenu(e, route.title, route.subRoutes)}
+            onClick={(e) => {
+              console.log("Original routes:", routes);
+              handleOpenSubmenu(e, route.title, route.subRoutes);
+              // Unhighlight all other navbar items with a path
+              document
+                .querySelectorAll(".navbar-nav .nav-link.nav-menu-active")
+                .forEach((link) => {
+                  link.classList.remove("nav-menu-active");
+                  console.log(`Unhighlighted navbar item: ${link.textContent}`);
+                });
+            }}
           >
             {route.title}
           </div>
-          {route.subRoutes &&
-            isMobileView && ( // Only show submenu for mobile
-              <div className="submenu">
-                <SubMenu
-                  subRoutes={route.subRoutes}
-                  pathName={pathName}
-                  activeSubmenu={openSubmenu === route.title}
-                  onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
-                />
-              </div>
-            )}
+          {route.subRoutes && isMobileView && (
+            <div className="submenu">
+              <SubMenu
+                subRoutes={route.subRoutes}
+                pathName={pathName}
+                activeSubmenu={openSubmenu === route.title}
+                onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>

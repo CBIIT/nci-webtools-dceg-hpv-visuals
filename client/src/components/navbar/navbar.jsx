@@ -90,6 +90,21 @@ function renderRoutes({
               "pointer-cursor"
             )}
             onClick={() => {
+              // Add the 'nav-menu-active' class to the clicked item
+              document
+                .querySelectorAll(
+                  ".navbar-nav .nav-item .nav-link.nav-menu-active"
+                )
+                .forEach((link) => {
+                  link.classList.remove("nav-menu-active");
+                });
+
+              const currentLink = document.querySelector(
+                `[href="${route.path}"]`
+              );
+              if (currentLink) {
+                currentLink.classList.add("nav-menu-active");
+              }
               handleCloseSubmenu();
             }}
           >
@@ -106,14 +121,14 @@ function renderRoutes({
         >
           <div
             onClick={(e) => {
-              console.log("Original routes:", routes);
+              // console.log("Original routes:", routes);
               handleOpenSubmenu(e, route.title, route.subRoutes);
               // Unhighlight all other navbar items with a path
               document
                 .querySelectorAll(".navbar-nav .nav-link.nav-menu-active")
                 .forEach((link) => {
                   link.classList.remove("nav-menu-active");
-                  console.log(`Unhighlighted navbar item: ${link.textContent}`);
+                  // console.log(`Unhighlighted navbar item: ${link.textContent}`);
                 });
             }}
           >

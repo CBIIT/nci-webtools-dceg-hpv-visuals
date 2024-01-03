@@ -14,10 +14,11 @@ const inter = Inter({
 
 export default function RootLayout({ children }) {
   const routes = [
-    { title: "Home", path: "/" },
-    { title: "View Images", path: "/view" },
+    { title: "Home", path: "/", subRoutes: [] },
+    { title: "View Images", path: "/view", subRoutes: [] },
     {
       title: "Learn about PAVE",
+      path: "/learn-about-pave",
       subRoutes: [
         { title: "Learn about PAVE", path: "/learn-about-pave" },
         { title: "Testing", path: "/learn-about-pave/testing" },
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
     },
     {
       title: "Lessons Learned / Publications",
+      path: "/lessons-learned",
       subRoutes: [
         { title: "Lessions Learned", path: "/lessons-learned" },
         { title: "Publications", path: "/publications" },

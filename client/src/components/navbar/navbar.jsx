@@ -9,6 +9,7 @@ import clsx from "clsx";
 import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useRouter } from "next/navigation";
 
 function pathsMatch(path1, path2) {
   // Check if path1 or path2 is undefined
@@ -79,9 +80,9 @@ function renderRoutes({
   isMobileView,
 }) {
   return routes.map((route) => (
-    <div key={route.path || `{routes}`}>
-      {route.path ? (
-        <Nav.Item className="nav-item">
+    <div key={route.path || route.title}>
+      {route.subRoutes.length == 0 ? (
+        <Nav.Item className="">
           <Link
             href={route.path}
             className={clsx(
@@ -92,16 +93,17 @@ function renderRoutes({
             onClick={() => {
               // Add the 'nav-menu-active' class to the clicked item
               document
-                .querySelectorAll(
-                  ".navbar-nav .nav-item .nav-link.nav-menu-active"
-                )
+                .querySelectorAll(".navbar-nav .nav-link .nav-menu-active")
                 .forEach((link) => {
                   link.classList.remove("nav-menu-active");
                 });
 
               const currentLink = document.querySelector(
-                `[href="${route.path}"]`
+                `.nav-item a[href="${route.path}"]`
               );
+
+              console.log("currentLink", currentLink);
+              console.log("route.path ", route.path);
               if (currentLink) {
                 currentLink.classList.add("nav-menu-active");
               }
@@ -155,6 +157,11 @@ export default function AppNavbar({ routes = [] }) {
   const pathName = usePathname();
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [isMobileView, setIsMobileView] = useState(false);
+  const router = useRouter(); // Move the useRouter hook to the main component
+  const handleSubmenuClick = (path) => {
+    console.log("Navigating to:", path);
+    router.push(path);
+  };
 
   const handleOpenSubmenu = (event, title, subRoutes) => {
     event.preventDefault();
@@ -162,7 +169,14 @@ export default function AppNavbar({ routes = [] }) {
       if (prevOpenSubmenu === title || !subRoutes) {
         return null;
       } else {
-        return title;
+        // Check if the main route has subRoutes
+        if (subRoutes.length > 0) {
+          // Set the first subRoute as the default open submenu
+          handleSubmenuClick(subRoutes[0].path);
+          return title;
+        } else {
+          return title;
+        }
       }
     });
   };

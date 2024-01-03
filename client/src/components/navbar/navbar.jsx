@@ -102,8 +102,8 @@ function renderRoutes({
                 `.nav-item a[href="${route.path}"]`
               );
 
-              console.log("currentLink", currentLink);
-              console.log("route.path ", route.path);
+              // console.log("currentLink", currentLink);
+              // console.log("route.path ", route.path);
               if (currentLink) {
                 currentLink.classList.add("nav-menu-active");
               }
@@ -159,7 +159,7 @@ export default function AppNavbar({ routes = [] }) {
   const [isMobileView, setIsMobileView] = useState(false);
   const router = useRouter(); // Move the useRouter hook to the main component
   const handleSubmenuClick = (path) => {
-    console.log("Navigating to:", path);
+    //console.log("Navigating to:", path);
     router.push(path);
   };
 

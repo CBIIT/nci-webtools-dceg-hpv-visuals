@@ -34,12 +34,12 @@ export default function Header({ routes = [] }) {
         <a
           className="d-inline-block col-md-9"
           rel="noopener noreferrer"
-          href="https://www.cancer.gov/"
+          href="/#"
         >
           <img
-            src="/assets/nci-dceg-logo.svg"
+            src="/assets/HPVLogo_Desktop.svg"
             height="60"
-            alt="National Cancer Institute Logo"
+            alt="Human Papillomavrus Automated Visual Evaluation Tool Logo"
             className="mw-100"
           />
         </a>

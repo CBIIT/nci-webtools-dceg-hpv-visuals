@@ -7,8 +7,13 @@ export default function Header({ routes = [] }) {
 
   function handleKey(e) {
     if (e.key === "Enter") {
+      // window.open(
+      //   "https://www.google.com/search?q=site:https://hpvvisuals.cancer.gov " +
+      //     search,
+      //   "_blank"
+      // );
       window.open(
-        "https://www.google.com/search?q=site:https://hpvvisuals.cancer.gov " +
+        "https://www.google.com/search?q=site:https://analysistools.cancer.gov " +
           search,
         "_blank"
       );
@@ -16,7 +21,7 @@ export default function Header({ routes = [] }) {
   }
   function handleClick(e) {
     window.open(
-      "https://www.google.com/search?q=site:https://icdgenie.cancer.gov " +
+      "https://www.google.com/search?q=site:https://analysistools.cancer.gov " +
         search,
       "_blank"
     );
@@ -38,7 +43,7 @@ export default function Header({ routes = [] }) {
         >
           <img
             src="/assets/HPVLogo_Desktop.svg"
-            height="60"
+            height="65"
             alt="Human Papillomavrus Automated Visual Evaluation Tool Logo"
             className="mw-100"
           />

@@ -232,32 +232,35 @@ export default function AboutTesting() {
           </span>
 
           <div className="my-3">
-            <h2>Self-Collected HPV Testing in PAVE </h2>
+            <h2 className="mb-2">Self-Collected HPV Testing in PAVE </h2>
+            <div>
+              <ul>
+                <li className="mb-1">
+                  The PAVE study protocol begins with self-collected samples,
+                  which requires far fewer pelvic examinations and clinician
+                  time compared to Visual Inspection with Acetic Acid (VIA) or
+                  other clinician-based techniques
+                </li>
+                <li>
+                  <a
+                    href="https://onlinelibrary.wiley.com/doi/10.1002/ijc.34698"
+                    target="_blank"
+                  >
+                    HPV testing in PAVE will be performed using a novel HPV test
+                    called Screenfire, a PCR-based DNA amplification system that
+                    provides typing in hierarchical risk groups (HPV 16, else
+                    HPV18/45, else HPV31/33/35/52/58, else HPV39/51/56/59/68).{" "}
+                  </a>{" "}
+                  HPV tests are run onsite or in local laboratories, with
+                  results returned by the healthcare team to women quickly (same
+                  day or within a few days), as determined individually at each
+                  study site.
+                </li>
+              </ul>
+            </div>
 
             <Row className="py-2">
-              <Col xs={12}>
-                The PAVE study protocol begins with self-collected samples,
-                which requires far fewer pelvic examinations and clinician time
-                compared to Visual Inspection with Acetic Acid (VIA) or other
-                clinician-based techniques.{" "}
-              </Col>
-            </Row>
-            <Row className="py-2">
-              <Col xs={12}>
-                <a
-                  href="https://onlinelibrary.wiley.com/doi/10.1002/ijc.34698"
-                  target="_blank"
-                >
-                  HPV testing in PAVE will be performed using a novel HPV test
-                  called Screenfire, a PCR-based DNA amplification system that
-                  provides typing in hierarchical risk groups (HPV 16, else
-                  HPV18/45, else HPV31/33/35/52/58, else HPV39/51/56/59/68).{" "}
-                </a>{" "}
-                HPV tests are run onsite or in local laboratories, with results
-                returned by the healthcare team to women quickly (same day or
-                within a few days), as determined individually at each study
-                site.
-              </Col>
+              <Col xs={12}></Col>
               <Col xs={12}>
                 <div className="d-flex justify-content-center mt-3 mb-3">
                   <figure className="text-center">
@@ -278,7 +281,7 @@ export default function AboutTesting() {
               </Col>
             </Row>
           </div>
-          <div className="my-3">
+          <div className="mb-3">
             <h2>Automated Visual Evaluation (AVE) in PAVE </h2>
             <Row className="py-2">
               <Col xs={12}>
@@ -307,7 +310,7 @@ export default function AboutTesting() {
             <Row className="py-2">
               <Col xs={12}>Lessons learned so far include: </Col>
               <Col>
-                <ul>
+                <ul className="mb-1">
                   <li>Rigorous outcome definitions are needed. </li>
                   <li>
                     Clinically Clinically important errors (e.g., calling
@@ -379,58 +382,61 @@ export default function AboutTesting() {
               </Col>
             </Row>
             <Row className="py-2">
-              <div className="table-responsive">
-                <Table bordered hover>
-                  <thead>
-                    <tr>
-                      <th className="visually-hidden no-top-border">
-                        placeholder
-                      </th>
-                      <th colSpan="3" className="text-center">
-                        AVE Classification
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>HPV risk group</th>
-                      <th className="text-center">Precancer+</th>
-                      <th className="text-center">Indeterminate</th>
-                      <th className="text-center">Normal</th>
-                    </tr>
-                    <tr>
-                      <td>HPV16</td>
-                      <td className="highest-bg text-center">Highest</td>
-                      <td className="high-bg text-center">High</td>
-                      <td className="high-bg text-center">High</td>
-                    </tr>
-                    <tr>
-                      <td>HPV18/45</td>
-                      <td className="high-bg text-center">High</td>
-                      <td className="high-bg text-center">High</td>
-                      <td className="high-bg text-center">High</td>
-                    </tr>
-                    <tr>
-                      <td>HPV31/33/35/52/58</td>
-                      <td className="high-bg text-center">High</td>
-                      <td className="medium-bg text-center">Medium</td>
-                      <td className="medium-bg text-center">Medium</td>
-                    </tr>
-                    <tr>
-                      <td>HPV39/51/56/59/68</td>
-                      <td className="high-bg text-center">High</td>
-                      <td className="medium-bg text-center">Medium</td>
-                      <td className="low-bg text-center">Low</td>
-                    </tr>
-                    <tr>
-                      <td>Negative</td>
-                      <td colSpan="3" className="lowest-bg text-center">
-                        Lowest
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
+              <Col lg={3} md={12} sm={12}></Col>
+              <Col lg={6} md={12} sm={12}>
+                <div className="table-responsive">
+                  <Table bordered>
+                    <thead>
+                      <tr>
+                        <th className="visually-hidden borderless">
+                          placeholder
+                        </th>
+                        <th colSpan="3" className="text-center">
+                          AVE Classification
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>HPV risk group</th>
+                        <th className="text-center">Precancer+</th>
+                        <th className="text-center">Indeterminate</th>
+                        <th className="text-center">Normal</th>
+                      </tr>
+                      <tr>
+                        <td>HPV16</td>
+                        <td className="highest-bg text-center">Highest</td>
+                        <td className="high-bg text-center">High</td>
+                        <td className="high-bg text-center">High</td>
+                      </tr>
+                      <tr>
+                        <td>HPV18/45</td>
+                        <td className="high-bg text-center">High</td>
+                        <td className="high-bg text-center">High</td>
+                        <td className="high-bg text-center">High</td>
+                      </tr>
+                      <tr>
+                        <td>HPV31/33/35/52/58</td>
+                        <td className="high-bg text-center">High</td>
+                        <td className="medium-bg text-center">Medium</td>
+                        <td className="medium-bg text-center">Medium</td>
+                      </tr>
+                      <tr>
+                        <td>HPV39/51/56/59/68</td>
+                        <td className="high-bg text-center">High</td>
+                        <td className="medium-bg text-center">Medium</td>
+                        <td className="low-bg text-center">Low</td>
+                      </tr>
+                      <tr>
+                        <td>Negative</td>
+                        <td colSpan="3" className="lowest-bg text-center">
+                          Lowest
+                        </td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </div>
+              </Col>
             </Row>
           </div>
         </div>

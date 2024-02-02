@@ -305,16 +305,7 @@ export default function AboutTesting() {
               </Col>
             </Row>
             <Row className="py-2">
-              <Col xs={12}>
-                <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8732320/"
-                  target="_blank"
-                >
-                  Developing reliable AVE algorithms that function well in
-                  varied settings has proven extremely challenging.
-                </a>{" "}
-                Lessons learned so far include:{" "}
-              </Col>
+              <Col xs={12}>Lessons learned so far include: </Col>
               <Col>
                 <ul>
                   <li>Rigorous outcome definitions are needed. </li>
@@ -335,6 +326,13 @@ export default function AboutTesting() {
                     support clinical guidelines development after validation.
                   </li>
                 </ul>
+                <a
+                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8732320/"
+                  target="_blank"
+                >
+                  Developing reliable AVE algorithms that function well in
+                  varied settings has proven extremely challenging.
+                </a>{" "}
               </Col>
               <Col xs={12}>
                 <div className="d-flex justify-content-center mt-3 mb-3">

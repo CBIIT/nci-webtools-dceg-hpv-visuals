@@ -319,20 +319,20 @@ export default function AboutTesting() {
                 <ul>
                   <li>Rigorous outcome definitions are needed. </li>
                   <li>
-                    Important errors (e.g., calling precancer normal and vice
-                    versa) must be minimize.
+                    Clinically Clinically important errors (e.g., calling
+                    precancer normal and vice versa) must be minimized.
                   </li>
                   <li>
-                    Determinate outcomes must be included to reduce the rate of
-                    clinically important errors.
+                    Indeterminate outcomes must be included to reduce the rate
+                    of clinically important errors.
                   </li>
                   <li>
-                    Using epidemiologic criteria must be evaluated to ensure
-                    that they function as intended to detect disease.
+                    Algorithms using epidemiologic criteria must be evaluated to
+                    ensure that they function as intended to detect disease.
                   </li>
                   <li>
-                    Can be linked to risk estimation to support clinical
-                    guideline development after validation.
+                    Algorithms Algorithms can be linked to risk estimation to
+                    support clinical guidelines development after validation.
                   </li>
                 </ul>
               </Col>

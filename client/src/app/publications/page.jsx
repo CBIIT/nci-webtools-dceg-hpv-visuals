@@ -8,11 +8,7 @@ export default function About() {
     <Container className="py-3">
       <article className="shadow p-4 rounded">
         <h1 className="text-primary mb-3">Publications</h1>
-        <span>
-          <b>
-            <i> This page will be updated as new papers are published. </i>
-          </b>
-        </span>
+
         <hr />
         <div>
           <h2 className="my-3">

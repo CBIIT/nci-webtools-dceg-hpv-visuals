@@ -91,7 +91,7 @@ export default function About() {
         <Row>
           <Col xs={12}>
             <div className="table-responsive">
-              <Table bordered hover>
+              <Table bordered>
                 <thead className="thead-dark">
                   <tr>
                     <th scope="col">Country</th>

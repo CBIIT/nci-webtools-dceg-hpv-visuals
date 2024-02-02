@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       title: "Learn about PAVE",
       path: "/learn-about-pave",
       subRoutes: [
-        { title: "Learn about PAVE", path: "/learn-about-pave" },
+        // { title: "Learn about PAVE", path: "/learn-about-pave" },
         { title: "Testing", path: "/learn-about-pave/testing" },
       ],
     },

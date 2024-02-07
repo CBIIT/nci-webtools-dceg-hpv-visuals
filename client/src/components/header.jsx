@@ -96,7 +96,9 @@ export default function Header({ routes = [] }) {
       </div>
       <div className="d-none d-md-block bg-primary text-white py-1">
         <div className="container">
-          <h1 className="h6 fw-semibold">HPV Visuals</h1>
+          <h1 className="h6 fw-semibold">
+            Human Papillomavirus Automated Visual Evaluation (HPV AVE) Tool
+          </h1>
         </div>
       </div>
       <AppNavbar routes={routes} />

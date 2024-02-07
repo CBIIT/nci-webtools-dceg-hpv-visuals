@@ -17,11 +17,13 @@ export default function Home() {
             <Row className="py-5">
               <Col className="d-flex align-items-center justify-content-center">
                 <div className="text-center">
-                  <h1 className="font-title text-light mb-3">HPV Visuals</h1>
-                  <hr className="border-white" />
+                  <h1 className="font-title text-light mb-3">
+                    Human Papillomavirus Automated Visual Evaluation (HPV AVE)
+                    Tool
+                  </h1>
+                  {/* <hr className="border-white" /> */}
                   <h2>
                     <p className="lead text-light">
-                      HPV-Automated Visual Evaluation (PAVE) Protocol:
                       Validating a Novel Cervical Screening Strategy
                     </p>
                   </h2>
@@ -35,64 +37,48 @@ export default function Home() {
       <div className="bg-light my-5">
         <Container>
           <Row className="justify-content-center">
-            <Col xs={12} md={4} className="mb-5 mb-md-0 d-flex">
-              <Card className="w-100 d-flex flex-column h-100">
-                <div className="card-middle-top-circle">
-                  <BsFillQuestionCircleFill size={30} color="#fff" />
-                </div>
-                <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
-                  <div className="mb-2">
-                    <h2 className="h4">
-                      Browse cervical Images and Quiz Yourself
-                    </h2>
+            <Col xs={12} md={4} className="mb-5 mb-md-0">
+              <a href="/learn-about-pave" className="card-link">
+                <Card className="w-100 d-flex flex-column h-100">
+                  <div className="card-middle-top-circle">
+                    <BsBook size={30} color="#fff" />
                   </div>
-                  <Button
-                    href="/view"
-                    variant="primary"
-                    className="w-75 mx-auto mt-2"
-                  >
-                    Explore
-                  </Button>
-                </Card.Body>
-              </Card>
+                  <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
+                    <div className="mb-2">
+                      <h2 className="h4">About the PAVE Protocol</h2>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </a>
             </Col>
-            <Col xs={12} md={4} className="mb-5 mb-md-0 d-flex">
-              <Card className="w-100 d-flex flex-column h-100">
-                <div className="card-middle-top-circle">
-                  <BsBook size={30} color="#fff" />
-                </div>
-                <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
-                  <div className="mb-2">
-                    <h2 className="h4">Learn about the PAVE Protocol</h2>
+            <Col xs={12} md={4} className="mb-5 mb-md-0">
+              <a href="/view" className="card-link">
+                <Card className="w-100 d-flex flex-column h-100">
+                  <div className="card-middle-top-circle">
+                    <BsFillQuestionCircleFill size={30} color="#fff" />
                   </div>
-                  <Button
-                    href="/learn-about-pave"
-                    variant="primary"
-                    className="w-75 mx-auto mt-2"
-                  >
-                    Explore
-                  </Button>
-                </Card.Body>
-              </Card>
+                  <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
+                    <div className="mb-2">
+                      <h2 className="h4">Browse Cervical Images</h2>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </a>
             </Col>
-            <Col xs={12} md={4} className="mb-5 mb-md-0 d-flex">
-              <Card className="w-100 d-flex flex-column h-100">
-                <div className="card-middle-top-circle">
-                  <BsLightningFill size={30} color="#fff" />
-                </div>
-                <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
-                  <div className="mb-2">
-                    <h2 className="h4">Lessons Learned</h2>
+
+            <Col xs={12} md={4} className="mb-5 mb-md-0">
+              <a href="/publications" className="card-link">
+                <Card className="w-100 d-flex flex-column h-100">
+                  <div className="card-middle-top-circle">
+                    <BsLightningFill size={30} color="#fff" />
                   </div>
-                  <Button
-                    href="/publications"
-                    variant="primary"
-                    className="w-75 mx-auto mt-2"
-                  >
-                    Explore
-                  </Button>
-                </Card.Body>
-              </Card>
+                  <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
+                    <div className="mb-2">
+                      <h2 className="h4">Publications and Lessons Learned</h2>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </a>
             </Col>
           </Row>
           <Row className="mt-3">
@@ -118,9 +104,7 @@ export default function Home() {
                 about novel strategies for cervical cancer screening in settings
                 with limited resources. This site describes the science
                 underlying the PAVE strategy, descriptions of participating
-                partners, and an annotated bibliography. For clinicians, there
-                is also an <a href="/view"> image library</a> to test your
-                visual diagnostic skills.
+                partners, and an annotated bibliography.
               </div>
             </Col>
           </Row>

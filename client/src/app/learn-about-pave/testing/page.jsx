@@ -370,15 +370,15 @@ export default function AboutTesting() {
                 </a>
                 Combining the four hierarchical HPV type risk groups and the
                 three hierarchical AVE classifications yields a 12-point ordinal
-                “severity score” that can be used to guide management. For
-                example, a screening participant with HPV 16 and a “precancer+”
-                AVE classification has the highest risk of precancer and is
-                therefore most likely to benefit from treatment. In contrast, a
-                screening participant with the lowest risk HPV genotypes
-                (HPV39/51/56/59/68) and a “normal” AVE classification has a
-                lower risk and is less likely to benefit from treatment. HPV
-                negative women are at extremely low cancer risk and do not
-                require further testing or treatment.{" "}
+                &quot;severity score&quot; that can be used to guide management.
+                For example, a screening participant with HPV 16 and a
+                &quot;precancer+&quot; AVE classification has the highest risk
+                of precancer and is therefore most likely to benefit from
+                treatment. In contrast, a screening participant with the lowest
+                risk HPV genotypes (HPV39/51/56/59/68) and a &quot;normal&quot;
+                AVE classification has a lower risk and is less likely to
+                benefit from treatment. HPV negative women are at extremely low
+                cancer risk and do not require further testing or treatment.{" "}
               </Col>
             </Row>
             <Row className="py-2">

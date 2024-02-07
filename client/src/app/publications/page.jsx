@@ -259,8 +259,8 @@ export default function About() {
                     href="https://pubmed.ncbi.nlm.nih.gov/34800038/"
                     target="_blank"
                   >
-                    The development of " automated visual evaluation" for
-                    cervical cancer screening: The promise and challenges in
+                    The development of &quot;automated visual evaluation&quot;
+                    for cervical cancer screening: The promise and challenges in
                     adapting deep-learning for clinical testing:
                     Interdisciplinary principles of automated visual evaluation
                     in cervical screening.
@@ -362,13 +362,14 @@ export default function About() {
                 </div>
                 <div>
                   This study classified images into four quality categories
-                  ("unusable", "unsatisfactory", "limited", and "evaluable") and
-                  improved the quality classification performance by
-                  automatically identifying mislabeled and overly ambiguous
-                  images. Testing on a dataset of 87,420 images obtained from
-                  14,183 patients from diverse studies and geographic regions
-                  worldwide. If images are not of adequate quality, an AI
-                  algorithm may not function or may provide inaccurate outputs.
+                  (&quot;unusable&quot;, &quot;unsatisfactory&quot;,
+                  &quot;limited&quot;, and &quot;evaluable&quot;) and improved
+                  the quality classification performance by automatically
+                  identifying mislabeled and overly ambiguous images. Testing on
+                  a dataset of 87,420 images obtained from 14,183 patients from
+                  diverse studies and geographic regions worldwide. If images
+                  are not of adequate quality, an AI algorithm may not function
+                  or may provide inaccurate outputs.
                 </div>
               </li>
             </ul>

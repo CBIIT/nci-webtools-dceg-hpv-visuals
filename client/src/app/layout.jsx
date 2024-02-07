@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
           {/* <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} /> */}
           <GoogleAnalytics id="G-4J9MRXD9YP" />
           <GoogleAnalytics id="G-VRQ8WTYGN7" />
+          <GoogleAnalytics id="G-MZ8408HSC0" />
           <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
 
           <script
@@ -86,6 +87,23 @@ export default function RootLayout({ children }) {
                 }
                 gtag('js', new Date());
                 gtag('config', 'G-VRQ8WTYGN7');
+              `,
+            }}
+          ></script>
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-MZ8408HSC0"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                  window.dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'G-MZ8408HSC0');
               `,
             }}
           ></script>

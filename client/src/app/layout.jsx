@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           <meta name="keywords" content="HPVAVE" />
           <link rel="icon" href="/favicon.ico" sizes="any" />
           {/* <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} /> */}
-          <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} />
+          <GoogleAnalytics id="G-4J9MRXD9YP" />
           <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
         </head>
         <body

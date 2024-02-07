@@ -35,15 +35,15 @@ export default function RootLayout({ children }) {
     },
   ];
 
-  useEffect(() => {
-    // Google Analytics script
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", process.env.GOOGLE_ANALYTICS_ID);
-  }, []);
+  // useEffect(() => {
+  //   // Google Analytics script
+  //   window.dataLayer = window.dataLayer || [];
+  //   function gtag() {
+  //     dataLayer.push(arguments);
+  //   }
+  //   gtag("js", new Date());
+  //   gtag("config", process.env.GOOGLE_ANALYTICS_ID);
+  // }, []);
 
   return (
     <RecoilRoot>
@@ -52,10 +52,11 @@ export default function RootLayout({ children }) {
           <title>HPV Visuals</title>
           <meta name="keywords" content="HPVAVE" />
           <link rel="icon" href="/favicon.ico" sizes="any" />
-          <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} />
+          {/* <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} /> */}
+          <GoogleAnalytics id="G-4J9MRXD9YP" />
           <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
 
-          <script
+          {/* <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-4J9MRXD9YP"
           ></script>
@@ -70,7 +71,7 @@ export default function RootLayout({ children }) {
                 gtag('config', 'G-4J9MRXD9YP');
               `,
             }}
-          ></script>
+          ></script> */}
         </head>
         <body
           className={[inter.className, "d-flex flex-column vh-100"].join(" ")}

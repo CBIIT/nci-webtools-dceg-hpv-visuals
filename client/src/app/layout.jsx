@@ -5,7 +5,6 @@ import GoogleAnalytics from "@/components/analytics";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import "./styles/main.scss";
-import { useEffect } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,16 +34,6 @@ export default function RootLayout({ children }) {
     },
   ];
 
-  // useEffect(() => {
-  //   // Google Analytics script
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag() {
-  //     dataLayer.push(arguments);
-  //   }
-  //   gtag("js", new Date());
-  //   gtag("config", process.env.GOOGLE_ANALYTICS_ID);
-  // }, []);
-
   return (
     <RecoilRoot>
       <html lang="en">
@@ -53,25 +42,8 @@ export default function RootLayout({ children }) {
           <meta name="keywords" content="HPVAVE" />
           <link rel="icon" href="/favicon.ico" sizes="any" />
           {/* <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} /> */}
-          <GoogleAnalytics id="G-4J9MRXD9YP" />
+          <GoogleAnalytics id={process.env.GOOGLE_ANALYTICS_ID} />
           <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
-
-          {/* <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-4J9MRXD9YP"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag() {
-                  window.dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-                gtag('config', 'G-4J9MRXD9YP');
-              `,
-            }}
-          ></script> */}
         </head>
         <body
           className={[inter.className, "d-flex flex-column vh-100"].join(" ")}

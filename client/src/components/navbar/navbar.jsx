@@ -52,6 +52,9 @@ function SubMenu({ subRoutes, pathName, isOpen }) {
 }
 
 function isRouteActive(route, pathName) {
+  // console.log("ROUTE ", route);
+  // console.log("PATH NAME ", pathName);
+
   if (route.path && pathsMatch(pathName, route.path)) {
     return true;
   }
@@ -59,6 +62,7 @@ function isRouteActive(route, pathName) {
   if (route.subRoutes) {
     const isSubRouteActive = route.subRoutes.some((subRoute) => {
       const isActive = pathsMatch(pathName, subRoute.path);
+      //console.log("SUBROUTE ACTIVE ---");
       return isActive;
     });
 
@@ -115,9 +119,17 @@ function renderRoutes({
         </Nav.Item>
       ) : (
         <div
+          // className={clsx(
+          //   "nav-link",
+          //   openSubmenu === route.title && "nav-menu-active",
+          //   "pointer-cursor"
+          // )}
           className={clsx(
             "nav-link",
-            openSubmenu === route.title && "nav-menu-active",
+            (openSubmenu === route.title ||
+              openSubmenu === route.subRoutes.title ||
+              isRouteActive(route, pathName)) &&
+              "nav-menu-active",
             "pointer-cursor"
           )}
         >
@@ -141,8 +153,11 @@ function renderRoutes({
               <SubMenu
                 subRoutes={route.subRoutes}
                 pathName={pathName}
-                activeSubmenu={openSubmenu === route.title}
-                onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
+                // activeSubmenu={openSubmenu === route.title}
+                // onSubmenuClick={(path) => handleOpenSubmenu(null, path)}
+                isOpen={
+                  openSubmenu === route.title || isRouteActive(route, pathName)
+                }
               />
             </div>
           )}
@@ -159,7 +174,7 @@ export default function AppNavbar({ routes = [] }) {
   const [isMobileView, setIsMobileView] = useState(false);
   const router = useRouter(); // Move the useRouter hook to the main component
   const handleSubmenuClick = (path) => {
-    //console.log("Navigating to:", path);
+    console.log("Navigating to:", path);
     router.push(path);
   };
 
@@ -214,7 +229,7 @@ export default function AppNavbar({ routes = [] }) {
         <Container className="">
           {/* Navbar Brand and Toggle */}
           <Navbar.Brand href="/" className="d-flex d-md-none text-light">
-          Human Papillomavirus Automated Visual Evaluation (HPV AVE) Tool.
+            Human Papillomavirus Automated Visual Evaluation (HPV AVE) Tool.
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbar-nav"

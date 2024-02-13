@@ -38,7 +38,7 @@ export default function Home() {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <a href="/learn-about-pave" className="card-link">
+              <Link href="/learn-about-pave/testing" className="card-link">
                 <Card className="w-100 d-flex flex-column h-100">
                   <div className="card-middle-top-circle">
                     <BsBook size={30} color="#fff" />
@@ -49,10 +49,10 @@ export default function Home() {
                     </div>
                   </Card.Body>
                 </Card>
-              </a>
+              </Link>
             </Col>
             <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <a href="/view" className="card-link">
+              <Link href="/view" className="card-link">
                 <Card className="w-100 d-flex flex-column h-100">
                   <div className="card-middle-top-circle">
                     <BsFillQuestionCircleFill size={30} color="#fff" />
@@ -63,11 +63,11 @@ export default function Home() {
                     </div>
                   </Card.Body>
                 </Card>
-              </a>
+              </Link>
             </Col>
 
             <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <a href="/publications" className="card-link">
+              <Link href="/publications" className="card-link">
                 <Card className="w-100 d-flex flex-column h-100">
                   <div className="card-middle-top-circle">
                     <BsLightningFill size={30} color="#fff" />
@@ -78,7 +78,7 @@ export default function Home() {
                     </div>
                   </Card.Body>
                 </Card>
-              </a>
+              </Link>
             </Col>
           </Row>
           <Row className="mt-3">

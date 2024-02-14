@@ -12,7 +12,7 @@ import {
 export default function Home() {
   const handleLinkClick = (href) => {
     const confirmed = window.confirm(
-      "Are you sure you want to leave this site?"
+      "The link will open a new tab. You can return to this page by clicking on the 'HPV' tab."
     );
     if (confirmed) {
       window.open(href, "_blank");
@@ -94,7 +94,7 @@ export default function Home() {
             <Col>
               <div>
                 This website describes PAVE,
-                <a
+                {/* <a
                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491363/"
                   target="_blank"
                 >
@@ -102,7 +102,23 @@ export default function Home() {
                   Human Papillomavirus Automated Visual Evaluation, (PAVE) a
                   protocol to evaluate a novel cervical screening and triage
                   protocol <BsBoxArrowUpRight className="ml-1" />
-                </a>{" "}
+                </a>{" "} */}
+                <span
+                  onClick={() =>
+                    handleLinkClick(
+                      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491363/"
+                    )
+                  }
+                  style={{
+                    cursor: "pointer",
+                    color: "#6e3acf",
+                  }}
+                >
+                  {" "}
+                  Human Papillomavirus Automated Visual Evaluation, (PAVE) a
+                  protocol to evaluate a novel cervical screening and triage
+                  protocol <BsBoxArrowUpRight className="ml-1" />
+                </span>{" "}
                 for resource-limited settings, including areas with high HIV
                 prevalence. PAVE is part of a global strategy to reduce cervical
                 cancer burden and part of the NCI Cancer Moonshot.

@@ -8,6 +8,7 @@ import genderImg from "../../../../public/images/gender.png";
 import AveAlgorithm from "../../../../public/images/AVE-algorithm.png";
 import learnAboutMapImg from "../../../../public/images/learn-about-map.png";
 import learnAboutWorldMapImg from "../../../../public/images/learn-about-worldmap.png";
+import { BsBoxArrowUpRight } from "react-icons/bs"; // Importing icons
 
 export default function AboutTesting() {
   return (
@@ -38,7 +39,7 @@ export default function AboutTesting() {
                 >
                   PAVE utilizes risk-based management for patients in low- and
                   middle-income countries based on their short-term risk of
-                  precancer/cancer.
+                  precancer/cancer <BsBoxArrowUpRight className="ml-1" />.
                 </a>{" "}
                 This approach minimizes overtreatment in low-risk patients and
                 optimizes treatment resources for high-risk patients.{" "}
@@ -249,7 +250,8 @@ export default function AboutTesting() {
                     HPV testing in PAVE will be performed using a novel HPV test
                     called Screenfire, a PCR-based DNA amplification system that
                     provides typing in hierarchical risk groups (HPV 16, else
-                    HPV18/45, else HPV31/33/35/52/58, else HPV39/51/56/59/68).{" "}
+                    HPV18/45, else HPV31/33/35/52/58, else HPV39/51/56/59/68){" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
                   </a>{" "}
                   HPV tests are run onsite or in local laboratories, with
                   results returned by the healthcare team to women quickly (same
@@ -366,7 +368,7 @@ export default function AboutTesting() {
                 >
                   Triage with HPV genotyping and AVE results together can create
                   a risk-stratification system that can guide clinical
-                  management.
+                  management <BsBoxArrowUpRight className="ml-1" />.
                 </a>
                 Combining the four hierarchical HPV type risk groups and the
                 three hierarchical AVE classifications yields a 12-point ordinal

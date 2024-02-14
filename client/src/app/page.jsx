@@ -6,9 +6,18 @@ import {
   BsFillQuestionCircleFill,
   BsBook,
   BsLightningFill,
+  BsBoxArrowUpRight,
 } from "react-icons/bs"; // Importing icons
 
 export default function Home() {
+  const handleLinkClick = (href) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to leave this site?"
+    );
+    if (confirmed) {
+      window.open(href, "_blank");
+    }
+  };
   return (
     <>
       <div className="bg-primary-dark">
@@ -92,7 +101,7 @@ export default function Home() {
                   {" "}
                   Human Papillomavirus Automated Visual Evaluation, (PAVE) a
                   protocol to evaluate a novel cervical screening and triage
-                  protocol
+                  protocol <BsBoxArrowUpRight className="ml-1" />
                 </a>{" "}
                 for resource-limited settings, including areas with high HIV
                 prevalence. PAVE is part of a global strategy to reduce cervical

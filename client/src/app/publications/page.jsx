@@ -2,6 +2,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { BsBoxArrowUpRight } from "react-icons/bs"; // Importing icons
 
 export default function About() {
   return (
@@ -25,7 +26,8 @@ export default function About() {
                     target="_blank"
                   >
                     Use of risk-based cervical screening programs in
-                    resource-limited settings.
+                    resource-limited settings{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                   <span className="green">
                     <i>Cancer Epidemiol. 2023.</i>
@@ -48,7 +50,8 @@ export default function About() {
                   target="_blank"
                 >
                   Design of the HPV-Automated Visual Evaluation (PAVE) Study:
-                  Validating a Novel Cervical Screening Strategy.{" "}
+                  Validating a Novel Cervical Screening Strategy{" "}
+                  <BsBoxArrowUpRight className="ml-1" />.{" "}
                 </a>
                 <span className="green">
                   <i>medRxiv. 2023.</i>
@@ -72,7 +75,8 @@ export default function About() {
                     href="https://pubmed.ncbi.nlm.nih.gov/33072178/"
                     target="_blank"
                   >
-                    automated visual evaluation
+                    automated visual evaluation{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   (AVE) information at the time of cervical examination. The
                   PAVE strategy allows risk-based management using
@@ -88,7 +92,7 @@ export default function About() {
                   >
                     Design and feasibility of a novel program of cervical
                     screening in Nigeria: self-sampled HPV testing paired with
-                    visual triage.{" "}
+                    visual triage <BsBoxArrowUpRight className="ml-1" />.{" "}
                   </a>
                   <span className="green">
                     <i>Infect Agent Cancer. 2020.</i>
@@ -121,8 +125,8 @@ export default function About() {
                     target="_blank"
                   >
                     A rapid HPV typing assay to support global cervical cancer
-                    screening and risk-based management: A cross-sectional
-                    study.{" "}
+                    screening and risk-based management: A cross-sectional study{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
                   </a>
                   <span className="green">
                     <i>Int J Cancer. 2023.</i>
@@ -144,7 +148,8 @@ export default function About() {
                     target="_blank"
                   >
                     Redesign of a rapid, low-cost HPV typing assay to support
-                    risk-based cervical screening and management.{" "}
+                    risk-based cervical screening and management{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
                   </a>
                   <span className="green">
                     <i>Int J Cancer. 2022.</i>
@@ -199,7 +204,8 @@ export default function About() {
                     target="_blank"
                   >
                     AI-based image analysis in clinical testing: lessons from
-                    cervical cancer screening.
+                    cervical cancer screening{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                   <span className="green">
                     <i>Int J Cancer. 2022.</i>
@@ -226,7 +232,8 @@ export default function About() {
                     target="_blank"
                   >
                     AI-based image analysis in clinical testing: lessons from
-                    cervical cancer screening.
+                    cervical cancer screening{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                   <span className="green">
                     <i>Infect Agent Cancer. 2023.</i>
@@ -263,7 +270,8 @@ export default function About() {
                     for cervical cancer screening: The promise and challenges in
                     adapting deep-learning for clinical testing:
                     Interdisciplinary principles of automated visual evaluation
-                    in cervical screening.
+                    in cervical screening <BsBoxArrowUpRight className="ml-1" />
+                    .
                   </a>{" "}
                   <span className="green">
                     <i>• Int J Cancer. 2022.</i>
@@ -299,7 +307,8 @@ export default function About() {
                     target="_blank"
                   >
                     Reproducible and Clinically Translatable Deep Neural
-                    Networks for Cancer Screening.
+                    Networks for Cancer Screening{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                   <span className="green">
                     <i>Res Sq. 2023.</i>
@@ -327,7 +336,7 @@ export default function About() {
                     target="_blank"
                   >
                     Improving the repeatability of deep learning models with
-                    Monte Carlo dropout.
+                    Monte Carlo dropout <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                   <span className="green">
                     <i>NPJ Digit Med. 2022.</i>
@@ -354,7 +363,8 @@ export default function About() {
                     target="_blank"
                   >
                     Image Quality Classification for Automated Visual Evaluation
-                    of Cervical Precancer.
+                    of Cervical Precancer <BsBoxArrowUpRight className="ml-1" />
+                    .
                   </a>{" "}
                   <span className="green">
                     <i>Med Image Learn Ltd Noisy Data. 2022.</i>

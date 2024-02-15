@@ -104,15 +104,12 @@ export default function Home() {
                   protocol <BsBoxArrowUpRight className="ml-1" />
                 </a>{" "} */}
                 <span
+                  className="link-custom"
                   onClick={() =>
                     handleLinkClick(
                       "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10491363/"
                     )
                   }
-                  style={{
-                    cursor: "pointer",
-                    color: "#6e3acf",
-                  }}
                 >
                   {" "}
                   Human Papillomavirus Automated Visual Evaluation, (PAVE) a

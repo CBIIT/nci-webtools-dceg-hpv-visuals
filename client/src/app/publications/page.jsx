@@ -5,6 +5,14 @@ import Col from "react-bootstrap/Col";
 import { BsBoxArrowUpRight } from "react-icons/bs"; // Importing icons
 
 export default function About() {
+  const handleLinkClick = (href) => {
+    const confirmed = window.confirm(
+      "The link will open a new tab. You can return to this page by clicking on the 'HPV' tab."
+    );
+    if (confirmed) {
+      window.open(href, "_blank");
+    }
+  };
   return (
     <Container className="py-3">
       <article className="shadow p-4 rounded">
@@ -21,14 +29,27 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Perkins RB et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/37105017/"
                     target="_blank"
                   >
                     Use of risk-based cervical screening programs in
                     resource-limited settings{" "}
                     <BsBoxArrowUpRight className="ml-1" />.
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/37105017/"
+                      )
+                    }
+                  >
+                    {" "}
+                    Use of risk-based cervical screening programs in
+                    resource-limited settings{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.
+                  </span>
                   <span className="green">
                     <i>Cancer Epidemiol. 2023.</i>
                   </span>
@@ -45,14 +66,24 @@ export default function About() {
               </li>
               <li className="mb-1">
                 De Sanjosé S et al.
-                <a
+                {/* <a
                   href="https://pubmed.ncbi.nlm.nih.gov/37693492/"
                   target="_blank"
                 >
                   Design of the HPV-Automated Visual Evaluation (PAVE) Study:
                   Validating a Novel Cervical Screening Strategy{" "}
                   <BsBoxArrowUpRight className="ml-1" />.{" "}
-                </a>
+                </a> */}
+                <span
+                  className="link-custom"
+                  onClick={() =>
+                    handleLinkClick("https://pubmed.ncbi.nlm.nih.gov/37693492/")
+                  }
+                >
+                  Design of the HPV-Automated Visual Evaluation (PAVE) Study:
+                  Validating a Novel Cervical Screening Strategy{" "}
+                  <BsBoxArrowUpRight className="ml-1" />.{" "}
+                </span>
                 <span className="green">
                   <i>medRxiv. 2023.</i>
                 </span>
@@ -71,13 +102,24 @@ export default function About() {
                   self-collected samples for screening followed by triage of
                   HPV-positives using genotyping information from the screening
                   test and point-of-care{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/33072178/"
                     target="_blank"
                   >
                     automated visual evaluation{" "}
                     <BsBoxArrowUpRight className="ml-1" />
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/33072178/"
+                      )
+                    }
+                  >
+                    automated visual evaluation{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
+                  </span>
                   (AVE) information at the time of cervical examination. The
                   PAVE strategy allows risk-based management using
                   country-specific protocols{" "}
@@ -86,14 +128,26 @@ export default function About() {
               <li className="mb-1">
                 <div>
                   Desai KT, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/33072178/"
                     target="_blank"
                   >
                     Design and feasibility of a novel program of cervical
                     screening in Nigeria: self-sampled HPV testing paired with
                     visual triage <BsBoxArrowUpRight className="ml-1" />.{" "}
-                  </a>
+                  </a> */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/33072178/"
+                      )
+                    }
+                  >
+                    Design and feasibility of a novel program of cervical
+                    screening in Nigeria: self-sampled HPV testing paired with
+                    visual triage <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>Infect Agent Cancer. 2020.</i>
                   </span>
@@ -120,14 +174,27 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Inturrisi F, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/37772799/"
                     target="_blank"
                   >
                     A rapid HPV typing assay to support global cervical cancer
                     screening and risk-based management: A cross-sectional study{" "}
                     <BsBoxArrowUpRight className="ml-1" />.{" "}
-                  </a>
+                  </a> */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/37772799/"
+                      )
+                    }
+                  >
+                    {" "}
+                    A rapid HPV typing assay to support global cervical cancer
+                    screening and risk-based management: A cross-sectional study{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>Int J Cancer. 2023.</i>
                   </span>
@@ -143,14 +210,26 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Desai KT, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/35666530/"
                     target="_blank"
                   >
                     Redesign of a rapid, low-cost HPV typing assay to support
                     risk-based cervical screening and management{" "}
                     <BsBoxArrowUpRight className="ml-1" />.{" "}
-                  </a>
+                  </a> */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/35666530/"
+                      )
+                    }
+                  >
+                    Redesign of a rapid, low-cost HPV typing assay to support
+                    risk-based cervical screening and management{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>Int J Cancer. 2022.</i>
                   </span>
@@ -199,14 +278,26 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Egemen D, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/37758250/"
                     target="_blank"
                   >
                     AI-based image analysis in clinical testing: lessons from
                     cervical cancer screening{" "}
                     <BsBoxArrowUpRight className="ml-1" />.
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/37758250/"
+                      )
+                    }
+                  >
+                    AI-based image analysis in clinical testing: lessons from
+                    cervical cancer screening{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>Int J Cancer. 2022.</i>
                   </span>
@@ -227,14 +318,27 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Parham GP, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/37845724/"
                     target="_blank"
                   >
                     AI-based image analysis in clinical testing: lessons from
                     cervical cancer screening{" "}
                     <BsBoxArrowUpRight className="ml-1" />.
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/37845724/"
+                      )
+                    }
+                  >
+                    {" "}
+                    AI-based image analysis in clinical testing: lessons from
+                    cervical cancer screening{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>Infect Agent Cancer. 2023.</i>
                   </span>
@@ -262,7 +366,7 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Desai KT, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/34800038/"
                     target="_blank"
                   >
@@ -272,9 +376,24 @@ export default function About() {
                     Interdisciplinary principles of automated visual evaluation
                     in cervical screening <BsBoxArrowUpRight className="ml-1" />
                     .
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/34800038/"
+                      )
+                    }
+                  >
+                    The development of &quot;automated visual evaluation&quot;
+                    for cervical cancer screening: The promise and challenges in
+                    adapting deep-learning for clinical testing:
+                    Interdisciplinary principles of automated visual evaluation
+                    in cervical screening <BsBoxArrowUpRight className="ml-1" />
+                    .{" "}
+                  </span>
                   <span className="green">
-                    <i>• Int J Cancer. 2022.</i>
+                    <i> Int J Cancer. 2022.</i>
                   </span>
                 </div>
                 <div>
@@ -302,14 +421,26 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Ahmed SR, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/36909463/"
                     target="_blank"
                   >
                     Reproducible and Clinically Translatable Deep Neural
                     Networks for Cancer Screening{" "}
                     <BsBoxArrowUpRight className="ml-1" />.
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/36909463/"
+                      )
+                    }
+                  >
+                    Reproducible and Clinically Translatable Deep Neural
+                    Networks for Cancer Screening{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>Res Sq. 2023.</i>
                   </span>
@@ -331,13 +462,24 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Lemay A., et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/36400939/"
                     target="_blank"
                   >
                     Improving the repeatability of deep learning models with
                     Monte Carlo dropout <BsBoxArrowUpRight className="ml-1" />.
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/36400939/"
+                      )
+                    }
+                  >
+                    Improving the repeatability of deep learning models with
+                    Monte Carlo dropout <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  </span>
                   <span className="green">
                     <i>NPJ Digit Med. 2022.</i>
                   </span>
@@ -358,14 +500,26 @@ export default function About() {
               <li className="mb-1">
                 <div className="mb-1">
                   Xue Z, et al.{" "}
-                  <a
+                  {/* <a
                     href="https://pubmed.ncbi.nlm.nih.gov/36315110/"
                     target="_blank"
                   >
                     Image Quality Classification for Automated Visual Evaluation
                     of Cervical Precancer <BsBoxArrowUpRight className="ml-1" />
                     .
-                  </a>{" "}
+                  </a>{" "} */}
+                  <span
+                    className="link-custom"
+                    onClick={() =>
+                      handleLinkClick(
+                        "https://pubmed.ncbi.nlm.nih.gov/36315110/"
+                      )
+                    }
+                  >
+                    Image Quality Classification for Automated Visual Evaluation
+                    of Cervical Precancer <BsBoxArrowUpRight className="ml-1" />
+                    .{" "}
+                  </span>
                   <span className="green">
                     <i>Med Image Learn Ltd Noisy Data. 2022.</i>
                   </span>

@@ -62,9 +62,8 @@ legend {
       border-bottom: $navbar-dark-nav-link-border-bottom-active;
     }
 
-    &:hover
-    {
-      border-bottom: 3px rgba(255,255,255,0.3) solid;
+    &:hover {
+      border-bottom: 3px rgba(255, 255, 255, 0.3) solid;
     }
   }
 
@@ -120,12 +119,17 @@ legend {
   }
 }
 
-.active-row{
+.active-row {
   background-color: lightgreen;
 }
 
-.card:hover{
-  box-shadow: 8px 8px 5px blue;    
+.card:hover {
+  box-shadow: 8px 8px 5px blue;
   transform: scale(1.05);
-  transition:.3s;
+  transition: 0.3s;
+}
+
+.link-custom {
+  cursor: pointer;
+  color: #6e3acf;
 }

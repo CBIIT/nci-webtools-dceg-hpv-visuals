@@ -24,13 +24,39 @@ function pathsMatch(path1, path2) {
   return path1 === path2;
 }
 
-function SubMenu({ subRoutes, pathName, isOpen }) {
+// function SubMenu({ subRoutes, pathName, isOpen }) {
+//   return (
+//     <div
+//       className={clsx(
+//         "d-flex flex-row",
+//         !isOpen && "d-none",
+//         isOpen && "active-submenu"
+//       )}
+//     >
+//       {subRoutes.map((subRoute) => (
+//         <Nav.Item key={subRoute.path}>
+//           <Link
+//             href={subRoute.path || "#"}
+//             className={clsx(
+//               "nav-link",
+//               "submenu",
+//               pathsMatch(pathName, subRoute.path) && "active"
+//             )}
+//           >
+//             {subRoute.title}
+//           </Link>
+//         </Nav.Item>
+//       ))}
+//     </div>
+//   );
+// }
+function SubMenu({ subRoutes, pathName, isOpen, isMainActive }) {
   return (
     <div
       className={clsx(
         "d-flex flex-row",
         !isOpen && "d-none",
-        isOpen && "active-submenu"
+        isMainActive && "active-submenu"
       )}
     >
       {subRoutes.map((subRoute) => (
@@ -52,9 +78,6 @@ function SubMenu({ subRoutes, pathName, isOpen }) {
 }
 
 function isRouteActive(route, pathName) {
-  // console.log("ROUTE ", route);
-  // console.log("PATH NAME ", pathName);
-
   if (route.path && pathsMatch(pathName, route.path)) {
     return true;
   }
@@ -62,7 +85,9 @@ function isRouteActive(route, pathName) {
   if (route.subRoutes) {
     const isSubRouteActive = route.subRoutes.some((subRoute) => {
       const isActive = pathsMatch(pathName, subRoute.path);
-      //console.log("SUBROUTE ACTIVE ---");
+      console.log("subRoute.path ", subRoute.path);
+      console.log("PATH NAME ", pathName);
+      console.log("SUBROUTE ACTIVE ---");
       return isActive;
     });
 
@@ -158,6 +183,7 @@ function renderRoutes({
                 isOpen={
                   openSubmenu === route.title || isRouteActive(route, pathName)
                 }
+                isMainActive={isRouteActive(route, pathName)}
               />
             </div>
           )}
@@ -180,19 +206,24 @@ export default function AppNavbar({ routes = [] }) {
 
   const handleOpenSubmenu = (event, title, subRoutes) => {
     event.preventDefault();
+    // setOpenSubmenu((prevOpenSubmenu) => {
+    //   if (prevOpenSubmenu === title || !subRoutes) {
+    //     return null;
+    //   } else {
+    //     // Check if the main route has subRoutes
+    //     if (subRoutes.length > 0) {
+    //       // Set the first subRoute as the default open submenu
+    //       handleSubmenuClick(subRoutes[0].path);
+    //       return title;
+    //     } else {
+    //       return title;
+    //     }
+    //   }
+    // });
     setOpenSubmenu((prevOpenSubmenu) => {
-      if (prevOpenSubmenu === title || !subRoutes) {
-        return null;
-      } else {
-        // Check if the main route has subRoutes
-        if (subRoutes.length > 0) {
-          // Set the first subRoute as the default open submenu
-          handleSubmenuClick(subRoutes[0].path);
-          return title;
-        } else {
-          return title;
-        }
-      }
+      // Set the first subRoute as the default open submenu
+      handleSubmenuClick(subRoutes[0].path);
+      return title;
     });
   };
 
@@ -269,6 +300,7 @@ export default function AppNavbar({ routes = [] }) {
                         subRoutes={route.subRoutes}
                         pathName={pathName}
                         isOpen={openSubmenu === route.title}
+                        isMainActive={isRouteActive(route, pathName)}
                       />
                     </div>
                   )}

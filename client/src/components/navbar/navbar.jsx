@@ -85,9 +85,7 @@ function isRouteActive(route, pathName) {
   if (route.subRoutes) {
     const isSubRouteActive = route.subRoutes.some((subRoute) => {
       const isActive = pathsMatch(pathName, subRoute.path);
-      console.log("subRoute.path ", subRoute.path);
-      console.log("PATH NAME ", pathName);
-      console.log("SUBROUTE ACTIVE ---");
+
       return isActive;
     });
 
@@ -200,7 +198,7 @@ export default function AppNavbar({ routes = [] }) {
   const [isMobileView, setIsMobileView] = useState(false);
   const router = useRouter(); // Move the useRouter hook to the main component
   const handleSubmenuClick = (path) => {
-    console.log("Navigating to:", path);
+    //console.log("Navigating to:", path);
     router.push(path);
   };
 

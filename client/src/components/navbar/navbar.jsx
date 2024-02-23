@@ -257,8 +257,11 @@ export default function AppNavbar({ routes = [] }) {
       >
         <Container className="">
           {/* Navbar Brand and Toggle */}
-          <Navbar.Brand href="/" className="d-flex d-md-none text-light">
-            Human Papillomavirus Automated Visual Evaluation (HPV AVE) Tool.
+          <Navbar.Brand
+            href="/"
+            className="d-flex d-md-none text-light text-wrap"
+          >
+            Humaan Papillomavirus Automated Visual Evaluation (HPV AVE) Tool.
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbar-nav"

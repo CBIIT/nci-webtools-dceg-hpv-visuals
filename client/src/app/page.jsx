@@ -83,7 +83,7 @@ export default function Home() {
                   </div>
                   <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                     <div className="mb-2">
-                      <h2 className="h4">Publications and Lessons Learned</h2>
+                      <h2 className="h4">Publications</h2>
                     </div>
                   </Card.Body>
                 </Card>

@@ -16,7 +16,6 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   const routes = [
     { title: "Home", path: "/", subRoutes: [] },
-    { title: "View Images", path: "/view", subRoutes: [] },
     {
       title: "Learn about PAVE",
       path: "/learn-about-pave",
@@ -25,6 +24,8 @@ export default function RootLayout({ children }) {
         { title: "Testing", path: "/learn-about-pave/testing" },
       ],
     },
+    { title: "View Images", path: "/view", subRoutes: [] },
+
     {
       title: "Lessons Learned / Publications",
       path: "/lessons-learned",

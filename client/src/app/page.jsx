@@ -2,12 +2,10 @@
 import Link from "next/link";
 import Container from "react-bootstrap/Container";
 import { Row, Col, Card, Button } from "react-bootstrap";
-import {
-  BsFillQuestionCircleFill,
-  BsBook,
-  BsLightningFill,
-  BsBoxArrowUpRight,
-} from "react-icons/bs"; // Importing icons
+import { BsBook, BsBoxArrowUpRight } from "react-icons/bs"; // Importing icons
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaLightbulb } from "react-icons/fa";
+import { HiLightBulb } from "react-icons/hi";
 
 export default function Home() {
   const handleLinkClick = (href) => {
@@ -64,7 +62,7 @@ export default function Home() {
               <Link href="/view" className="card-link">
                 <Card className="w-100 d-flex flex-column h-100">
                   <div className="card-middle-top-circle">
-                    <BsFillQuestionCircleFill size={30} color="#fff" />
+                    <FaMagnifyingGlass size={30} color="#fff" />
                   </div>
                   <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                     <div className="mb-2">
@@ -79,7 +77,7 @@ export default function Home() {
               <Link href="/publications" className="card-link">
                 <Card className="w-100 d-flex flex-column h-100">
                   <div className="card-middle-top-circle">
-                    <BsLightningFill size={30} color="#fff" />
+                    <FaLightbulb size={30} color="#fff" />
                   </div>
                   <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                     <div className="mb-2">

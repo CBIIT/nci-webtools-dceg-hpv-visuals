@@ -15,7 +15,7 @@ export default function AboutTesting() {
     <Container className="py-3">
       <article className="shadow p-4 rounded">
         <div>
-          <h1 className="text-primary mb-3">Learn about the PAVE Protocol </h1>
+          <h1 className="text-primary mb-3">About the PAVE Protocol </h1>
           <hr />
           <Row>
             <Col xs={12}>
@@ -43,6 +43,14 @@ export default function AboutTesting() {
                 </a>{" "}
                 This approach minimizes overtreatment in low-risk patients and
                 optimizes treatment resources for high-risk patients.{" "}
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S1877782123000498?via%3Dihub"
+                  target="_blank"
+                >
+                  Read the manuscript on risk-based cervical screening in
+                  resource-limited settings{" "}
+                  <BsBoxArrowUpRight className="ml-1" />.
+                </a>{" "}
               </div>
             </Col>
           </Row>
@@ -229,7 +237,7 @@ export default function AboutTesting() {
           <h1 className="text-primary mb-3">Testing in PAVE </h1>
           <span>
             PAVE utilizes HPV and automated visual evaluation to estimate risk
-            of cervical cancer
+            of cervical cancer.
           </span>
 
           <div className="my-3">
@@ -240,7 +248,7 @@ export default function AboutTesting() {
                   The PAVE study protocol begins with self-collected samples,
                   which requires far fewer pelvic examinations and clinician
                   time compared to Visual Inspection with Acetic Acid (VIA) or
-                  other clinician-based techniques
+                  other clinician-based techniques.
                 </li>
                 <li>
                   <a
@@ -249,10 +257,13 @@ export default function AboutTesting() {
                   >
                     HPV testing in PAVE will be performed using a novel HPV test
                     called Screenfire, a PCR-based DNA amplification system that
-                    provides typing in hierarchical risk groups (HPV 16, else
-                    HPV18/45, else HPV31/33/35/52/58, else HPV39/51/56/59/68){" "}
+                    provides typing in hierarchical risk groups: HPV 16, else
+                    HPV18/45, else HPV 31/33/35/52/58, else HPV 39/51/56/59/68.
+                    Read the Screenfire test manuscript{" "}
                     <BsBoxArrowUpRight className="ml-1" />.{" "}
                   </a>{" "}
+                </li>
+                <li>
                   HPV tests are run onsite or in local laboratories, with
                   results returned by the healthcare team to women quickly (same
                   day or within a few days), as determined individually at each
@@ -307,6 +318,13 @@ export default function AboutTesting() {
                 and portable algorithms to aid clinicians in identifying the
                 cervix and squamocolumnar junction and detecting and treating
                 precancerous lesions.{" "}
+                <a
+                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8732320/"
+                  target="_blank"
+                >
+                  Read the AVE manuscript <BsBoxArrowUpRight className="ml-1" />
+                  .{" "}
+                </a>{" "}
               </Col>
             </Row>
             <Row className="py-2">
@@ -315,8 +333,8 @@ export default function AboutTesting() {
                 <ul className="mb-1">
                   <li>Rigorous outcome definitions are needed. </li>
                   <li>
-                    Clinically Clinically important errors (e.g., calling
-                    precancer normal and vice versa) must be minimized.
+                    Clinically important errors (e.g., calling precancer normal
+                    and vice versa) must be minimized.
                   </li>
                   <li>
                     Indeterminate outcomes must be included to reduce the rate
@@ -327,8 +345,8 @@ export default function AboutTesting() {
                     ensure that they function as intended to detect disease.
                   </li>
                   <li>
-                    Algorithms Algorithms can be linked to risk estimation to
-                    support clinical guidelines development after validation.
+                    Algorithms can be linked to risk estimation to support
+                    clinical guidelines development after validation.
                   </li>
                 </ul>
                 <a
@@ -362,17 +380,13 @@ export default function AboutTesting() {
             <h2>Risk-Stratification Using the PAVE Protocol </h2>
             <Row className="py-2">
               <Col xs={12}>
-                <a
-                  href="https://www.sciencedirect.com/science/article/abs/pii/S1877782123000498?via%3Dihub"
-                  target="_blank"
-                >
-                  Triage with HPV genotyping and AVE results together can create
-                  a risk-stratification system that can guide clinical
-                  management <BsBoxArrowUpRight className="ml-1" />.
-                </a>
                 Combining the four hierarchical HPV type risk groups and the
                 three hierarchical AVE classifications yields a 12-point ordinal
                 &quot;severity score&quot; that can be used to guide management.
+              </Col>
+            </Row>
+            <Row className="py-2">
+              <Col xs={12}>
                 For example, a screening participant with HPV 16 and a
                 &quot;precancer+&quot; AVE classification has the highest risk
                 of precancer and is therefore most likely to benefit from
@@ -383,6 +397,7 @@ export default function AboutTesting() {
                 cancer risk and do not require further testing or treatment.{" "}
               </Col>
             </Row>
+
             <Row className="py-2">
               <Col lg={3} md={12} sm={12}></Col>
               <Col lg={6} md={12} sm={12}>

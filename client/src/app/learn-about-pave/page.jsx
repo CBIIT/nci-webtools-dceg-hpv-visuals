@@ -11,7 +11,7 @@ export default function About() {
   return (
     <Container className="py-3">
       <article className="shadow p-4 rounded">
-        <h1 className="text-primary mb-3">Learn about the PAVE Protocol </h1>
+        <h1 className="text-primary mb-3">About the PAVE Protocol </h1>
         <hr />
         <Row>
           <Col xs={12}>

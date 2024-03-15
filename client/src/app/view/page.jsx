@@ -146,26 +146,22 @@ export default function Explore() {
                 })}
               </Row>
 
-              <Pagination className="d=flex justify-content-end">
-                <Pagination.Prev
-                  onClick={() => (page > 1 ? setPage(page - 1) : "")}
-                />
-                {getPages().map((e) => {
-                  return (
-                    <Pagination.Item
-                      key={e}
-                      active={e === page}
-                      onClick={() => setPage(e)}
-                    >
-                      {e}
-                    </Pagination.Item>
-                  );
-                })}
-                <Pagination.Next
-                  onClick={() =>
-                    page < getPages().length ? setPage(page + 1) : ""
-                  }
-                />
+              <Pagination className="d-flex justify-content-end">
+                {page > 1 && (
+                  <Pagination.Prev onClick={() => setPage(page - 1)} />
+                )}
+                {getPages().map((pageNumber) => (
+                  <Pagination.Item
+                    key={pageNumber}
+                    active={pageNumber === page}
+                    onClick={() => setPage(pageNumber)}
+                  >
+                    {pageNumber}
+                  </Pagination.Item>
+                ))}
+                {page < getPages().length && (
+                  <Pagination.Next onClick={() => setPage(page + 1)} />
+                )}
               </Pagination>
             </article>
           </Col>

@@ -108,6 +108,12 @@ export default function Explore() {
                 visual diagnosis. Try to determine the diagnosis before clicking
                 on the image to see the results.{" "}
               </div>
+              <div>
+                Some of these images show classic examples of normal, low-grade,
+                high-grade, and cancer. Because the visual appearance of these
+                conditions varies considerably, the biopsy diagnoses for some of
+                the images may surprise you.
+              </div>
 
               <hr />
 

@@ -26,13 +26,18 @@ export default function RootLayout({ children }) {
     },
     { title: "View Images", path: "/view", subRoutes: [] },
 
+    // {
+    //   title: "Lessons Learned / Publications",
+    //   path: "/lessons-learned",
+    //   subRoutes: [
+    //     { title: "Lessions Learned", path: "/lessons-learned" },
+    //     { title: "Publications", path: "/publications" },
+    //   ],
+    // },
     {
-      title: "Lessons Learned / Publications",
-      path: "/lessons-learned",
-      subRoutes: [
-        { title: "Lessions Learned", path: "/lessons-learned" },
-        { title: "Publications", path: "/publications" },
-      ],
+      title: "Publications",
+      path: "/publications",
+      subRoutes: [],
     },
   ];
 

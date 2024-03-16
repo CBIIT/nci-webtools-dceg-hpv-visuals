@@ -20,9 +20,7 @@ export default function About() {
 
         <hr />
         <div>
-          <h2 className="my-2">
-            Scientific Basis and Methods of the Pave Protocol
-          </h2>
+          <h2 className="my-2">Scientific Basis and Methods of the Protocol</h2>
 
           <div className="py-2">
             <ul>
@@ -34,7 +32,7 @@ export default function About() {
                     target="_blank"
                   >
                     Use of risk-based cervical screening programs in
-                    resource-limited settings{" "}
+                    resource-limited setting{" "}
                     <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                   {/* <span
@@ -87,29 +85,20 @@ export default function About() {
                 <span className="green">
                   <i>medRxiv. 2023.</i>
                 </span>
-                <div>
-                  PAVE protocol of risk-based management using country-specific
-                  protocols described for PAVE, wh.ich includes screening with
-                  HPV self-collection using HPV genotyping and image and
-                  cervical biopsy collection to train automated visual
-                  evaluation (AVE) algorithms. During PAVE study, wWomen who
-                  screen HPV-positive are managed with VIA, colposcopy, and/or
-                  ablative or excisional treatment per in-country
-                  standard-of-care with treatment resources allocated to those
-                  most likely to develop cancer. The goal of the PAVE study is
-                  to develop an accurate, low-cost, screen-triage protocol. The
-                  PAVE strategy uses self-collected HPV testing on
-                  self-collected samples for screening followed by triage of
-                  HPV-positives using genotyping information from the screening
-                  test and point-of-care{" "}
+                {/* <div>
+                  The goal of the PAVE study is to develop an accurate,
+                  low-cost, screen-triage protocol. The PAVE strategy uses
+                  self-collected HPV testing on self-collected samples for
+                  screening followed by triage of HPV-positives using genotyping
+                  information from the screening test and point-of-care{" "}
                   <a
                     href="https://pubmed.ncbi.nlm.nih.gov/33072178/"
                     target="_blank"
                   >
                     automated visual evaluation{" "}
                     <BsBoxArrowUpRight className="ml-1" />
-                  </a>{" "}
-                  {/* <span
+                  </a>{" "} */}
+                {/* <span
                     className="link-custom"
                     onClick={() =>
                       handleLinkClick(
@@ -120,9 +109,20 @@ export default function About() {
                     automated visual evaluation{" "}
                     <BsBoxArrowUpRight className="ml-1" />
                   </span> */}
-                  (AVE) information at the time of cervical examination. The
+                {/* (AVE) information at the time of cervical examination. The
                   PAVE strategy allows risk-based management using
-                  country-specific protocols{" "}
+                  country-specific protocols.{" "}
+                </div> */}
+                <div>
+                  This paper describes the PAVE protocol of risk-based
+                  management using country-specific protocols. Women who screen
+                  HPV-positive are managed with VIA, colposcopy, and/or ablative
+                  or excisional treatment per in-country standard-of-care with
+                  treatment resources allocated to those most likely to develop
+                  cancer. HPV testing on self-collected samples followed by
+                  triage of HPV-positives using genotyping information and
+                  point-of-care automated visual evaluation (AVE) at the time of
+                  cervical examination.{" "}
                 </div>
               </li>
               <li className="mb-1">
@@ -257,14 +257,13 @@ export default function About() {
             <Col xs={12}>
               <div>
                 <b>
-                  The following papers are key for This section contains
-                  critical papers for any group intending to use AI for analysis
-                  of cervical images. These papers is study outlines critical
+                  The following papers are key for any group intending to use AI
+                  for analysis of cervical images. These papers outline critical
                   steps for ensuring that AI algorithms will function when
                   deployed in the field. Many current algorithms contain
-                  critical important errors of overfitting, lack of portability,
-                  and unrealistic, near-perfect performance estimates, leading
-                  them to fail when used in real-life settings. Key steps for
+                  important errors of overfitting, lack of portability, and
+                  unrealistic, near-perfect performance estimates, leading them
+                  to fail when used in real-life settings. Key steps for
                   avoiding AI algorithm failures in the field are detailed.
                 </b>
               </div>
@@ -397,18 +396,18 @@ export default function About() {
                   </span>
                 </div>
                 <div>
-                  Critical steps for ensuring that AI algorithms will function
-                  when deployed outside of test settings. Key elements for
-                  ensuring portability of an AI algorithm to a new dataset
-                  include clarifying the target population; aligning AVE
-                  categories with HPV natural history; training on
-                  representative images from the four stages of cervical
-                  carcinogenesis; carefully selecting the AI algorithm; and
-                  performing internal validation to test accuracy and external
-                  validation to avoid overfitting. External validation and field
-                  testing ensures that AI functions well outside of the test
-                  setting. Introducing deep learning-based methods prematurely
-                  threatens their eventual acceptance and best use.
+                  This paper describes critical steps for ensuring that AI
+                  algorithms will function when deployed outside of test
+                  settings. Key elements for ensuring portability of an AI
+                  algorithm to a new dataset include clarifying the target
+                  population; aligning AVE categories with HPV natural history;
+                  training on representative images from the four stages of
+                  cervical carcinogenesis; carefully selecting the AI algorithm;
+                  and performing internal validation to test accuracy and
+                  external validation to avoid overfitting. External validation
+                  and field testing ensures that AI functions well outside of
+                  the test setting. Introducing deep learning-based methods
+                  prematurely threatens their eventual acceptance and best use.
                 </div>
               </li>
             </ul>

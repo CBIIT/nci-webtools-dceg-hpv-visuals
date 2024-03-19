@@ -56,7 +56,7 @@ export default function Home() {
                   </div>
                   <Card.Body className="text-center flex-grow-1 d-flex flex-column justify-content-between">
                     <div className="mb-2">
-                      <h2 className="h4">About the PAVE Protocol</h2>
+                      <h2 className="h4">About PAVE</h2>
                     </div>
                   </Card.Body>
                 </Card>

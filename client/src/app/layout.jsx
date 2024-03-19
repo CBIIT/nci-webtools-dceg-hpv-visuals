@@ -17,14 +17,14 @@ export default function RootLayout({ children }) {
   const routes = [
     { title: "Home", path: "/", subRoutes: [] },
     {
-      title: "Learn about PAVE",
+      title: "About PAVE",
       path: "/learn-about-pave",
       subRoutes: [
         // { title: "Learn about PAVE", path: "/learn-about-pave" },
         { title: "Testing", path: "/learn-about-pave/testing" },
       ],
     },
-    { title: "View Images", path: "/view", subRoutes: [] },
+    { title: "Browse Cervical Images", path: "/view", subRoutes: [] },
 
     // {
     //   title: "Lessons Learned / Publications",

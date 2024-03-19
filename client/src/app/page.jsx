@@ -112,9 +112,9 @@ export default function Home() {
                   }
                 >
                   {" "} */}
-                Human Papillomavirus Automated Visual Evaluation, (PAVE) a
+                {/* Human Papillomavirus Automated Visual Evaluation, (PAVE) a
                 protocol to evaluate a novel cervical screening and triage
-                protocol <BsBoxArrowUpRight className="ml-1" />
+                protocol <BsBoxArrowUpRight className="ml-1" /> */}
                 {/* </span>{" "} */}
                 for resource-limited settings, including areas with high HIV
                 prevalence. PAVE is part of a global strategy to reduce cervical

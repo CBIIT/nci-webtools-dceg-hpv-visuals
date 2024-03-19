@@ -20,7 +20,9 @@ export default function About() {
 
         <hr />
         <div>
-          <h2 className="my-2">Scientific Basis and Methods of the Protocol</h2>
+          <h2 className="my-2">
+            Scientific Basis and Methods of the PAVE Protocol
+          </h2>
 
           <div className="py-2">
             <ul>

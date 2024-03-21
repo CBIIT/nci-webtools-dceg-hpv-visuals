@@ -14,6 +14,27 @@ export default function Explore() {
   const [modal, setModal] = useRecoilState(modalState);
   const [numCards, setNumCards] = useState(12); //Number of cards per page
   const [data, setData] = useState([]);
+  const [filterOption, setFilterOption] = useState("All"); // Initially set to "All"
+
+  // Create a function to handle filter change
+  const handleFilterChange = (e) => {
+    setFilterOption(e.target.value);
+  };
+
+  // Function to calculate the number of pages based on filtered data
+  function getFilteredPages() {
+    const filteredData = data.filter(
+      (item) =>
+        filterOption === "All" || item.detailedGroundTruth === filterOption
+    );
+    const totalPages = Math.ceil(filteredData.length / numCards);
+    return totalPages;
+  }
+
+  // Adjust pagination based on filter
+  useEffect(() => {
+    setPage(1); // Reset page to 1 when filter changes
+  }, [filterOption]);
 
   const document = new Document({
     document: {
@@ -93,15 +114,41 @@ export default function Explore() {
         <Row>
           <Col>
             <article className="shadow px-3 py-2 rounded">
-              <h1 className="text-primary mb-3">View Images</h1>
+              <Row>
+                <Col className="mb-3" lg={8} xl={8}>
+                  {" "}
+                  <h1 className="text-primary mb-3">View Images</h1>
+                </Col>
+                <Col>
+                  {/* Dropdown menu */}
+                  <Form.Group className="mb-3" controlId="filterOption">
+                    <Form.Label>Filter by Detailed Ground Truth</Form.Label>
+                    <Form.Select
+                      value={filterOption}
+                      onChange={handleFilterChange}
+                    >
+                      <option value="All">All</option>
+                      {/* Unique detailedGroundTruth values */}
+                      {[
+                        ...new Set(
+                          data.map((item) => item.detailedGroundTruth)
+                        ),
+                      ].map((value) => (
+                        <option key={value} value={value}>
+                          {value}
+                        </option>
+                      ))}
+                    </Form.Select>
+                  </Form.Group>
+                </Col>
+              </Row>
               {/*<Form.Group className="mb-3" controlId="ageEnroll">
                 <Form.Label >Search</Form.Label>
                 <Form.Control
                   name="ageEnroll"
                   onChange={handleSearch}
                 />
-              </Form.Group>*/}
-
+              </Form.Group>*/}{" "}
               <div className="pb-0">
                 The images below include information on HPV, cytology, and
                 histology diagnoses. They allow you to test the accuracy of your
@@ -114,10 +161,8 @@ export default function Explore() {
                 conditions varies considerably, the biopsy diagnoses for some of
                 the images may surprise you.
               </div>
-
               <hr />
-
-              <Row>
+              {/* <Row>
                 {data.map((e) => {
                   return (
                     e._id < numCards * page &&
@@ -144,9 +189,42 @@ export default function Explore() {
                     )
                   );
                 })}
+              </Row> */}
+              <Row>
+                {data
+                  .filter(
+                    (item) =>
+                      filterOption === "All" ||
+                      item.detailedGroundTruth === filterOption
+                  )
+                  .map((e) => {
+                    return (
+                      e._id < numCards * page &&
+                      e._id >= numCards * (page - 1) && (
+                        <Col className="mb-3" lg={6} xl={4}>
+                          <Card
+                            className="shadow"
+                            onClick={() => showModal(e)}
+                            style={{ cursor: "pointer" }}
+                          >
+                            <Card.Img
+                              height="368px"
+                              variant="top"
+                              src={e._image}
+                              alt={`Image ${e._id + 1}`}
+                            />
+                            <Card.Body>
+                              <Card.Text className="d-flex justify-content-center">
+                                {"Image " + (e._id + 1)}
+                              </Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      )
+                    );
+                  })}
               </Row>
-
-              <Pagination className="d-flex justify-content-end">
+              {/* <Pagination className="d-flex justify-content-end">
                 {page > 1 && (
                   <Pagination.Prev onClick={() => setPage(page - 1)} />
                 )}
@@ -160,6 +238,23 @@ export default function Explore() {
                   </Pagination.Item>
                 ))}
                 {page < getPages().length && (
+                  <Pagination.Next onClick={() => setPage(page + 1)} />
+                )}
+              </Pagination> */}
+              <Pagination className="d-flex justify-content-end">
+                {page > 1 && (
+                  <Pagination.Prev onClick={() => setPage(page - 1)} />
+                )}
+                {Array.from({ length: getFilteredPages() }).map((_, index) => (
+                  <Pagination.Item
+                    key={index + 1}
+                    active={index + 1 === page}
+                    onClick={() => setPage(index + 1)}
+                  >
+                    {index + 1}
+                  </Pagination.Item>
+                ))}
+                {page < getFilteredPages() && (
                   <Pagination.Next onClick={() => setPage(page + 1)} />
                 )}
               </Pagination>

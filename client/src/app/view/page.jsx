@@ -119,8 +119,7 @@ export default function Explore() {
                   {" "}
                   <h1 className="text-primary mb-3">View Images</h1>
                 </Col>
-                <Col>
-                  {/* Dropdown menu */}
+                {/* <Col>
                   <Form.Group className="mb-3" controlId="filterOption">
                     <Form.Label>Filter by Detailed Ground Truth</Form.Label>
                     <Form.Select
@@ -128,7 +127,6 @@ export default function Explore() {
                       onChange={handleFilterChange}
                     >
                       <option value="All">All</option>
-                      {/* Unique detailedGroundTruth values */}
                       {[
                         ...new Set(
                           data.map((item) => item.detailedGroundTruth)
@@ -140,7 +138,7 @@ export default function Explore() {
                       ))}
                     </Form.Select>
                   </Form.Group>
-                </Col>
+                </Col> */}
               </Row>
               {/*<Form.Group className="mb-3" controlId="ageEnroll">
                 <Form.Label >Search</Form.Label>

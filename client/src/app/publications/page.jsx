@@ -255,14 +255,14 @@ export default function About() {
           <Row className="pb-2">
             <Col xs={12}>
               <div>
-                The following papers are key for any group intending to use AI
-                for analysis of cervical images. These papers outline critical
-                steps for ensuring that AI algorithms will function when
-                deployed in the field. Many current algorithms contain important
-                errors of overfitting, lack of portability, and unrealistic,
-                near-perfect performance estimates, leading them to fail when
-                used in real-life settings. Key steps for avoiding AI algorithm
-                failures in the field are detailed.
+                This section contains any group intending to use AI for analysis
+                of cervical images. These papers outline critical steps for
+                ensuring that AI algorithms will function when deployed in the
+                field. Many current algorithms contain important errors of
+                overfitting, lack of portability, and unrealistic, near-perfect
+                performance estimates, leading them to fail when used in
+                real-life settings. Key steps for avoiding AI algorithm failures
+                in the field are detailed.
               </div>
             </Col>
           </Row>

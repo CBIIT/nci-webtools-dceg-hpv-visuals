@@ -34,8 +34,8 @@ export default function About() {
                     target="_blank"
                   >
                     Use of risk-based cervical screening programs in
-                    resource-limited setting{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.
+                    resource-limited setting.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"
@@ -71,8 +71,8 @@ export default function About() {
                   target="_blank"
                 >
                   Design of the HPV-Automated Visual Evaluation (PAVE) Study:
-                  Validating a Novel Cervical Screening Strategy{" "}
-                  <BsBoxArrowUpRight className="ml-1" />.{" "}
+                  Validating a Novel Cervical Screening Strategy.{" "}
+                  <BsBoxArrowUpRight className="ml-1" />{" "}
                 </a>
                 {/* <span
                   className="link-custom"
@@ -121,10 +121,7 @@ export default function About() {
                   HPV-positive are managed with VIA, colposcopy, and/or ablative
                   or excisional treatment per in-country standard-of-care with
                   treatment resources allocated to those most likely to develop
-                  cancer. HPV testing on self-collected samples followed by
-                  triage of HPV-positives using genotyping information and
-                  point-of-care automated visual evaluation (AVE) at the time of
-                  cervical examination.{" "}
+                  cancer.{" "}
                 </div>
               </li>
               <li className="mb-1">
@@ -136,7 +133,7 @@ export default function About() {
                   >
                     Design and feasibility of a novel program of cervical
                     screening in Nigeria: self-sampled HPV testing paired with
-                    visual triage <BsBoxArrowUpRight className="ml-1" />.{" "}
+                    visual triage. <BsBoxArrowUpRight className="ml-1" />{" "}
                   </a>
                   {/* <span
                     className="link-custom"
@@ -181,8 +178,8 @@ export default function About() {
                     target="_blank"
                   >
                     A rapid HPV typing assay to support global cervical cancer
-                    screening and risk-based management: A cross-sectional study{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                    screening and risk-based management: A cross-sectional
+                    study. <BsBoxArrowUpRight className="ml-1" />{" "}
                   </a>
                   {/* <span
                     className="link-custom"
@@ -217,8 +214,8 @@ export default function About() {
                     target="_blank"
                   >
                     Redesign of a rapid, low-cost HPV typing assay to support
-                    risk-based cervical screening and management{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                    risk-based cervical screening and management.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />{" "}
                   </a>
                   {/* <span
                     className="link-custom"
@@ -258,16 +255,14 @@ export default function About() {
           <Row className="pb-2">
             <Col xs={12}>
               <div>
-                <b>
-                  The following papers are key for any group intending to use AI
-                  for analysis of cervical images. These papers outline critical
-                  steps for ensuring that AI algorithms will function when
-                  deployed in the field. Many current algorithms contain
-                  important errors of overfitting, lack of portability, and
-                  unrealistic, near-perfect performance estimates, leading them
-                  to fail when used in real-life settings. Key steps for
-                  avoiding AI algorithm failures in the field are detailed.
-                </b>
+                The following papers are key for any group intending to use AI
+                for analysis of cervical images. These papers outline critical
+                steps for ensuring that AI algorithms will function when
+                deployed in the field. Many current algorithms contain important
+                errors of overfitting, lack of portability, and unrealistic,
+                near-perfect performance estimates, leading them to fail when
+                used in real-life settings. Key steps for avoiding AI algorithm
+                failures in the field are detailed.
               </div>
             </Col>
           </Row>
@@ -284,8 +279,8 @@ export default function About() {
                     target="_blank"
                   >
                     AI-based image analysis in clinical testing: lessons from
-                    cervical cancer screening{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.
+                    cervical cancer screening.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"
@@ -324,8 +319,8 @@ export default function About() {
                     target="_blank"
                   >
                     AI-based image analysis in clinical testing: lessons from
-                    cervical cancer screening{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.
+                    cervical cancer screening.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"
@@ -375,8 +370,8 @@ export default function About() {
                     for cervical cancer screening: The promise and challenges in
                     adapting deep-learning for clinical testing:
                     Interdisciplinary principles of automated visual evaluation
-                    in cervical screening <BsBoxArrowUpRight className="ml-1" />
-                    .
+                    in cervical screening.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"
@@ -427,8 +422,8 @@ export default function About() {
                     target="_blank"
                   >
                     Reproducible and Clinically Translatable Deep Neural
-                    Networks for Cancer Screening{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.
+                    Networks for Cancer Screening.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"
@@ -468,7 +463,7 @@ export default function About() {
                     target="_blank"
                   >
                     Improving the repeatability of deep learning models with
-                    Monte Carlo dropout <BsBoxArrowUpRight className="ml-1" />.
+                    Monte Carlo dropout. <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"
@@ -506,8 +501,8 @@ export default function About() {
                     target="_blank"
                   >
                     Image Quality Classification for Automated Visual Evaluation
-                    of Cervical Precancer <BsBoxArrowUpRight className="ml-1" />
-                    .
+                    of Cervical Precancer.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span
                     className="link-custom"

@@ -58,15 +58,26 @@ export default function AboutTesting() {
             <Col xs={12}>
               <div className="d-flex justify-content-center mt-3 mb-3">
                 <figure className="text-center">
-                  <Image
-                    src={learnAboutMapImg}
-                    alt="This figure depicts the steps that a patient would experience. First, HPV testing. Patients testing negative are reassured. Patients testing HPV positive undergo Automated Visual Evaluation (AVE) and AVE information is combined with HPV genotyping information to determine the risk of precancer. Patients are then directed to treatment or surveillance]"
-                    title="This figure depicts the steps that a patient would experience. First, HPV testing. Patients testing negative are reassured. Patients testing HPV positive undergo Automated Visual Evaluation (AVE) and AVE information is combined with HPV genotyping information to determine the risk of precancer. Patients are then directed to treatment or surveillance]"
-                    width={500}
-                    height={300}
-                    layout="responsive"
-                    className="img-fluid mx-auto"
-                  />
+                  <div className="image-container">
+                    <Image
+                      src={learnAboutMapImg}
+                      alt="This figure depicts the steps that a patient would experience. First, HPV testing. Patients testing negative are reassured. Patients testing HPV positive undergo Automated Visual Evaluation (AVE) and AVE information is combined with HPV genotyping information to determine the risk of precancer. Patients are then directed to treatment or surveillance"
+                      title=""
+                      width={500}
+                      height={300}
+                      layout="responsive"
+                      className="img-fluid mx-auto"
+                    />
+                    <p className="title-text">
+                      This figure depicts the steps that a patient would
+                      experience. First, HPV testing. Patients testing negative
+                      are reassured. Patients testing HPV positive undergo
+                      Automated Visual Evaluation (AVE) and AVE information is
+                      combined with HPV genotyping information to determine the
+                      risk of precancer. Patients are then directed to treatment
+                      or surveillance
+                    </p>
+                  </div>
                   <figcaption className="mt-2">
                     <b>Participant experience map.</b>
                   </figcaption>
@@ -218,15 +229,21 @@ export default function AboutTesting() {
             <Col xs={12}>
               <div className="d-flex justify-content-center mt-3 mb-3">
                 <figure className="text-center">
-                  <Image
-                    src={learnAboutWorldMapImg}
-                    alt="Map of the world showing the geographical locations of PAVE member sites."
-                    title="Map of the world showing the geographical locations of PAVE member sites."
-                    width={500}
-                    height={300}
-                    layout="responsive"
-                    className="img-fluid"
-                  />
+                  <div className="image-container">
+                    <Image
+                      src={learnAboutWorldMapImg}
+                      alt="Map of the world showing the geographical locations of PAVE member sites."
+                      title=""
+                      width={500}
+                      height={300}
+                      layout="responsive"
+                      className="img-fluid"
+                    />
+                    <p className="title-text">
+                      Map of the world showing the geographical locations of
+                      PAVE member sites.
+                    </p>
+                  </div>
                   <figcaption className="mt-2">
                     <b>Map of the world showing PAVE sites</b>
                   </figcaption>
@@ -279,12 +296,21 @@ export default function AboutTesting() {
               <Col xs={12}>
                 <div className="d-flex justify-content-center mt-3 mb-3">
                   <figure className="text-center">
-                    <Image
-                      src={genderImg}
-                      alt="In a hypothetical population of 100 individuals, with clinician-collected sampling, 100 women require pelvic exams to detect 15 women testing HPV+ and 3 with precancer. Using self-sampling, only the 15 HPV+ women require pelvic exams."
-                      title="In a hypothetical population of 100 individuals, with clinician-collected sampling, 100 women require pelvic exams to detect 15 women testing HPV+ and 3 with precancer. Using self-sampling, only the 15 HPV+ women require pelvic exams."
-                      className="img-fluid mx-auto"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src={genderImg}
+                        alt="In a hypothetical population of 100 individuals, with clinician-collected sampling, 100 women require pelvic exams to detect 15 women testing HPV+ and 3 with precancer. Using self-sampling, only the 15 HPV+ women require pelvic exams."
+                        className="img-fluid mx-auto"
+                      />
+                      <p className="title-text">
+                        In a hypothetical population of 100 individuals, with
+                        clinician-collected sampling, 100 women require pelvic
+                        exams to detect 15 women testing HPV+ and 3 with
+                        precancer. Using self-sampling, only the 15 HPV+ women
+                        require pelvic exams.
+                      </p>
+                    </div>
+
                     <figcaption className="mt-2">
                       <b>
                         Number of women undergoing pelvic exams to detect
@@ -363,12 +389,21 @@ export default function AboutTesting() {
               <Col xs={12}>
                 <div className="d-flex justify-content-center mt-3 mb-3">
                   <figure className="text-center">
-                    <Image
-                      src={AveAlgorithm}
-                      alt="The top of this figure depicts photographs of the cervix ranging from normal to precancer. The bottom depicts the results of the AVE algorithms, classified as normal, indeterminate, and precancer+. "
-                      title="The top of this figure depicts photographs of the cervix ranging from normal to precancer. The bottom depicts the results of the AVE algorithms, classified as normal, indeterminate, and precancer+. "
-                      className="img-fluid mx-auto"
-                    />
+                    <div className="image-container">
+                      <Image
+                        src={AveAlgorithm}
+                        alt="The top of this figure depicts photographs of the cervix ranging from normal to precancer. The bottom depicts the results of the AVE algorithms, classified as normal, indeterminate, and precancer+. "
+                        title=""
+                        className="img-fluid mx-auto"
+                      />
+                      <p className="title-text">
+                        The top of this figure depicts photographs of the cervix
+                        ranging from normal to precancer. The bottom depicts the
+                        results of the AVE algorithms, classified as normal,
+                        indeterminate, and precancer+.
+                      </p>
+                    </div>
+
                     <figcaption className="mt-2">
                       <b>
                         Illustration of AVE algorithm distinguishing normal from

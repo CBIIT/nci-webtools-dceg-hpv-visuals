@@ -25,8 +25,7 @@ export default function Home() {
               <Col className="d-flex align-items-center justify-content-center">
                 <div className="text-center">
                   <h1 className="font-title text-light mb-3">
-                    Human Papillomavirus Automated Visual Evaluation (HPV AVE)
-                    Tool
+                    Human Papillomavirus Automated Visual Evaluation (PAVE) Tool
                   </h1>
                   {/* <hr className="border-white" /> */}
                   <h2>

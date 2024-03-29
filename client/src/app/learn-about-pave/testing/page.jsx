@@ -439,9 +439,9 @@ export default function AboutTesting() {
 
             <Row className="py-2">
               <Col xl={3} lg={1} md={12} sm={12}></Col>
-              <Col xl={6} lg={10} md={12} sm={12}>
+              <Col xl={6} lg={10} md={12} sm={12} sx={12}>
                 <div className="table-responsive">
-                  <Table bordered>
+                  <Table bordered className="custom-table">
                     <thead>
                       <tr>
                         <th className="visually-hidden borderless">

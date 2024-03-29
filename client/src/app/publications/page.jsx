@@ -34,7 +34,7 @@ export default function About() {
                     target="_blank"
                   >
                     Use of risk-based cervical screening programs in
-                    resource-limited setting.{" "}
+                    resource-limited settings.{" "}
                     <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                   {/* <span

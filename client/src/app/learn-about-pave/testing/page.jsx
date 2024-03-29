@@ -437,61 +437,56 @@ export default function AboutTesting() {
               </Col>
             </Row>
 
-            <Row className="py-2">
-              <Col xl={3} lg={1} md={12} sm={12}></Col>
-              <Col xl={6} lg={10} md={12} sm={12} sx={12}>
-                <div className="table-responsive">
-                  <Table bordered className="custom-table">
-                    <thead>
-                      <tr>
-                        <th className="visually-hidden borderless">
-                          placeholder
-                        </th>
-                        <th colSpan="3" className="text-center">
-                          AVE Classification
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>HPV risk group</th>
-                        <th className="text-center">Precancer+</th>
-                        <th className="text-center">Indeterminate</th>
-                        <th className="text-center">Normal</th>
-                      </tr>
-                      <tr>
-                        <td>HPV16</td>
-                        <td className="highest-bg text-center">Highest</td>
-                        <td className="high-bg text-center">High</td>
-                        <td className="high-bg text-center">High</td>
-                      </tr>
-                      <tr>
-                        <td>HPV18/45</td>
-                        <td className="high-bg text-center">High</td>
-                        <td className="high-bg text-center">High</td>
-                        <td className="high-bg text-center">High</td>
-                      </tr>
-                      <tr>
-                        <td>HPV31/33/35/52/58</td>
-                        <td className="high-bg text-center">High</td>
-                        <td className="medium-bg text-center">Medium</td>
-                        <td className="medium-bg text-center">Medium</td>
-                      </tr>
-                      <tr>
-                        <td>HPV39/51/56/59/68</td>
-                        <td className="high-bg text-center">High</td>
-                        <td className="medium-bg text-center">Medium</td>
-                        <td className="low-bg text-center">Low</td>
-                      </tr>
-                      <tr>
-                        <td>Negative</td>
-                        <td colSpan="3" className="lowest-bg text-center">
-                          Lowest
-                        </td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </div>
+            <Row className="py-2 justify-content-center">
+              <Col xl={6} lg={10} md={12} sm={12} xs={12}>
+                <Table size="sm" bordered responsive="xs">
+                  <thead>
+                    <tr>
+                      <th className="visually-hidden border-0">&nbsp;</th>
+                      <th colSpan="3" className="text-center">
+                        AVE Classification
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>HPV risk group</th>
+                      <th className="text-center text-truncate">Precancer+</th>
+                      <th className="text-center text-truncate">Indeterminate</th>
+                      <th className="text-center">Normal</th>
+                    </tr>
+                    <tr>
+                      <td>HPV16</td>
+                      <td className="highest-bg text-center">Highest</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="high-bg text-center">High</td>
+                    </tr>
+                    <tr>
+                      <td>HPV18/45</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="high-bg text-center">High</td>
+                    </tr>
+                    <tr>
+                      <td>HPV31/33/35/52/58</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="medium-bg text-center">Medium</td>
+                      <td className="medium-bg text-center">Medium</td>
+                    </tr>
+                    <tr>
+                      <td>HPV39/51/56/59/68</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="medium-bg text-center">Medium</td>
+                      <td className="low-bg text-center">Low</td>
+                    </tr>
+                    <tr>
+                      <td>Negative</td>
+                      <td colSpan="3" className="lowest-bg text-center">
+                        Lowest
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
               </Col>
             </Row>
           </div>

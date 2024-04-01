@@ -47,7 +47,7 @@ export default function Header({ routes = [] }) {
             className="mw-100 hpv-logo"
           />
         </a>
-        <div className="col-xl-3 col-md-4 col-sm-9 mb-1">
+        <div className="col-xl-3 col-md-4 col-sm-9 col-sx-9 mb-1">
           <div className="d-flex" style={{ width: "auto !important" }}>
             <label htmlFor="doc_search" className="visually-hidden">
               Search:

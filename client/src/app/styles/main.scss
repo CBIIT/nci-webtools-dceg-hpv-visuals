@@ -196,6 +196,9 @@ h1,
   }
 }
 
-.navbar-toggler {
-  border: none;
+.navbar-toggler:focus,
+.navbar-toggler:focus > *,
+.navbar-toggler:focus > *:before,
+.navbar-toggler:focus > *:after {
+  box-shadow: none !important;
 }

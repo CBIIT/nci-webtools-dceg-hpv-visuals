@@ -42,14 +42,12 @@ export default function Header({ routes = [] }) {
           href="/#"
         >
           <img
-            src="/assets/HPVLogo_Desktop.png"
-            //height="65"
+            src="/assets/HPVLogo_Desktop.svg"
             alt="Human Papillomavrus Automated Visual Evaluation Tool Logo"
-            className="mw-100"
-            //style={{ width: "100%", height: "auto" }}
+            className="mw-100 hpv-logo"
           />
         </a>
-        <div className="col-xl-3 col-md-4 col-sm-12 mb-1">
+        <div className="col-xl-3 col-md-4 col-sm-9 mb-1">
           <div className="d-flex" style={{ width: "auto !important" }}>
             <label htmlFor="doc_search" className="visually-hidden">
               Search:

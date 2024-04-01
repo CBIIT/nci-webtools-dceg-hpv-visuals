@@ -189,10 +189,12 @@ h1,
 //     font-size: 12px; /* Decrease font size for smaller screens */
 //   }
 // }
-
-@media (max-width: 576px) {
-  .mw-100 {
-    max-width: 200px; /* Adjust the maximum width as needed */
+.hpv-logo {
+  height: 65px;
+}
+@media (max-width: 767px) {
+  .hpv-logo {
+    height: auto;
   }
 }
 

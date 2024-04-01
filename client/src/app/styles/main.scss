@@ -66,8 +66,8 @@ th {
   border-top: none;
 }
 
-.nav-menu-active,
-.nav-menu-active:hover {
+.navbar-nav .nav-item .nav-link.nav-menu-active,
+.navbar-nav .nav-item .nav-link.nav-menu-active:hover {
   background-color: #6e3acf;
   color: white;
 }

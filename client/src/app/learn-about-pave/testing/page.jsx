@@ -438,8 +438,13 @@ export default function AboutTesting() {
             </Row>
 
             <Row className="py-2 justify-content-center">
-              <Col xl={6} lg={10} md={12} sm={12} xs={12}>
-                <Table size="sm" bordered responsive="xs">
+              <Col sm="auto">
+                <Table
+                  size="sm"
+                  bordered
+                  responsive="sm"
+                  className="d-none d-sm-block"
+                >
                   <thead>
                     <tr>
                       <th className="visually-hidden border-0">&nbsp;</th>
@@ -451,8 +456,8 @@ export default function AboutTesting() {
                   <tbody>
                     <tr>
                       <th>HPV risk group</th>
-                      <th className="text-center text-truncate">Precancer+</th>
-                      <th className="text-center text-truncate">Indeterminate</th>
+                      <th className="text-center">Precancer+</th>
+                      <th className="text-center">Indeterminate</th>
                       <th className="text-center">Normal</th>
                     </tr>
                     <tr>
@@ -477,6 +482,56 @@ export default function AboutTesting() {
                       <td>HPV39/51/56/59/68</td>
                       <td className="high-bg text-center">High</td>
                       <td className="medium-bg text-center">Medium</td>
+                      <td className="low-bg text-center">Low</td>
+                    </tr>
+                    <tr>
+                      <td>Negative</td>
+                      <td colSpan="3" className="lowest-bg text-center">
+                        Lowest
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
+                <Table size="sm" bordered className="d-block d-sm-none">
+                  <thead>
+                    <tr>
+                      <th className="visually-hidden">&nbsp;</th>
+                      <th colSpan="3" className="text-center">
+                        AVE Classification
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>HPV risk group</th>
+                      <th style={{ writingMode: "vertical-lr" }}>Precancer+</th>
+                      <th style={{ writingMode: "vertical-lr" }}>
+                        Indeterminate
+                      </th>
+                      <th style={{ writingMode: "vertical-lr" }}>Normal</th>
+                    </tr>
+                    <tr>
+                      <td>HPV16</td>
+                      <td className="highest-bg text-center">Highest</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="high-bg text-center">High</td>
+                    </tr>
+                    <tr>
+                      <td>HPV18/45</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="high-bg text-center">High</td>
+                    </tr>
+                    <tr>
+                      <td>HPV31/33/35/52/58</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="medium-bg text-center">Med</td>
+                      <td className="medium-bg text-center">Med</td>
+                    </tr>
+                    <tr>
+                      <td>HPV39/51/56/59/68</td>
+                      <td className="high-bg text-center">High</td>
+                      <td className="medium-bg text-center">Med</td>
                       <td className="low-bg text-center">Low</td>
                     </tr>
                     <tr>

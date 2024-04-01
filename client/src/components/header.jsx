@@ -36,15 +36,20 @@ export default function Header({ routes = [] }) {
           marginRight: "auto !important",
         }}
       >
-        <a className="col-md-9 mb-1" rel="noopener noreferrer" href="/#">
+        <a
+          className="col-xl-9 col-md-8 col-sm-12 mb-1"
+          rel="noopener noreferrer"
+          href="/#"
+        >
           <img
-            src="/assets/HPVLogo_Desktop.svg"
+            src="/assets/HPVLogo_Desktop.png"
             //height="65"
             alt="Human Papillomavrus Automated Visual Evaluation Tool Logo"
             className="mw-100"
+            //style={{ width: "100%", height: "auto" }}
           />
         </a>
-        <div className="col-md-3">
+        <div className="col-xl-3 col-md-4 col-sm-12 mb-1">
           <div className="d-flex" style={{ width: "auto !important" }}>
             <label htmlFor="doc_search" className="visually-hidden">
               Search:

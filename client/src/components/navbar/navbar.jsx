@@ -257,12 +257,12 @@ export default function AppNavbar({ routes = [] }) {
       >
         <Container className="">
           {/* Navbar Brand and Toggle */}
-          <Navbar.Brand
+          {/* <Navbar.Brand
             href="/"
             className="d-flex d-md-none text-light text-wrap"
           >
-            Human Papillomavirus Automated Visual Evaluation (PAVE) Tool.
-          </Navbar.Brand>
+            Human Papillomavirus Automated Visual Evaluation (PAVE) Tool
+          </Navbar.Brand> */}
           <Navbar.Toggle
             aria-controls="navbar-nav"
             className="px-0 py-3 text-uppercase"

@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <head>
           <title>
-            Human Papillomavirus Automated Visual Evaluation (PAVE) Tool.
+            Human Papillomavirus Automated Visual Evaluation (PAVE) Tool
           </title>
           <meta name="keywords" content="HPVAVE" />
           <link rel="icon" href="/favicon.ico" sizes="any" />

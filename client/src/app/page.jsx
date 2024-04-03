@@ -48,7 +48,7 @@ export default function Home() {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={4} className="mb-5 mb-md-0">
-              <Link href="/learn-about-pave/testing" className="card-link">
+              <Link href="/learn-about-pave/" className="card-link">
                 <Card className="w-100 d-flex flex-column h-100">
                   <div className="card-middle-top-circle">
                     <BsBook size={30} color="#fff" />

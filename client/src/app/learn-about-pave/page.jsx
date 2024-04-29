@@ -81,7 +81,7 @@ export default function AboutTesting() {
                     </p>
                   </div>
                   <figcaption className="mt-2">
-                    <b>Participant experience map.</b>
+                    <b>Participant experience map</b>
                   </figcaption>
                 </figure>
               </div>
@@ -411,7 +411,7 @@ export default function AboutTesting() {
                     <figcaption className="mt-2">
                       <b>
                         Illustration of AVE algorithm distinguishing normal from
-                        precancer.
+                        precancer
                       </b>
                     </figcaption>
                   </figure>

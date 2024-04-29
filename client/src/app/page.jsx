@@ -32,9 +32,10 @@ export default function Home() {
                     <p className="lead text-light">
                       PAVE is a strategy to validate a novel cervical screening
                       strategy. This website is designed to teach about the PAVE
-                      strategy, provide relevant publications, and includes a
-                      section to improve visual diagnosis skills by viewing
-                      cervical images with relevant diagnostic information.
+                      strategy for cervical cancer prevention, provide relevant
+                      publications, and includes a section to improve visual
+                      diagnosis skills by viewing cervical images with relevant
+                      diagnostic information.
                     </p>
                   </h2>
                 </div>
@@ -100,9 +101,10 @@ export default function Home() {
                   target="_blank"
                 >
                   {" "}
-                  Human Papillomavirus Automated Visual Evaluation, (PAVE) a
-                  protocol to evaluate a novel cervical screening and triage
-                  protocol <BsBoxArrowUpRight className="ml-1" />
+                  Human Papillomavirus Automated Visual Evaluation (PAVE), Human
+                  Papillomavirus Automated Visual Evaluation, (PAVE), a protocol
+                  to evaluate a novel cervical screening and triage strategy{" "}
+                  <BsBoxArrowUpRight className="ml-1" />
                 </a>{" "}
                 {/* <span
                   className="link-custom"
@@ -123,9 +125,7 @@ export default function Home() {
                 This website was developed for researchers, public health
                 workers, clinicians, and others who are interested in learning
                 about novel strategies for cervical cancer screening in settings
-                with limited resources. This site describes the science
-                underlying the PAVE strategy, descriptions of participating
-                partners, and an annotated bibliography.
+                with limited resources.
               </div>
             </Col>
           </Row>

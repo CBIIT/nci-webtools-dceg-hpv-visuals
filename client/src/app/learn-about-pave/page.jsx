@@ -41,8 +41,10 @@ export default function AboutTesting() {
                   middle-income countries based on their short-term risk of
                   precancer/cancer <BsBoxArrowUpRight className="ml-1" />.
                 </a>{" "}
-                This approach minimizes overtreatment in low-risk patients and
-                optimizes treatment resources for high-risk patients.{" "}
+                This approach minimizes overtreatment in patients with low risk
+                of cervical precancer or cancer and optimizes treatment
+                resources for patients at high risk of having cervical precancer
+                or developing cervical cancer. {"  "}
                 <a
                   href="https://www.sciencedirect.com/science/article/pii/S1877782123000498?via%3Dihub"
                   target="_blank"
@@ -92,12 +94,13 @@ export default function AboutTesting() {
             <Col xs={12}>
               <div className="mb-3">
                 The NCI team is led by Dr. Mark Schiffman and Dr. Silvia de
-                Sanjose. The NCI provides sites with laboratory materials and
-                epidemiologic and statistical support. Each site is responsible
-                for its own clinical protocol, including recruitment, informed
-                consent, testing, and clinical management of patients. Sites
-                share data with NCI to evaluate the effectiveness of the PAVE
-                protocol in diverse settings.{" "}
+                Sanjose. The NCI provides consortium members with laboratory
+                materials and epidemiologic and statistical support. Each
+                consortium member is responsible for its own clinical protocol,
+                including recruitment, informed consent, testing, and clinical
+                management of patients. Consortium members share data with NCI
+                to evaluate the effectiveness of the PAVE protocol in diverse
+                settings.{" "}
               </div>
             </Col>
           </Row>
@@ -279,7 +282,7 @@ export default function AboutTesting() {
                     provides typing in hierarchical risk groups: HPV 16, else
                     HPV18/45, else HPV 31/33/35/52/58, else HPV 39/51/56/59/68.
                     Read the Screenfire test manuscript{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />.
                   </a>{" "}
                 </li>
                 <li>
@@ -332,10 +335,10 @@ export default function AboutTesting() {
                 reproducibility. AVE, a machine-learning approach utilizing
                 artificial intelligence and visual information from digital
                 cervical images, has the potential to estimate risk more
-                reproducibly, accurately, and reliably than humans using VIA
-                increasing its suitability for resource-limited settings.
-                Because AVE accuracy is affected by the characteristics of the
-                camera used for image capture, AVE is implemented on a dedicated
+                reproducibly, accurately, and reliably than humans using VIA.
+                This makes AVE suitable for resource-limited settings. Because
+                AVE accuracy is affected by the characteristics of the camera
+                used for image capture, AVE is implemented on a dedicated
                 portable device. AVE programs using deep-learning strategies
                 hold promise for further refining risk estimates beyond what is
                 possible with HPV genotyping results alone.{" "}
@@ -343,16 +346,16 @@ export default function AboutTesting() {
             </Row>
             <Row className="py-2">
               <Col xs={12}>
-                The PAVE AVE study aims to develop several reliable, accurate,
-                and portable algorithms to aid clinicians in identifying the
-                cervix and squamocolumnar junction and detecting and treating
-                precancerous lesions.{" "}
+                AVE research within the PAVE study aims to develop several
+                reliable, accurate, and portable algorithms to aid clinicians in
+                identifying the cervix and squamocolumnar junction and detecting
+                and treating precancerous lesions.{" "}
                 <a
                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8732320/"
                   target="_blank"
                 >
                   Read the AVE manuscript <BsBoxArrowUpRight className="ml-1" />
-                  .{" "}
+                  .
                 </a>{" "}
               </Col>
             </Row>
@@ -383,7 +386,8 @@ export default function AboutTesting() {
                   target="_blank"
                 >
                   Developing reliable AVE algorithms that function well in
-                  varied settings has proven extremely challenging.
+                  varied settings has proven extremely challenging{" "}
+                  <BsBoxArrowUpRight className="ml-1" />.
                 </a>{" "}
               </Col>
               <Col xs={12}>

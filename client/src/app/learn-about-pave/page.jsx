@@ -351,7 +351,7 @@ export default function AboutTesting() {
                 identifying the cervix and squamocolumnar junction and detecting
                 and treating precancerous lesions.{" "}
                 <a
-                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8732320/"
+                  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10777665/"
                   target="_blank"
                 >
                   Read the AVE manuscript <BsBoxArrowUpRight className="ml-1" />

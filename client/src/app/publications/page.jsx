@@ -117,11 +117,14 @@ export default function About() {
                 </div> */}
                 <div>
                   This paper describes the PAVE protocol of risk-based
-                  management using country-specific protocols. Women who screen
-                  HPV-positive are managed with VIA, colposcopy, and/or ablative
-                  or excisional treatment per in-country standard-of-care with
-                  treatment resources allocated to those most likely to develop
-                  cancer.{" "}
+                  management using country-specific protocols. HPV testing is
+                  performed on self-collected samples followed by triage of
+                  HPV-positives using genotyping information and point-of-care
+                  automated visual evaluation (AVE) at the time of cervical
+                  examination. Women who screen HPV-positive are managed with
+                  VIA, colposcopy, and/or ablative or excisional treatment per
+                  in-country standard-of-care with treatment resources allocated
+                  to those most likely to develop cancer.{" "}
                 </div>
               </li>
               <li className="mb-1">
@@ -255,14 +258,8 @@ export default function About() {
           <Row className="pb-2">
             <Col xs={12}>
               <div>
-                This section contains any group intending to use AI for analysis
-                of cervical images. These papers outline critical steps for
-                ensuring that AI algorithms will function when deployed in the
-                field. Many current algorithms contain important errors of
-                overfitting, lack of portability, and unrealistic, near-perfect
-                performance estimates, leading them to fail when used in
-                real-life settings. Key steps for avoiding AI algorithm failures
-                in the field are detailed.
+                This section contains important information for any group
+                intending to use AI for analysis of cervical images.
               </div>
             </Col>
           </Row>

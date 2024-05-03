@@ -62,8 +62,18 @@ th {
 .visually-hidden {
   color: transparent;
 }
+
 .no-top-border {
   border-top: none;
+}
+
+#AVETable1.table td,
+#AVETable2.table td {
+  border: black solid 1px !important;
+}
+#AVETable1.table th,
+#AVETable2.table th {
+  border: black solid 1px !important;
 }
 
 .navbar-nav .nav-item .nav-link.nav-menu-active,

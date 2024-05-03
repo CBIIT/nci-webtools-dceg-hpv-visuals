@@ -444,6 +444,7 @@ export default function AboutTesting() {
             <Row className="py-2 justify-content-center">
               <Col sm="auto">
                 <Table
+                  id="AVETable1"
                   size="sm"
                   bordered
                   responsive="sm"
@@ -451,7 +452,9 @@ export default function AboutTesting() {
                 >
                   <thead>
                     <tr>
-                      <th className="visually-hidden border-0">&nbsp;</th>
+                      <th>
+                        <p className="visually-hidden">placeholder</p>
+                      </th>
                       <th colSpan="3" className="text-center">
                         AVE Classification
                       </th>
@@ -496,10 +499,17 @@ export default function AboutTesting() {
                     </tr>
                   </tbody>
                 </Table>
-                <Table size="sm" bordered className="d-block d-sm-none">
+                <Table
+                  id="AVETable2"
+                  size="sm"
+                  bordered
+                  className="d-block d-sm-none"
+                >
                   <thead>
                     <tr>
-                      <th className="visually-hidden">&nbsp;</th>
+                      <th>
+                        <p className="visually-hidden">placeholder</p>
+                      </th>
                       <th colSpan="3" className="text-center">
                         AVE Classification
                       </th>

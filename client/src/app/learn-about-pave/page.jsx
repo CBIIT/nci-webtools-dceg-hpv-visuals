@@ -504,6 +504,7 @@ export default function AboutTesting() {
                   size="sm"
                   bordered
                   className="d-block d-sm-none"
+                  responsive="sm"
                 >
                   <thead>
                     <tr>

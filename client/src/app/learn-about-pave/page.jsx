@@ -70,7 +70,7 @@ export default function AboutTesting() {
                       layout="responsive"
                       className="img-fluid mx-auto"
                     />
-                    <p className="title-text">
+                    {/* <p className="title-text">
                       This figure depicts the steps that a patient would
                       experience. First, HPV testing. Patients testing negative
                       are reassured. Patients testing HPV positive undergo
@@ -78,7 +78,7 @@ export default function AboutTesting() {
                       combined with HPV genotyping information to determine the
                       risk of precancer. Patients are then directed to treatment
                       or surveillance
-                    </p>
+                    </p> */}
                   </div>
                   <figcaption className="mt-2">
                     <b>Participant experience map</b>
@@ -242,10 +242,10 @@ export default function AboutTesting() {
                       layout="responsive"
                       className="img-fluid"
                     />
-                    <p className="title-text">
+                    {/* <p className="title-text">
                       Map of the world showing the geographical locations of
                       PAVE member sites.
-                    </p>
+                    </p> */}
                   </div>
                   <figcaption className="mt-2">
                     <b>Map of the world showing PAVE sites</b>
@@ -305,13 +305,13 @@ export default function AboutTesting() {
                         alt="In a hypothetical population of 100 individuals, with clinician-collected sampling, 100 women require pelvic exams to detect 15 women testing HPV+ and 3 with precancer. Using self-sampling, only the 15 HPV+ women require pelvic exams."
                         className="img-fluid mx-auto"
                       />
-                      <p className="title-text">
+                      {/* <p className="title-text">
                         In a hypothetical population of 100 individuals, with
                         clinician-collected sampling, 100 women require pelvic
                         exams to detect 15 women testing HPV+ and 3 with
                         precancer. Using self-sampling, only the 15 HPV+ women
                         require pelvic exams.
-                      </p>
+                      </p> */}
                     </div>
 
                     <figcaption className="mt-2">
@@ -400,12 +400,12 @@ export default function AboutTesting() {
                         title=""
                         className="img-fluid mx-auto"
                       />
-                      <p className="title-text">
+                      {/* <p className="title-text">
                         The top of this figure depicts photographs of the cervix
                         ranging from normal to precancer. The bottom depicts the
                         results of the AVE algorithms, classified as normal,
                         indeterminate, and precancer+.
-                      </p>
+                      </p> */}
                     </div>
 
                     <figcaption className="mt-2">

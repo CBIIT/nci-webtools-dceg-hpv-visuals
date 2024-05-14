@@ -33,18 +33,12 @@ export default function AboutTesting() {
           <Row>
             <Col xs={12}>
               <div className="mb-2">
-                <a
-                  href="https://www.sciencedirect.com/science/article/abs/pii/S1877782123000498?via%3Dihub"
-                  target="_blank"
-                >
-                  PAVE utilizes risk-based management for patients in low- and
-                  middle-income countries based on their short-term risk of
-                  precancer/cancer <BsBoxArrowUpRight className="ml-1" />.
-                </a>{" "}
-                This approach minimizes overtreatment in patients with low risk
-                of cervical precancer or cancer and optimizes treatment
-                resources for patients at high risk of having cervical precancer
-                or developing cervical cancer. {"  "}
+                PAVE utilizes risk-based management for patients in low- and
+                middle-income countries based on their short-term risk of
+                precancer/cancer. This approach minimizes overtreatment in
+                patients with low risk of cervical precancer or cancer and
+                optimizes treatment resources for patients at high risk of
+                having cervical precancer or developing cervical cancer. {"  "}
                 <a
                   href="https://www.sciencedirect.com/science/article/pii/S1877782123000498?via%3Dihub"
                   target="_blank"

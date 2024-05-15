@@ -33,20 +33,20 @@ export default function AboutTesting() {
           <Row>
             <Col xs={12}>
               <div className="mb-2">
-                PAVE utilizes risk-based management for patients in low- and
-                middle-income countries based on their short-term risk of
-                precancer/cancer. This approach minimizes overtreatment in
-                patients with low risk of cervical precancer or cancer and
-                optimizes treatment resources for patients at high risk of
-                having cervical precancer or developing cervical cancer. {"  "}
                 <a
                   href="https://www.sciencedirect.com/science/article/pii/S1877782123000498?via%3Dihub"
                   target="_blank"
                 >
-                  Read the manuscript on risk-based cervical screening in
-                  resource-limited settings{" "}
-                  <BsBoxArrowUpRight className="ml-1" />.
+                  PAVE utilizes risk-based management for patients in low- and
+                  middle-income countries based on their short-term risk of
+                  precancer/cancer. <BsBoxArrowUpRight className="ml-1" />
                 </a>{" "}
+                This approach minimizes overtreatment in patients with low risk
+                of cervical precancer or cancer and optimizes treatment
+                resources for patients at high risk of having cervical precancer
+                or developing cervical cancer. {"  "}
+                Read the manuscript on risk-based cervical screening in
+                resource-limited settings.
               </div>
             </Col>
           </Row>
@@ -275,8 +275,8 @@ export default function AboutTesting() {
                     called Screenfire, a PCR-based DNA amplification system that
                     provides typing in hierarchical risk groups: HPV 16, else
                     HPV18/45, else HPV 31/33/35/52/58, else HPV 39/51/56/59/68.
-                    Read the Screenfire test manuscript{" "}
-                    <BsBoxArrowUpRight className="ml-1" />.
+                    Read the Screenfire test manuscript.{" "}
+                    <BsBoxArrowUpRight className="ml-1" />
                   </a>{" "}
                 </li>
                 <li>
@@ -324,32 +324,32 @@ export default function AboutTesting() {
             <h2>Automated Visual Evaluation (AVE) in PAVE </h2>
             <Row className="py-2">
               <Col xs={12}>
-                Although VIA is commonly used in resource-limited settings, its
-                utility is limited by low sensitivity and lack of
-                reproducibility. AVE, a machine-learning approach utilizing
-                artificial intelligence and visual information from digital
-                cervical images, has the potential to estimate risk more
-                reproducibly, accurately, and reliably than humans using VIA.
-                This makes AVE suitable for resource-limited settings. Because
-                AVE accuracy is affected by the characteristics of the camera
-                used for image capture, AVE is implemented on a dedicated
-                portable device. AVE programs using deep-learning strategies
-                hold promise for further refining risk estimates beyond what is
-                possible with HPV genotyping results alone.{" "}
+                Although Visual inspection of cervix with acetic acid (VIA) is
+                commonly used as resource-limited settings, its utility is
+                limited by low sensitivity and lack of reproducibility. AVE, a
+                machine-learning approach utilizing artificial intelligence and
+                visual information from digital cervical images, has the
+                potential to estimate risk more reproducibly, accurately, and
+                reliably than humans using VIA. This makes AVE suitable for
+                resource-limited settings. Because AVE accuracy is affected by
+                the characteristics of the camera used for image capture, AVE is
+                implemented on a dedicated portable device. AVE programs using
+                deep-learning strategies hold promise for further refining risk
+                estimates beyond what is possible with HPV genotyping results
+                alone.{" "}
               </Col>
             </Row>
             <Row className="py-2">
               <Col xs={12}>
-                AVE research within the PAVE study aims to develop several
-                reliable, accurate, and portable algorithms to aid clinicians in
-                identifying the cervix and squamocolumnar junction and detecting
-                and treating precancerous lesions.{" "}
                 <a
                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10777665/"
                   target="_blank"
                 >
-                  Read the AVE manuscript <BsBoxArrowUpRight className="ml-1" />
-                  .
+                  AVE research within the PAVE study aims to develop several
+                  reliable, accurate, and portable algorithms to aid clinicians
+                  in identifying the cervix and squamocolumnar junction and
+                  detecting and treating precancerous lesions.{" "}
+                  <BsBoxArrowUpRight className="ml-1" />
                 </a>{" "}
               </Col>
             </Row>
@@ -380,8 +380,8 @@ export default function AboutTesting() {
                   target="_blank"
                 >
                   Developing reliable AVE algorithms that function well in
-                  varied settings has proven extremely challenging{" "}
-                  <BsBoxArrowUpRight className="ml-1" />.
+                  varied settings has proven extremely challenging.{" "}
+                  <BsBoxArrowUpRight className="ml-1" />
                 </a>{" "}
               </Col>
               <Col xs={12}>

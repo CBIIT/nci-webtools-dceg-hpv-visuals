@@ -30,12 +30,12 @@ export default function Home() {
                   {/* <hr className="border-white" /> */}
                   <h2>
                     <p className="lead text-light">
-                      PAVE is a strategy to validate a novel cervical screening
-                      strategy. This website is designed to teach about the PAVE
-                      strategy for cervical cancer prevention, provide relevant
-                      publications, and includes a section to improve visual
-                      diagnosis skills by viewing cervical images with relevant
-                      diagnostic information.
+                      PAVE is a research project to validate a novel cervical
+                      screening strategy. This website is designed to teach
+                      about the PAVE strategy for cervical cancer prevention,
+                      provide relevant publications, and includes a section to
+                      improve visual diagnosis skills by viewing cervical images
+                      with relevant diagnostic information.
                     </p>
                   </h2>
                 </div>

@@ -21,12 +21,12 @@ export default function AboutTesting() {
             <Col xs={12}>
               <div className="mb-2">
                 The PAVE protocol aims to target cervical precancer accurately
-                and affordably by 1) self-collection of samples for HPV
-                screening; 2) triage among HPV-positive participants by
+                and affordably by 1)self-collection of samples for HPV
+                screening; 2)triage among HPV-positive participants by
                 combination of extended genotyping and visual evaluation of the
                 cervix using deep-learning-based Automated Visual Evaluation
-                (AVE); and 3) treatment using thermal ablation or excision
-                (Large Loop Excision of the Transformation Zone) (LLETZ).
+                (AVE); and 3)treatment using thermal ablation or excision (Large
+                Loop Excision of the Transformation Zone) (LLETZ).
               </div>
             </Col>
           </Row>
@@ -325,7 +325,7 @@ export default function AboutTesting() {
             <Row className="py-2">
               <Col xs={12}>
                 Although Visual inspection of cervix with acetic acid (VIA) is
-                commonly used as resource-limited settings, its utility is
+                commonly used in resource-limited settings, its utility is
                 limited by low sensitivity and lack of reproducibility. AVE, a
                 machine-learning approach utilizing artificial intelligence and
                 visual information from digital cervical images, has the

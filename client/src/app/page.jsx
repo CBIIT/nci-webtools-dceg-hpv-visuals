@@ -101,9 +101,9 @@ export default function Home() {
                   target="_blank"
                 >
                   {" "}
-                  Human Papillomavirus Automated Visual Evaluation, (PAVE), a
+                  Human Papillomavirus Automated Visual Evaluation (PAVE), a
                   protocol to evaluate a novel cervical screening and triage
-                  strategy <BsBoxArrowUpRight className="ml-1" />
+                  strategy
                 </a>{" "}
                 {/* <span
                   className="link-custom"
